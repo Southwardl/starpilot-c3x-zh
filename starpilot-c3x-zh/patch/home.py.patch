@@ -1,0 +1,137 @@
+--- a/selfdrive/ui/layouts/home.py
++++ b/selfdrive/ui/layouts/home.py
+@@ -6,6 +6,7 @@
+ from openpilot.selfdrive.ui.widgets.offroad_alerts import UpdateAlert, OffroadAlert
+ from openpilot.selfdrive.ui.widgets.exp_mode_button import ExperimentalModeButton
+ from openpilot.selfdrive.ui.widgets.drive_stats import DriveStatsDashboard
++from openpilot.selfdrive.ui.widgets.vehicle_status import VehicleStatusPanel
+ from openpilot.selfdrive.ui.widgets.home_info_card import HomeInfoCard
+ from openpilot.selfdrive.ui.widgets.setup import SetupWidget
+ from openpilot.selfdrive.ui.lib.starpilot_version import starpilot_display_description
+@@ -30,6 +31,10 @@
+   ALERTS = 2
+ 
+ 
++TAB_HEIGHT = 64
++TAB_GAP = 14
++
++
+ class HomeLayout(Widget):
+   def __init__(self):
+     super().__init__()
+@@ -63,6 +68,10 @@
+     self._home_info_card = self._child(HomeInfoCard(params=self.params, drive_stats=self._drive_stats))
+ 
+     self._exp_mode_button = ExperimentalModeButton()
++    # [tabs] 行驶统计 / 车辆状态
++    self._active_tab = 0
++    self._vehicle_panel = VehicleStatusPanel(self.params)
++    self.tab_rects: list[rl.Rectangle] = []
+     self._setup_callbacks()
+ 
+   def show_event(self):
+@@ -102,6 +111,7 @@
+ 
+     # Render content based on current state
+     if self.current_state == HomeLayoutState.HOME:
++      self._render_tabs()
+       self._render_home_content()
+     elif self.current_state == HomeLayoutState.UPDATE:
+       self._render_update_view()
+@@ -113,19 +123,26 @@
+       self._rect.x + CONTENT_MARGIN, self._rect.y + CONTENT_MARGIN, self._rect.width - 2 * CONTENT_MARGIN, HEADER_HEIGHT
+     )
+ 
+-    content_y = self._rect.y + CONTENT_MARGIN + HEADER_HEIGHT + SPACING
+-    content_height = self._rect.height - CONTENT_MARGIN - HEADER_HEIGHT - SPACING - CONTENT_MARGIN
++    # [tabs] 标签栏占位
++    tab_total_w = 2 * 300 + TAB_GAP
++    tab_x0 = self._rect.x + (self._rect.width - tab_total_w) / 2
++    tab_y = self._rect.y + CONTENT_MARGIN + HEADER_HEIGHT + SPACING
++    self.tab_rects = [rl.Rectangle(tab_x0 + i * (300 + TAB_GAP), tab_y, 300, TAB_HEIGHT) for i in range(2)]
++
++    content_y = tab_y + TAB_HEIGHT + SPACING
++    content_height = self._rect.height - (content_y - self._rect.y) - CONTENT_MARGIN
+ 
+     self.content_rect = rl.Rectangle(
+       self._rect.x + CONTENT_MARGIN, content_y, self._rect.width - 2 * CONTENT_MARGIN, content_height
+     )
+ 
+-    left_width = self.content_rect.width - RIGHT_COLUMN_WIDTH - SPACING
++    # [i18n-patch] ???????????? + ?????????????
++    left_width = self.content_rect.width
+ 
+     self.left_column_rect = rl.Rectangle(self.content_rect.x, self.content_rect.y, left_width, self.content_rect.height)
+ 
+     self.right_column_rect = rl.Rectangle(
+-      self.content_rect.x + left_width + SPACING, self.content_rect.y, RIGHT_COLUMN_WIDTH, self.content_rect.height
++      self.content_rect.x + left_width + SPACING, self.content_rect.y, 0, self.content_rect.height
+     )
+ 
+     self.update_notif_rect.x = self.header_rect.x
+@@ -137,6 +154,14 @@
+ 
+   def _handle_mouse_release(self, mouse_pos: MousePos):
+     super()._handle_mouse_release(mouse_pos)
++
++    # [tabs] 点击切换标签
++    if self.current_state == HomeLayoutState.HOME:
++      for index, rect in enumerate(self.tab_rects):
++        if rl.check_collision_point_rec(mouse_pos, rect):
++          if self._active_tab != index:
++            self._active_tab = index
++          return
+ 
+     if self.update_available and rl.check_collision_point_rec(mouse_pos, self.update_notif_rect):
+       self._set_state(HomeLayoutState.UPDATE)
+@@ -208,9 +233,26 @@
+       detail_rect = rl.Rectangle(brand_rect.x + brand_rect.width, version_rect.y, detail_width, version_rect.height)
+       gui_label(detail_rect, detail_text, version_font_size, rl.WHITE, font_weight=FontWeight.MEDIUM)
+ 
++  def _render_tabs(self):
++    font = gui_app.font(FontWeight.MEDIUM)
++    labels = (tr("行驶统计"), tr("车辆状态"))
++    for index, rect in enumerate(self.tab_rects):
++      active = index == self._active_tab
++      bg = rl.Color(75, 95, 255, 255) if active else rl.Color(28, 30, 42, 220)
++      border = rl.Color(120, 140, 255, 255) if active else rl.Color(67, 57, 86, 255)
++      rl.draw_rectangle_rounded(rect, 0.25, 10, bg)
++      rl.draw_rectangle_rounded_lines_ex(rect, 0.25, 10, 2, border)
++      text = labels[index]
++      size = measure_text_cached(font, text, 30)
++      rl.draw_text_ex(font, text,
++                      rl.Vector2(rect.x + (rect.width - size.x) / 2, rect.y + (rect.height - size.y) / 2),
++                      30, 0, rl.WHITE if active else rl.Color(200, 196, 220, 255))
++
+   def _render_home_content(self):
+-    self._render_left_column()
+-    self._render_right_column()
++    if self._active_tab == 1:
++      self._vehicle_panel.render(self.content_rect)
++    else:
++      self._render_left_column()
+ 
+   def _render_update_view(self):
+     self.update_alert.render(self.content_rect)
+@@ -219,9 +261,21 @@
+     self.offroad_alert.render(self.content_rect)
+ 
+   def _render_left_column(self):
++    # [restyle] ??????????? / ?????
++    try:
++      self._drive_stats.footer_version = str(self._version_text or "")
++      model_name = (model_lab_pair_display_name_from_params(self.params) or
++                    self.params.get("DrivingModelName", encoding="utf-8") or "")
++      if isinstance(model_name, bytes):
++        model_name = model_name.decode("utf-8", errors="ignore")
++      self._drive_stats.footer_model = str(model_name or "").strip()
++    except Exception:
++      pass
+     self._drive_stats.render_overview(self.left_column_rect)
+ 
+   def _render_right_column(self):
++    # [i18n-patch] ??????
++    return
+     exp_height = 125
+     exp_rect = rl.Rectangle(
+       self.right_column_rect.x, self.right_column_rect.y, self.right_column_rect.width, exp_height

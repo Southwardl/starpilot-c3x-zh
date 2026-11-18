@@ -1,0 +1,140 @@
+--- a/selfdrive/ui/onroad/starpilot/favorite_radial_menu.py
++++ b/selfdrive/ui/onroad/starpilot/favorite_radial_menu.py
+@@ -8,6 +8,8 @@
+ from typing import Any
+ 
+ import pyray as rl
++
++from openpilot.system.ui.lib.multilang import tr
+ 
+ from openpilot.starpilot.common.controller_actions import CONTROLLER_ACTION_SET_SPEED
+ from openpilot.starpilot.common.favorite_slots import (
+@@ -264,7 +266,7 @@
+         slot["label"] = self._available_option_labels[key]
+       if key == CONTROLLER_ACTION_SET_SPEED and slot.get("value") is not None:
+         unit = "km/h" if self._params.get_bool("IsMetric") else "mph"
+-        slot["label"] = f"Set Speed To {slot['value']:g} {unit}"
++        slot["label"] = tr("Set Speed To {} {}").format(f"{slot['value']:g}", unit)
+     self._layout_slot_rects()
+     self._layout_picker_rects()
+ 
+@@ -618,7 +620,7 @@
+       "enabled": True,
+       "show_onroad": True,
+       "key": key,
+-      "label": str(option.get("label") or key),
++      "label": tr(str(option.get("label") or key)),
+     }
+     save_favorite_slots(slots, self._params, eligible_keys=self._available_option_keys)
+     request_starpilot_toggle_refresh(self._params_memory)
+@@ -691,7 +693,7 @@
+   @classmethod
+   def _picker_section_label(cls, option: dict[str, Any]) -> str:
+     section = str(option.get("section") or "Favorite").strip()
+-    return cls._PICKER_SECTION_LABELS.get(section, section)
++    return tr(cls._PICKER_SECTION_LABELS.get(section, section))
+ 
+   @staticmethod
+   def _wrap_picker_text(font: Any, text: str, font_size: int, max_width: float,
+@@ -948,7 +950,7 @@
+ 
+       if configured:
+         if is_dropdown:
+-          title_text = str(slot.get("label") or slot.get("key") or "Favorite").replace('\\"', '"')
++          title_text = tr(str(slot.get("label") or slot.get("key") or "Favorite").replace('\\"', '"'))
+           fs_title = int(32 * scale)
+           fs_sub = int(24 * scale)
+           fitted_title = self._fit_text(self._font(bold=True), title_text, fs_title, max_text_w)
+@@ -969,7 +971,7 @@
+             else:
+               rl.draw_rectangle_rounded(pip_rect, 0.4, 6, rl.Color(161, 112, 255, 75))
+         elif is_toggle:
+-          raw_label = str(slot.get("label") or slot.get("key") or "Favorite").replace('\\"', '"')
++          raw_label = tr(str(slot.get("label") or slot.get("key") or "Favorite").replace('\\"', '"'))
+           fs_title = int(32 * scale)
+           fs_sub = int(24 * scale)
+           fitted_title = self._fit_text(self._font(bold=True), raw_label, fs_title, max_text_w)
+@@ -979,7 +981,7 @@
+           status_color = rl.Color(214, 192, 255, 255) if is_on else rl.Color(213, 202, 232, 160)
+           self._draw_text(self._font(bold=True), status_text, rl.Vector2(text_x, center.y + 8.0 * scale), fs_sub, status_color)
+         else:
+-          raw_label = str(slot.get("label") or slot.get("key") or "Favorite").replace('\\"', '"')
++          raw_label = tr(str(slot.get("label") or slot.get("key") or "Favorite").replace('\\"', '"'))
+           label_font_size = int(34 * scale)
+           text_dim = self._measure_text(self._font(bold=True), raw_label, label_font_size)
+ 
+@@ -1005,8 +1007,8 @@
+       else:
+         fs_title = int(32 * scale)
+         fs_sub = int(24 * scale)
+-        title_text = f"Add Favorite {index + 1}"
+-        sub_text = "Tap to configure"
++        title_text = tr("Add Favorite {}").format(index + 1)
++        sub_text = tr("Tap to configure")
+         dim_t = self._measure_text(self._font(bold=True), title_text, fs_title)
+         dim_s = self._measure_text(self._font(bold=False), sub_text, fs_sub)
+         total_h = dim_t.y + dim_s.y + 2.0 * scale
+@@ -1055,10 +1057,10 @@
+     rl.draw_rectangle_rounded_lines_ex(self._drawer_rect, self._roundness(self._drawer_rect, 34 * scale), 16,
+                                        2 * scale, self._PANEL_BORDER)
+ 
+-    title = f"Assign Favorite {self._selected_slot + 1}" if self._selected_slot is not None else "Assign Favorite"
++    title = tr("Assign Favorite {}").format(self._selected_slot + 1) if self._selected_slot is not None else tr("Assign Favorite")
+     title_pos = rl.Vector2(self._drawer_rect.x + 36 * scale, self._drawer_rect.y + 26 * scale)
+     self._draw_text(self._font(bold=True), title, title_pos, int(50 * scale), self._TEXT)
+-    subtitle = "Set Speed: configure in New Galaxy"
++    subtitle = tr("Set Speed: configure in New Galaxy")
+     self._draw_text(
+       self._font(bold=False), subtitle,
+       rl.Vector2(title_pos.x, title_pos.y + 72 * scale), int(26 * scale), self._MUTED_TEXT,
+@@ -1066,7 +1068,7 @@
+ 
+     self._draw_close_icon(self._drawer_close_rect, pressed=self._pressed_target == ("close", None))
+     if not self._option_rects:
+-      empty_text = "No selectable favorites are available for this vehicle."
++      empty_text = tr("No selectable favorites are available for this vehicle.")
+       self._draw_centered_text(
+         empty_text,
+         rl.Vector2(self._drawer_rect.x + self._drawer_rect.width / 2, self._drawer_rect.y + self._drawer_rect.height / 2),
+@@ -1089,7 +1091,7 @@
+     )
+     first_option = page_start + 1 if self._picker_options else 0
+     last_option = min(page_start + self.PICKER_PAGE_SIZE, len(self._picker_options))
+-    page_label = f"{first_option}–{last_option} of {len(self._picker_options)}"
++    page_label = tr("{}–{} of {}").format(first_option, last_option, len(self._picker_options))
+     self._draw_centered_text(
+       page_label,
+       rl.Vector2(self._drawer_rect.x + self._drawer_rect.width / 2,
+@@ -1112,11 +1114,11 @@
+     is_drop = (ui_type == "dropdown" and isinstance(raw_options, list) and len(raw_options) >= 2)
+ 
+     if is_act:
+-      badge_label = "ACTION"
++      badge_label = tr("ACTION")
+     elif is_drop:
+-      badge_label = f"{len(raw_options)} STATES"
++      badge_label = tr("{} STATES").format(len(raw_options))
+     else:
+-      badge_label = "TOGGLE"
++      badge_label = tr("TOGGLE")
+ 
+     badge_fs = int(18 * scale)
+     badge_dim = self._measure_text(self._font(bold=True), badge_label, badge_fs)
+@@ -1148,7 +1150,7 @@
+     self._draw_text(self._font(bold=False), section, rl.Vector2(rect.x + padding, rect.y + 24 * scale),
+                     int(22 * scale), rl.Color(200, 172, 255, 214))
+ 
+-    raw_label = str(option.get("picker_label") or option.get("label") or option.get("key") or "Favorite").replace('\\"', '"')
++    raw_label = tr(str(option.get("picker_label") or option.get("label") or option.get("key") or "Favorite").replace('\\"', '"'))
+     title_fs = int(36 * scale)
+     title_dim = self._measure_text(self._font(bold=True), raw_label, title_fs)
+     if title_dim.x <= content_w:
+@@ -1168,7 +1170,7 @@
+         self._draw_text(self._font(bold=True), f_l1, rl.Vector2(rect.x + padding, rect.y + 76 * scale), fs_l1, self._TEXT)
+         self._draw_text(self._font(bold=True), f_l2, rl.Vector2(rect.x + padding, rect.y + 118 * scale), fs_l2, rl.Color(255, 255, 255, 235))
+ 
+-    raw_desc = str(option.get("picker_description") or option.get("description") or "").replace('\\"', '"')
++    raw_desc = tr(str(option.get("picker_description") or option.get("description") or "").replace('\\"', '"'))
+     desc_fs = int(26 * scale)
+     if raw_desc:
+       desc_font = self._font(bold=False)

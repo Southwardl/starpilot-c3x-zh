@@ -1,0 +1,34 @@
+--- a/system/ui/widgets/label.py
++++ b/system/ui/widgets/label.py
+@@ -5,7 +5,7 @@
+ from typing import Union
+ import pyray as rl
+ 
+-from openpilot.system.ui.lib.application import gui_app, FontWeight, DEFAULT_TEXT_SIZE, DEFAULT_TEXT_COLOR, FONT_SCALE
++from openpilot.system.ui.lib.application import (gui_app, FontWeight, DEFAULT_TEXT_SIZE, DEFAULT_TEXT_COLOR, FONT_SCALE, font_fallback)
+ from openpilot.system.ui.widgets import Widget
+ from openpilot.system.ui.lib.text_measure import measure_text_cached
+ from openpilot.system.ui.lib.utils import GuiStyleContext
+@@ -95,13 +95,19 @@
+     (rl.GuiControl.DEFAULT, rl.GuiDefaultProperty.TEXT_ALIGNMENT_VERTICAL, alignment_vertical),
+     (rl.GuiControl.DEFAULT, rl.GuiDefaultProperty.TEXT_WRAP_MODE, rl.GuiTextWrapMode.TEXT_WRAP_WORD)
+   ]
+-  if font_weight != FontWeight.NORMAL:
+-    rl.gui_set_font(gui_app.font(font_weight))
++  # 含非 ASCII 字符（如中文）时使用 CJK 回退字体，否则内置拉丁字体不含这些字形
++  base_font = gui_app.font(font_weight)
++  needs_fallback = any(ord(ch) > 0x7F for ch in text)
++  text_font = font_fallback(base_font) if needs_fallback else base_font
++  switched = text_font.texture.id != base_font.texture.id
++
++  if font_weight != FontWeight.NORMAL or switched:
++    rl.gui_set_font(text_font)
+ 
+   with GuiStyleContext(styles):
+     rl.gui_label(rect, text)
+ 
+-  if font_weight != FontWeight.NORMAL:
++  if font_weight != FontWeight.NORMAL or switched:
+     rl.gui_set_font(gui_app.font(FontWeight.NORMAL))
+ 
+ 

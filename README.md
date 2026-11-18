@@ -16,6 +16,7 @@
 - [日常维护](#日常维护)
 - [故障排查](#故障排查)
 - [已知限制](#已知限制)
+- [九、9008 整机克隆](#九9008-整机克隆可选进阶)
 - [变更记录](#变更记录)
 
 ---
@@ -395,7 +396,130 @@ ls -la /usr/lib/aarch64-linux-gnu/libEGL.so.1   # 应指向 libEGL_adreno
 
 ---
 
+## 九、9008 整机克隆（可选，进阶）
+
+把一整台 C3X 做成 9008 可刷包，用于**变砖恢复**或**多设备统一部署**。
+
+> **详细步骤、实测数据和踩坑记录见 [`docs/9008打包与刷写指南.md`](docs/9008打包与刷写指南.md)。**
+> 本章只给结论和最短路径。
+
+### 关键结论
+
+| 项目 | 结论 |
+|---|---|
+| 能否做包 | ✅ 84 项 / 29.13 GiB，通过工具自身校验 |
+| **推荐导出方式** | **SSH + dd**（18-19 MB/s，约 27 分钟）|
+| 不要用 | EDL/Firehose 读取（1.4 MB/s 且频繁停顿，实测 5 次全失败）|
+| 实机刷写验证 | ❌ 未做，首次用可放弃的设备 |
+| 身份问题 | ⚠️ 含来源设备校准/IMEI/TEE 密钥，仅限自有设备间克隆 |
+
+### 最短路径
+
+```powershell
+# 1. 设备正常开机（不是 9008），能 SSH
+# 2. 探测分区表（只读，30 秒）
+python tools\build_package_ssh.py --ssh comma@192.168.1.12 \
+    --ssh-key "$env:USERPROFILE\.ssh\id_ed25519_comma" \
+    --out D:\c3x_pkg --flasher-source "D:\SkyGMFlasher\source" \
+    --firehose-from "D:\已有包" --dry-run
+
+# 3. 正式导出（约 27 分钟）
+python tools\build_package_ssh.py --ssh comma@192.168.1.12 \
+    --ssh-key "$env:USERPROFILE\.ssh\id_ed25519_comma" \
+    --out D:\c3x_pkg --flasher-source "D:\SkyGMFlasher\source" \
+    --firehose-from "D:\已有包" --split-mb 0 --yes
+
+# 4. 若校验报错，用修复工具补全
+python tools\repair_package.py
+```
+
+导出完成后用 SkyGMFlasher：选包 → 连接 → **全选 84 项** → **勾选重建分区表** → 刷写。
+
+刷完首启会自动重建 `/data`（64 KiB 标记触发 `reset --recover`），然后：
+
+```bash
+scp -r starpilot-c3x-zh comma@<设备IP>:/tmp/
+ssh comma@<设备IP> 'sudo bash /tmp/starpilot-c3x-zh/provision.sh'
+```
+
+### 工具链
+
+| 脚本 | 用途 |
+|---|---|
+| `tools/build_package_ssh.py` | **推荐**。SSH + dd 导出 |
+| `tools/build_package.py` | EDL/Firehose 导出（大分区会超时，仅供调试/小包）|
+| `tools/repair_package.py` | 修复清单：补 userdata / 修哈希 / 登记 Firehose |
+
+---
+
 ## 变更记录
+
+### v1.3.0 — 2026-11-18
+
+别克威朗（BUICK_VERANO）实车适配：从「能识别」到「能开」。
+
+**新修复**
+
+- **雷达左右镜像**：`radar_interface.py` 增加 `AZIMUTH_SIGN` 表，仅对威朗把
+  `TrkAzimuth` 取反。之前左侧车道的车会显示在右侧，导致视觉-雷达融合始终
+  匹配失败（`radard.track_matches_vision` 的 `lat_sane` 过不了）。
+- **纵向控制启用**：SDGM 线束替换了原车 SDGM 模块，原厂 ACC 链路已断，
+  必须设 `AlphaLongitudinalEnabled=1` 让 openpilot 通过 SASCM 提供纵向。
+  否则 `pcmCruise=True` 会让 openpilot 空等一个不存在的原厂 ACC，
+  表现为「按 SET 立即退出」。
+- **接合速度设为 0**：`minEnableSpeed=0`，任意速度可接合。
+- **转向提示按实测校准**：威朗 EPS 在 10-45 km/h 有 65-68% 的帧报
+  `LKATorqueDeliveredStatus=2`（扭矩限制），45-50 km/h 降至 1.6%，
+  50 km/h 以上为 0%。5 万帧实测数据见表。50 km/h 以下属该车型正常特性，
+  不再误报「转向辅助不可用」；50 km/h 以上出现才告警。
+- **地图道路名乱码**：字体图集从 1,113 字扩到 **6,933 字（GB2312 全表）**。
+  地图道路名是运行时数据，不可能从 `.po` 或代码字面量里收集，必须覆盖常用汉字全表。
+- **恢复出厂保护**：`comma.sh` 的「触摸计数 >4 即恢复出厂」改为 opt-in
+  （需 `/data/.allow_tap_reset`）。`touch_count` 是内核累计计数、跨重启不清零，
+  实测中曾误触发工厂重置（已及时终止，数据无损）。
+
+**新增参数（install.sh 自动设置）**
+
+| 参数 | 值 | 作用 |
+|---|---|---|
+| `AlphaLongitudinalEnabled` | `1` | 启用 openpilot 纵向控制 |
+| `ClusterOffset` | `1.19` | UI 车速显示校准（只影响显示） |
+
+**新增工具**
+
+- `tools/eps_speed_test.py`：实测 EPS 拒绝转向扭矩的速度阈值，按 5 km/h 分档
+  统计 `LKATorqueDeliveredStatus=2` 占比，输出 CSV + 分档表。
+- `tools/capture_steer_hi.py`：只在行驶时记录转向状态变化，用于现场排障。
+
+### v1.2.1 — 2026-11-18
+
+修复威朗上车后 `card` 崩溃。
+
+- **新增 `patch/substitute.toml.patch`**：`opendbc/car/torque_data/substitute.toml` 里缺少 `BUICK_VERANO`
+  → `get_torque_params()[candidate]` KeyError → `card` 进程崩溃 → 界面显示「openpilot 无法使用」
+- 该文件用「替代车型」机制映射扭矩参数，所有别克都指向 `CHEVROLET_VOLT`，威朗漏了
+- 实车验证：补上后 `carFingerprint = BUICK_VERANO`，`card` 稳定运行
+
+> ⚠️ v1.2.0 及更早的包在威朗上会出现这个问题，请务必更新到 v1.2.1。
+
+### v1.2.0 — 2026-11-18
+
+9008 整机克隆落地：从设备成功导出并校验通过完整刷机包。
+
+- 新增 `tools/build_package_ssh.py`：**SSH + dd 导出**，18-19 MB/s，实测 27 分钟导出 29.13 GiB
+- 新增 `tools/repair_package.py`：修复清单（补 userdata / 重算哈希 / 登记 Firehose）
+- 新增 `docs/9008打包与刷写指南.md`：完整流程 + 7 个踩坑记录 + 实测数据
+- `tools/build_package.py`（EDL 版）：修复 GPT 修复函数误用、XML 类型、零填充分块
+- 结论：EDL 读取不可用于大包（1.4 MB/s + 频繁停顿 + 重试污染协议），SSH 是唯一可行路径
+
+### v1.1.0 — 2026-11-18
+
+新增 9008 整机克隆能力。
+
+- 新增 `provision.sh`：刷机后一键部署（clone → 依赖 → continue.sh → 参数 → 汉化补丁 → 验证）
+- 新增 `tools/build_package.py`：从 9008 设备导出自建刷机包，支持 `--dry-run` / `--verify-only` / 分区切分 / 零填充
+- 完成第三方 RC10 包的完整可行性验证（Firehose 哈希、83 项清单、6 LUN 容量）
+- 文档新增第九章「9008 整机克隆」
 
 ### v1.0.0 — 2026-11-18
 
@@ -420,9 +544,10 @@ starpilot-c3x-zh/
 ├── README.md                 # 本文档
 ├── VERSION                   # 版本号
 ├── manifest.json             # 文件清单 + SHA256 + 基线信息
-├── install.sh                # 安装脚本
+├── install.sh                # 汉化补丁安装脚本
 ├── uninstall.sh              # 回滚脚本
-├── patch/                    # 11 个 unified diff 补丁
+├── provision.sh              # 刷机后一键部署（StarPilot + 汉化）
+├── patch/                    # 15 个 unified diff 补丁
 │   ├── multilang.py.patch
 │   ├── application.py.patch
 │   ├── label.py.patch
@@ -440,11 +565,16 @@ starpilot-c3x-zh/
 │       ├── ui/widgets/vehicle_status.py
 │       ├── ui/translations/app_zh-CHS.po
 │       └── assets/fonts/NotoSansSC-Regular.{fnt,png}
-├── tools/                    # 维护工具
+├── tools/                    # 维护与构建工具
 │   ├── make_cjk_font.py      # 字体图集生成器
-│   └── audit_trn.py          # 复数条目审计
+│   ├── audit_trn.py          # 复数条目审计
+│   ├── build_package.py      # 9008 包导出（EDL 版，仅供调试）
+│   ├── build_package_ssh.py  # 9008 包导出（SSH 版，推荐）
+│   └── repair_package.py     # 清单修复工具
 └── docs/                     # 相关文档
-    └── C3X_StarPilot_部署实录.md
+    ├── C3X_StarPilot_部署实录.md
+    ├── 9008刷机可行性验证报告.md
+    └── 9008打包与刷写指南.md
 ```
 
 ---

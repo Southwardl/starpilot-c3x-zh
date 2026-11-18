@@ -1,0 +1,18 @@
+--- a/selfdrive/ui/onroad/alert_renderer.py
++++ b/selfdrive/ui/onroad/alert_renderer.py
+@@ -112,13 +112,13 @@
+           return ALERT_CRITICAL_REBOOT
+ 
+     if ss.alertSize != AlertSize.none:
+-      ret = Alert(text1=ss.alertText1, text2=ss.alertText2, size=ss.alertSize.raw, status=ss.alertStatus.raw,
++      ret = Alert(text1=tr(ss.alertText1), text2=tr(ss.alertText2), size=ss.alertSize.raw, status=ss.alertStatus.raw,
+                   alert_type=ss.alertType)
+     else:
+       starpilot_ss = sm["starpilotSelfdriveState"]
+       if starpilot_ss.alertSize == custom.StarPilotSelfdriveState.AlertSize.none:
+         return None
+-      ret = Alert(text1=starpilot_ss.alertText1, text2=starpilot_ss.alertText2,
++      ret = Alert(text1=tr(starpilot_ss.alertText1), text2=tr(starpilot_ss.alertText2),
+                   size=starpilot_ss.alertSize.raw, status=starpilot_ss.alertStatus.raw,
+                   alert_type=starpilot_ss.alertType)
+ 

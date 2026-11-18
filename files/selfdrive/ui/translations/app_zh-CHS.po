@@ -1,0 +1,6903 @@
+# Language zh-CHS translations for PACKAGE package.
+# Copyright (C) 2025 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-23 00:50-0700\n"
+"PO-Revision-Date: 2025-10-22 16:32-0700\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: zh-CHS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: selfdrive/ui/layouts/settings/device.py:160
+#, python-format
+msgid " Steering torque response calibration is complete."
+msgstr " 转向扭矩响应校准完成。"
+
+#: selfdrive/ui/layouts/settings/device.py:158
+#, python-format
+msgid " Steering torque response calibration is {}% complete."
+msgstr " 转向扭矩响应校准已完成 {}%。"
+
+#: selfdrive/ui/layouts/settings/device.py:133
+#, python-format
+msgid " Your device is pointed {:.1f}° {} and {:.1f}° {}."
+msgstr " 您的设备朝向 {:.1f}° {} 与 {:.1f}° {}。"
+
+#: selfdrive/ui/layouts/sidebar.py:43
+msgid "--"
+msgstr "--"
+
+#: selfdrive/ui/widgets/prime.py:47
+#, python-format
+msgid "1 year of drive storage"
+msgstr "1 年行驶数据存储"
+
+#: selfdrive/ui/widgets/prime.py:47
+#, python-format
+msgid "24/7 LTE connectivity"
+msgstr "全天候 LTE 连接"
+
+#: selfdrive/ui/layouts/sidebar.py:46
+msgid "2G"
+msgstr "2G"
+
+#: selfdrive/ui/layouts/sidebar.py:47
+msgid "3G"
+msgstr "3G"
+
+#: selfdrive/ui/layouts/sidebar.py:49
+msgid "5G"
+msgstr "5G"
+
+#: selfdrive/ui/layouts/settings/developer.py:23
+msgid ""
+"<b>WARNING: openpilot longitudinal control is in alpha for this car and will "
+"disable Automatic Emergency Braking (AEB).</b><br><br>On this car, openpilot "
+"defaults to the car's built-in ACC instead of openpilot's longitudinal "
+"control. Enable this to switch to openpilot longitudinal control. Enabling "
+"Experimental mode is recommended when enabling openpilot longitudinal "
+"control alpha. Changing this setting will restart openpilot if the car is "
+"powered on."
+msgstr ""
+"<b>警告：此车型的 openpilot 纵向控制仍为 alpha，将会停用自动紧急制动 (AEB)。"
+"</b><br><br>在此车型上，openpilot 默认使用车载 ACC，而非 openpilot 的纵向控"
+"制。启用此选项可切换为 openpilot 纵向控制。建议同时启用实验模式。若车辆通电，"
+"更改此设置将会重启 openpilot。"
+
+#: selfdrive/ui/layouts/settings/device.py:148
+#, python-format
+msgid "<br><br>Steering lag calibration is complete."
+msgstr "<br><br>转向延迟校准完成。"
+
+#: selfdrive/ui/layouts/settings/device.py:146
+#, python-format
+msgid "<br><br>Steering lag calibration is {}% complete."
+msgstr "<br><br>转向延迟校准已完成 {}%。"
+
+#: selfdrive/ui/layouts/settings/firehose.py:138
+#, python-format
+msgid "ACTIVE"
+msgstr "已启用"
+
+#: selfdrive/ui/layouts/settings/developer.py:15
+msgid ""
+"ADB (Android Debug Bridge) allows connecting to your device over USB or over "
+"the network. See https://docs.comma.ai/how-to/connect-to-comma for more info."
+msgstr ""
+"ADB（Android 调试桥）可通过 USB 或网络连接到您的设备。详见 https://docs."
+"comma.ai/how-to/connect-to-comma。"
+
+#: selfdrive/ui/widgets/ssh_key.py:30
+msgid "ADD"
+msgstr "添加"
+
+#: system/ui/widgets/network.py:139
+#, python-format
+msgid "APN Setting"
+msgstr "APN 设置"
+
+#: selfdrive/ui/widgets/offroad_alerts.py:109
+#, python-format
+msgid "Acknowledge Excessive Actuation"
+msgstr "确认过度作动"
+
+#: system/ui/widgets/network.py:74 system/ui/widgets/network.py:95
+#, python-format
+msgid "Advanced"
+msgstr "高级"
+
+#: selfdrive/ui/layouts/settings/toggles.py:98
+#, python-format
+msgid "Aggressive"
+msgstr "激进"
+
+#: selfdrive/ui/layouts/onboarding.py:116
+#, python-format
+msgid "Agree"
+msgstr "同意"
+
+#: selfdrive/ui/layouts/settings/toggles.py:70
+#, python-format
+msgid "Always-On Driver Monitoring"
+msgstr "始终启用驾驶员监控"
+
+#: selfdrive/ui/layouts/settings/toggles.py:186
+#, python-format
+msgid ""
+"An alpha version of openpilot longitudinal control can be tested, along with "
+"Experimental mode, on non-release branches."
+msgstr "openpilot 纵向控制的 alpha 版本可在非发布分支搭配实验模式进行测试。"
+
+#: selfdrive/ui/layouts/settings/device.py:187
+#, python-format
+msgid "Are you sure you want to power off?"
+msgstr "确定要关机吗？"
+
+#: selfdrive/ui/layouts/settings/device.py:175
+#, python-format
+msgid "Are you sure you want to reboot?"
+msgstr "确定要重启吗？"
+
+#: selfdrive/ui/layouts/settings/device.py:119
+#, python-format
+msgid "Are you sure you want to reset calibration?"
+msgstr "确定要重置校准吗？"
+
+#: selfdrive/ui/layouts/settings/software.py:163
+#, python-format
+msgid "Are you sure you want to uninstall?"
+msgstr "确定要卸载吗？"
+
+#: system/ui/widgets/network.py:99 selfdrive/ui/layouts/onboarding.py:147
+#, python-format
+msgid "Back"
+msgstr "返回"
+
+#: selfdrive/ui/widgets/prime.py:38
+#, python-format
+msgid "Become a comma prime member at connect.comma.ai"
+msgstr "前往 connect.comma.ai 成为 comma prime 会员"
+
+#: selfdrive/ui/widgets/pairing_dialog.py:130
+#, python-format
+msgid "Bookmark connect.comma.ai to your home screen to use it like an app"
+msgstr "将 connect.comma.ai 添加到主屏幕，像应用一样使用"
+
+#: selfdrive/ui/layouts/settings/device.py:68
+#, python-format
+msgid "CHANGE"
+msgstr "更改"
+
+#: selfdrive/ui/layouts/settings/software.py:50
+#: selfdrive/ui/layouts/settings/software.py:107
+#: selfdrive/ui/layouts/settings/software.py:118
+#: selfdrive/ui/layouts/settings/software.py:147
+#, python-format
+msgid "CHECK"
+msgstr "检查"
+
+#: selfdrive/ui/widgets/exp_mode_button.py:50
+#, python-format
+msgid "CHILL MODE ON"
+msgstr "安稳模式已开启"
+
+#: system/ui/widgets/network.py:155 selfdrive/ui/layouts/sidebar.py:73
+#: selfdrive/ui/layouts/sidebar.py:134 selfdrive/ui/layouts/sidebar.py:136
+#: selfdrive/ui/layouts/sidebar.py:138
+#, python-format
+msgid "CONNECT"
+msgstr "CONNECT"
+
+#: system/ui/widgets/network.py:369
+#, python-format
+msgid "CONNECTING..."
+msgstr "CONNECTING..."
+
+#: system/ui/widgets/confirm_dialog.py:23 system/ui/widgets/option_dialog.py:35
+#: system/ui/widgets/keyboard.py:81 system/ui/widgets/network.py:318
+#, python-format
+msgid "Cancel"
+msgstr "取消"
+
+#: system/ui/widgets/network.py:134
+#, python-format
+msgid "Cellular Metered"
+msgstr "蜂窝计量"
+
+#: selfdrive/ui/layouts/settings/device.py:68
+#, python-format
+msgid "Change Language"
+msgstr "更改语言"
+
+#: selfdrive/ui/layouts/settings/toggles.py:125
+#, python-format
+msgid "Changing this setting will restart openpilot if the car is powered on."
+msgstr "若车辆通电，更改此设置将重启 openpilot。"
+
+#: selfdrive/ui/widgets/pairing_dialog.py:129
+#, python-format
+msgid "Click \"add new device\" and scan the QR code on the right"
+msgstr "点击“添加新设备”，扫描右侧二维码"
+
+#: selfdrive/ui/widgets/offroad_alerts.py:104
+#, python-format
+msgid "Close"
+msgstr "关闭"
+
+#: selfdrive/ui/layouts/settings/software.py:49
+#, python-format
+msgid "Current Version"
+msgstr "当前版本"
+
+#: selfdrive/ui/layouts/settings/software.py:110
+#, python-format
+msgid "DOWNLOAD"
+msgstr "下载"
+
+#: selfdrive/ui/layouts/onboarding.py:115
+#, python-format
+msgid "Decline"
+msgstr "拒绝"
+
+#: selfdrive/ui/layouts/onboarding.py:148
+#, python-format
+msgid "Decline, uninstall openpilot"
+msgstr "拒绝并卸载 openpilot"
+
+#: selfdrive/ui/layouts/settings/settings.py:67
+msgid "Developer"
+msgstr "开发者"
+
+#: selfdrive/ui/layouts/settings/settings.py:62
+msgid "Device"
+msgstr "设备"
+
+#: selfdrive/ui/layouts/settings/toggles.py:58
+#, python-format
+msgid "Disengage on Accelerator Pedal"
+msgstr "踩下加速踏板时脱离"
+
+#: selfdrive/ui/layouts/settings/device.py:184
+#, python-format
+msgid "Disengage to Power Off"
+msgstr "脱离以关机"
+
+#: selfdrive/ui/layouts/settings/device.py:172
+#, python-format
+msgid "Disengage to Reboot"
+msgstr "脱离以重启"
+
+#: selfdrive/ui/layouts/settings/device.py:103
+#, python-format
+msgid "Disengage to Reset Calibration"
+msgstr "脱离以重置校准"
+
+#: selfdrive/ui/layouts/settings/toggles.py:32
+msgid "Display speed in km/h instead of mph."
+msgstr "以 km/h 显示速度（非 mph）。"
+
+#: selfdrive/ui/layouts/settings/device.py:59
+#, python-format
+msgid "Dongle ID"
+msgstr "Dongle ID"
+
+#: selfdrive/ui/layouts/settings/software.py:50
+#, python-format
+msgid "Download"
+msgstr "下载"
+
+#: selfdrive/ui/layouts/settings/device.py:62
+#, python-format
+msgid "Driver Camera"
+msgstr "车内摄像头"
+
+#: selfdrive/ui/layouts/settings/toggles.py:96
+#, python-format
+msgid "Driving Personality"
+msgstr "驾驶风格"
+
+#: system/ui/widgets/network.py:123 system/ui/widgets/network.py:139
+#, python-format
+msgid "EDIT"
+msgstr "编辑"
+
+#: selfdrive/ui/layouts/sidebar.py:138
+msgid "ERROR"
+msgstr "错误"
+
+#: selfdrive/ui/layouts/sidebar.py:45
+msgid "ETH"
+msgstr "ETH"
+
+#: selfdrive/ui/widgets/exp_mode_button.py:50
+#, python-format
+msgid "EXPERIMENTAL MODE ON"
+msgstr "实验模式已开启"
+
+#: selfdrive/ui/layouts/settings/developer.py:166
+#: selfdrive/ui/layouts/settings/toggles.py:228
+#, python-format
+msgid "Enable"
+msgstr "启用"
+
+#: selfdrive/ui/layouts/settings/developer.py:39
+#, python-format
+msgid "Enable ADB"
+msgstr "启用 ADB"
+
+#: selfdrive/ui/layouts/settings/toggles.py:64
+#, python-format
+msgid "Enable Lane Departure Warnings"
+msgstr "启用车道偏离警示"
+
+#: system/ui/widgets/network.py:129
+#, python-format
+msgid "Enable Roaming"
+msgstr "启用漫游"
+
+#: selfdrive/ui/layouts/settings/developer.py:48
+#, python-format
+msgid "Enable SSH"
+msgstr "启用 SSH"
+
+#: system/ui/widgets/network.py:120
+#, python-format
+msgid "Enable Tethering"
+msgstr "启用网络共享"
+
+#: selfdrive/ui/layouts/settings/toggles.py:30
+msgid "Enable driver monitoring even when openpilot is not engaged."
+msgstr "即使未启用 openpilot 也启用驾驶员监控。"
+
+#: selfdrive/ui/layouts/settings/toggles.py:46
+#, python-format
+msgid "Enable openpilot"
+msgstr "启用 openpilot"
+
+#: selfdrive/ui/layouts/settings/toggles.py:189
+#, python-format
+msgid ""
+"Enable the openpilot longitudinal control (alpha) toggle to allow "
+"Experimental mode."
+msgstr "启用 openpilot 纵向控制（alpha）开关，以使用实验模式。"
+
+#: system/ui/widgets/network.py:204
+#, python-format
+msgid "Enter APN"
+msgstr "输入 APN"
+
+#: system/ui/widgets/network.py:241
+#, python-format
+msgid "Enter SSID"
+msgstr "输入 SSID"
+
+#: system/ui/widgets/network.py:254
+#, python-format
+msgid "Enter new tethering password"
+msgstr "输入新的网络共享密码"
+
+#: system/ui/widgets/network.py:237 system/ui/widgets/network.py:314
+#, python-format
+msgid "Enter password"
+msgstr "输入密码"
+
+#: selfdrive/ui/widgets/ssh_key.py:89
+#, python-format
+msgid "Enter your GitHub username"
+msgstr "输入您的 GitHub 用户名"
+
+#: system/ui/widgets/list_view.py:123 system/ui/widgets/list_view.py:160
+#, python-format
+msgid "Error"
+msgstr "错误"
+
+#: selfdrive/ui/layouts/settings/toggles.py:52
+#, python-format
+msgid "Experimental Mode"
+msgstr "实验模式"
+
+#: selfdrive/ui/layouts/settings/toggles.py:181
+#, python-format
+msgid ""
+"Experimental mode is currently unavailable on this car since the car's stock "
+"ACC is used for longitudinal control."
+msgstr "此车型当前无法使用实验模式，因为纵向控制使用的是原厂 ACC。"
+
+#: system/ui/widgets/network.py:373
+#, python-format
+msgid "FORGETTING..."
+msgstr "正在遗忘..."
+
+#: selfdrive/ui/widgets/setup.py:44
+#, python-format
+msgid "Finish Setup"
+msgstr "完成设置"
+
+#: selfdrive/ui/layouts/settings/settings.py:66
+msgid "Firehose"
+msgstr "Firehose"
+
+#: selfdrive/ui/layouts/settings/firehose.py:18
+msgid "Firehose Mode"
+msgstr "Firehose 模式"
+
+#: selfdrive/ui/layouts/settings/firehose.py:25
+msgid ""
+"For maximum effectiveness, bring your device inside and connect to a good "
+"USB-C adapter and Wi-Fi weekly.\n"
+"\n"
+"Firehose Mode can also work while you're driving if connected to a hotspot "
+"or unlimited SIM card.\n"
+"\n"
+"\n"
+"Frequently Asked Questions\n"
+"\n"
+"Does it matter how or where I drive? Nope, just drive as you normally "
+"would.\n"
+"\n"
+"Do all of my segments get pulled in Firehose Mode? No, we selectively pull a "
+"subset of your segments.\n"
+"\n"
+"What's a good USB-C adapter? Any fast phone or laptop charger should be "
+"fine.\n"
+"\n"
+"Does it matter which software I run? Yes, only upstream openpilot (and "
+"particular forks) are able to be used for training."
+msgstr ""
+"为达到最佳效果，请将设备带到室内，并每周连接优质 USB‑C 充电器与 Wi‑Fi。\n"
+"\n"
+"若连接热点或不限流量卡，行车中也可使用 Firehose 模式。\n"
+"\n"
+"\n"
+"常见问题\n"
+"\n"
+"我怎么开、在哪开有区别吗？没有，平常怎么开就怎么开。\n"
+"\n"
+"Firehose 模式会拉取我所有片段吗？不会，我们会选择性拉取部分片段。\n"
+"\n"
+"什么是好的 USB‑C 充电器？任何快速的手机或笔电充电器都可以。\n"
+"\n"
+"我跑什么软件有区别吗？有，只有上游 openpilot（及特定分支）可用于训练。"
+
+#: system/ui/widgets/network.py:318 system/ui/widgets/network.py:451
+#, python-format
+msgid "Forget"
+msgstr "忘记"
+
+#: selfdrive/ui/layouts/sidebar.py:71 selfdrive/ui/layouts/sidebar.py:125
+msgid "GOOD"
+msgstr "良好"
+
+#: selfdrive/ui/widgets/pairing_dialog.py:128
+#, python-format
+msgid "Go to https://connect.comma.ai on your phone"
+msgstr "在手机上前往 https://connect.comma.ai"
+
+#: selfdrive/ui/layouts/sidebar.py:129
+msgid "HIGH"
+msgstr "高"
+
+#: system/ui/widgets/network.py:155
+#, python-format
+msgid "Hidden Network"
+msgstr "隐藏网络"
+
+#: selfdrive/ui/layouts/settings/firehose.py:140
+#, python-format
+msgid "INACTIVE: connect to an unmetered network"
+msgstr "未启用：请连接不限流量网络"
+
+#: selfdrive/ui/layouts/settings/software.py:53
+#: selfdrive/ui/layouts/settings/software.py:136
+#, python-format
+msgid "INSTALL"
+msgstr "安装"
+
+#: system/ui/widgets/network.py:150
+#, python-format
+msgid "IP Address"
+msgstr "IP 地址"
+
+#: selfdrive/ui/layouts/settings/software.py:53
+#, python-format
+msgid "Install Update"
+msgstr "安装更新"
+
+#: selfdrive/ui/layouts/settings/developer.py:56
+#, python-format
+msgid "Joystick Debug Mode"
+msgstr "摇杆调试模式"
+
+#: selfdrive/ui/widgets/ssh_key.py:29
+msgid "LOADING"
+msgstr "加载中"
+
+#: selfdrive/ui/layouts/sidebar.py:48
+msgid "LTE"
+msgstr "LTE"
+
+#: selfdrive/ui/layouts/settings/developer.py:64
+#, python-format
+msgid "Longitudinal Maneuver Mode"
+msgstr "纵向操作模式"
+
+#: selfdrive/ui/onroad/hud_renderer.py:148
+#, python-format
+msgid "MAX"
+msgstr "最大"
+
+#: selfdrive/ui/widgets/setup.py:75
+#, python-format
+msgid ""
+"Maximize your training data uploads to improve openpilot's driving models."
+msgstr "最大化上传训练数据，以改进 openpilot 的驾驶模型。"
+
+#: selfdrive/ui/layouts/settings/device.py:59
+#: selfdrive/ui/layouts/settings/device.py:60
+#, python-format
+msgid "N/A"
+msgstr "无"
+
+#: selfdrive/ui/layouts/sidebar.py:142
+msgid "NO"
+msgstr "否"
+
+#: selfdrive/ui/layouts/settings/settings.py:63
+msgid "Network"
+msgstr "网络"
+
+#: selfdrive/ui/widgets/ssh_key.py:114
+#, python-format
+msgid "No SSH keys found"
+msgstr "未找到 SSH 密钥"
+
+#: selfdrive/ui/widgets/ssh_key.py:126
+#, python-format
+msgid "No SSH keys found for user '{}'"
+msgstr "未找到用户“{}”的 SSH 密钥"
+
+#: selfdrive/ui/widgets/offroad_alerts.py:320
+#, python-format
+msgid "No release notes available."
+msgstr "暂无发行说明。"
+
+#: selfdrive/ui/layouts/sidebar.py:73 selfdrive/ui/layouts/sidebar.py:134
+msgid "OFFLINE"
+msgstr "离线"
+
+#: system/ui/widgets/html_render.py:263 system/ui/widgets/confirm_dialog.py:93
+#: selfdrive/ui/layouts/sidebar.py:127
+#, python-format
+msgid "OK"
+msgstr "确定"
+
+#: selfdrive/ui/layouts/sidebar.py:72 selfdrive/ui/layouts/sidebar.py:136
+#: selfdrive/ui/layouts/sidebar.py:144
+msgid "ONLINE"
+msgstr "在线"
+
+#: selfdrive/ui/widgets/setup.py:20
+#, python-format
+msgid "Open"
+msgstr "打开"
+
+#: selfdrive/ui/layouts/settings/device.py:48
+#, python-format
+msgid "PAIR"
+msgstr "配对"
+
+#: selfdrive/ui/layouts/sidebar.py:142
+msgid "PANDA"
+msgstr "PANDA"
+
+#: selfdrive/ui/layouts/settings/device.py:62
+#, python-format
+msgid "PREVIEW"
+msgstr "预览"
+
+#: selfdrive/ui/widgets/prime.py:44
+#, python-format
+msgid "PRIME FEATURES:"
+msgstr "PRIME 功能："
+
+#: selfdrive/ui/layouts/settings/device.py:48
+#, python-format
+msgid "Pair Device"
+msgstr "配对设备"
+
+#: selfdrive/ui/widgets/setup.py:19
+#, python-format
+msgid "Pair device"
+msgstr "配对设备"
+
+#: selfdrive/ui/widgets/pairing_dialog.py:103
+#, python-format
+msgid "Pair your device to your comma account"
+msgstr "将设备配对到您的 comma 账号"
+
+#: selfdrive/ui/widgets/setup.py:48 selfdrive/ui/layouts/settings/device.py:24
+#, python-format
+msgid ""
+"Pair your device with comma connect (connect.comma.ai) and claim your comma "
+"prime offer."
+msgstr ""
+"将设备与 comma connect（connect.comma.ai）配对，领取您的 comma prime 优惠。"
+
+#: selfdrive/ui/widgets/setup.py:91
+#, python-format
+msgid "Please connect to Wi-Fi to complete initial pairing"
+msgstr "请连接 Wi‑Fi 以完成初始配对"
+
+#: selfdrive/ui/layouts/settings/device.py:55
+#: selfdrive/ui/layouts/settings/device.py:187
+#, python-format
+msgid "Power Off"
+msgstr "关机"
+
+#: system/ui/widgets/network.py:144
+#, python-format
+msgid "Prevent large data uploads when on a metered Wi-Fi connection"
+msgstr "在计量制 Wi‑Fi 连接时避免大量上传"
+
+#: system/ui/widgets/network.py:135
+#, python-format
+msgid "Prevent large data uploads when on a metered cellular connection"
+msgstr "在计量制蜂窝网络时避免大量上传"
+
+#: selfdrive/ui/layouts/settings/device.py:25
+msgid ""
+"Preview the driver facing camera to ensure that driver monitoring has good "
+"visibility. (vehicle must be off)"
+msgstr "预览车内摄像头以确保驾驶员监控视野良好。（车辆必须熄火）"
+
+#: selfdrive/ui/widgets/pairing_dialog.py:161
+#, python-format
+msgid "QR Code Error"
+msgstr "二维码错误"
+
+#: selfdrive/ui/widgets/ssh_key.py:31
+msgid "REMOVE"
+msgstr "移除"
+
+#: selfdrive/ui/layouts/settings/device.py:51
+#, python-format
+msgid "RESET"
+msgstr "重置"
+
+#: selfdrive/ui/layouts/settings/device.py:65
+#, python-format
+msgid "REVIEW"
+msgstr "查看"
+
+#: selfdrive/ui/layouts/settings/device.py:55
+#: selfdrive/ui/layouts/settings/device.py:175
+#, python-format
+msgid "Reboot"
+msgstr "重启"
+
+#: selfdrive/ui/onroad/alert_renderer.py:66
+#, python-format
+msgid "Reboot Device"
+msgstr "重启设备"
+
+#: selfdrive/ui/widgets/offroad_alerts.py:112
+#, python-format
+msgid "Reboot and Update"
+msgstr "重启并更新"
+
+#: selfdrive/ui/layouts/settings/toggles.py:27
+msgid ""
+"Receive alerts to steer back into the lane when your vehicle drifts over a "
+"detected lane line without a turn signal activated while driving over 31 mph "
+"(50 km/h)."
+msgstr ""
+"当车辆以超过 31 mph（50 km/h）行驶且未打转向灯越过检测到的车道线时，接收引导"
+"回车道的警报。"
+
+#: selfdrive/ui/layouts/settings/toggles.py:76
+#, python-format
+msgid "Record and Upload Driver Camera"
+msgstr "录制并上传车内摄像头"
+
+#: selfdrive/ui/layouts/settings/toggles.py:82
+#, python-format
+msgid "Record and Upload Microphone Audio"
+msgstr "录制并上传麦克风音频"
+
+#: selfdrive/ui/layouts/settings/toggles.py:33
+msgid ""
+"Record and store microphone audio while driving. The audio will be included "
+"in the dashcam video in comma connect."
+msgstr ""
+"行驶时录制并保存麦克风音频。音频将包含在 comma connect 的行车记录视频中。"
+
+#: selfdrive/ui/layouts/settings/device.py:67
+#, python-format
+msgid "Regulatory"
+msgstr "法规"
+
+#: selfdrive/ui/layouts/settings/toggles.py:98
+#, python-format
+msgid "Relaxed"
+msgstr "从容"
+
+#: selfdrive/ui/widgets/prime.py:47
+#, python-format
+msgid "Remote access"
+msgstr "远程访问"
+
+#: selfdrive/ui/widgets/prime.py:47
+#, python-format
+msgid "Remote snapshots"
+msgstr "远程快照"
+
+#: selfdrive/ui/widgets/ssh_key.py:123
+#, python-format
+msgid "Request timed out"
+msgstr "请求超时"
+
+#: selfdrive/ui/layouts/settings/device.py:119
+#, python-format
+msgid "Reset"
+msgstr "重置"
+
+#: selfdrive/ui/layouts/settings/device.py:51
+#, python-format
+msgid "Reset Calibration"
+msgstr "重置校准"
+
+#: selfdrive/ui/layouts/settings/device.py:65
+#, python-format
+msgid "Review Training Guide"
+msgstr "查看训练指南"
+
+#: selfdrive/ui/layouts/settings/device.py:27
+msgid "Review the rules, features, and limitations of openpilot"
+msgstr "查看 openpilot 的规则、功能与限制"
+
+#: selfdrive/ui/layouts/settings/software.py:61
+#, python-format
+msgid "SELECT"
+msgstr "选择"
+
+#: selfdrive/ui/layouts/settings/developer.py:53
+#, python-format
+msgid "SSH Keys"
+msgstr "SSH 密钥"
+
+#: system/ui/widgets/network.py:310
+#, python-format
+msgid "Scanning Wi-Fi networks..."
+msgstr "正在扫描 Wi‑Fi 网络…"
+
+#: system/ui/widgets/option_dialog.py:36
+#, python-format
+msgid "Select"
+msgstr "选择"
+
+#: selfdrive/ui/layouts/settings/software.py:183
+#, python-format
+msgid "Select a branch"
+msgstr "选择分支"
+
+#: selfdrive/ui/layouts/settings/device.py:91
+#, python-format
+msgid "Select a language"
+msgstr "选择语言"
+
+#: selfdrive/ui/layouts/settings/device.py:60
+#, python-format
+msgid "Serial"
+msgstr "序列号"
+
+#: selfdrive/ui/widgets/offroad_alerts.py:106
+#, python-format
+msgid "Snooze Update"
+msgstr "延后更新"
+
+#: selfdrive/ui/layouts/settings/settings.py:65
+msgid "Software"
+msgstr "软件"
+
+#: selfdrive/ui/layouts/settings/toggles.py:98
+#, python-format
+msgid "Standard"
+msgstr "标准"
+
+#: selfdrive/ui/layouts/settings/toggles.py:22
+msgid ""
+"Standard is recommended. In aggressive mode, openpilot will follow lead cars "
+"closer and be more aggressive with the gas and brake. In relaxed mode "
+"openpilot will stay further away from lead cars. On supported cars, you can "
+"cycle through these personalities with your steering wheel distance button."
+msgstr ""
+"建议使用标准模式。激进模式下，openpilot 会更贴近前车，油门与刹车更为激进；从"
+"容模式下，会与前车保持更远距离。在支持的车型上，可用方向盘距离按钮切换这些风"
+"格。"
+
+#: selfdrive/ui/onroad/alert_renderer.py:59
+#: selfdrive/ui/onroad/alert_renderer.py:65
+#, python-format
+msgid "System Unresponsive"
+msgstr "系统无响应"
+
+#: selfdrive/ui/onroad/alert_renderer.py:58
+#, python-format
+msgid "TAKE CONTROL IMMEDIATELY"
+msgstr "请立即接管控制"
+
+#: selfdrive/ui/layouts/sidebar.py:71 selfdrive/ui/layouts/sidebar.py:125
+#: selfdrive/ui/layouts/sidebar.py:127 selfdrive/ui/layouts/sidebar.py:129
+msgid "TEMP"
+msgstr "温度"
+
+#: selfdrive/ui/layouts/settings/software.py:61
+#, python-format
+msgid "Target Branch"
+msgstr "目标分支"
+
+#: system/ui/widgets/network.py:124
+#, python-format
+msgid "Tethering Password"
+msgstr "网络共享密码"
+
+#: selfdrive/ui/layouts/settings/settings.py:64
+msgid "Toggles"
+msgstr "切换"
+
+#: selfdrive/ui/layouts/settings/software.py:72
+#, python-format
+msgid "UNINSTALL"
+msgstr "卸载"
+
+#: selfdrive/ui/layouts/home.py:155
+#, python-format
+msgid "UPDATE"
+msgstr "更新"
+
+#: selfdrive/ui/layouts/settings/software.py:72
+#: selfdrive/ui/layouts/settings/software.py:163
+#, python-format
+msgid "Uninstall"
+msgstr "卸载"
+
+#: selfdrive/ui/layouts/sidebar.py:117
+msgid "Unknown"
+msgstr "未知"
+
+#: selfdrive/ui/layouts/settings/software.py:48
+#, python-format
+msgid "Updates are only downloaded while the car is off."
+msgstr "仅在车辆熄火时下载更新。"
+
+#: selfdrive/ui/widgets/prime.py:33
+#, python-format
+msgid "Upgrade Now"
+msgstr "立即升级"
+
+#: selfdrive/ui/layouts/settings/toggles.py:31
+msgid ""
+"Upload data from the driver facing camera and help improve the driver "
+"monitoring algorithm."
+msgstr "上传车内摄像头数据，帮助改进驾驶员监控算法。"
+
+#: selfdrive/ui/layouts/settings/toggles.py:88
+#, python-format
+msgid "Use Metric System"
+msgstr "使用公制"
+
+#: selfdrive/ui/layouts/settings/toggles.py:17
+msgid ""
+"Use the openpilot system for adaptive cruise control and lane keep driver "
+"assistance. Your attention is required at all times to use this feature."
+msgstr ""
+"使用 openpilot 进行自适应巡航与车道保持辅助。使用此功能时，您必须始终保持专"
+"注。"
+
+#: selfdrive/ui/layouts/sidebar.py:72 selfdrive/ui/layouts/sidebar.py:144
+msgid "VEHICLE"
+msgstr "车辆"
+
+#: selfdrive/ui/layouts/settings/device.py:67
+#, python-format
+msgid "VIEW"
+msgstr "查看"
+
+#: selfdrive/ui/onroad/alert_renderer.py:52
+#, python-format
+msgid "Waiting to start"
+msgstr "等待开始"
+
+#: selfdrive/ui/layouts/settings/developer.py:19
+msgid ""
+"Warning: This grants SSH access to all public keys in your GitHub settings. "
+"Never enter a GitHub username other than your own. A comma employee will "
+"NEVER ask you to add their GitHub username."
+msgstr ""
+"警告：这将授予对您 GitHub 设置中所有公钥的 SSH 访问权限。请勿输入非您本人的 "
+"GitHub 用户名。comma 员工绝不会要求您添加他们的用户名。"
+
+#: selfdrive/ui/layouts/onboarding.py:111
+#, python-format
+msgid "Welcome to openpilot"
+msgstr "欢迎使用 openpilot"
+
+#: selfdrive/ui/layouts/settings/toggles.py:20
+msgid "When enabled, pressing the accelerator pedal will disengage openpilot."
+msgstr "启用后，踩下加速踏板将会脱离 openpilot。"
+
+#: selfdrive/ui/layouts/sidebar.py:44
+msgid "Wi-Fi"
+msgstr "Wi‑Fi"
+
+#: system/ui/widgets/network.py:144
+#, python-format
+msgid "Wi-Fi Network Metered"
+msgstr "Wi‑Fi 计量网络"
+
+#: system/ui/widgets/network.py:314
+#, python-format
+msgid "Wrong password"
+msgstr "密码错误"
+
+#: selfdrive/ui/layouts/onboarding.py:145
+#, python-format
+msgid "You must accept the Terms and Conditions in order to use openpilot."
+msgstr "您必须接受条款与条件才能使用 openpilot。"
+
+#: selfdrive/ui/layouts/onboarding.py:112
+#, python-format
+msgid ""
+"You must accept the Terms and Conditions to use openpilot. Read the latest "
+"terms at https://comma.ai/terms before continuing."
+msgstr ""
+"您必须接受条款与条件才能使用 openpilot。继续前请阅读 https://comma.ai/terms "
+"上的最新条款。"
+
+#: selfdrive/ui/onroad/driver_camera_dialog.py:34
+#, python-format
+msgid "camera starting"
+msgstr "相机启动中"
+
+#: selfdrive/ui/widgets/prime.py:63
+#, python-format
+msgid "comma prime"
+msgstr "comma prime"
+
+#: system/ui/widgets/network.py:142
+#, python-format
+msgid "default"
+msgstr "默认"
+
+#: selfdrive/ui/layouts/settings/device.py:133
+#, python-format
+msgid "down"
+msgstr "下"
+
+#: selfdrive/ui/layouts/settings/software.py:106
+#, python-format
+msgid "failed to check for update"
+msgstr "检查更新失败"
+
+#: selfdrive/ui/onroad/hud_renderer.py:177
+#, python-format
+msgid "km/h"
+msgstr "公里/时"
+
+#: system/ui/widgets/network.py:204
+#, python-format
+msgid "leave blank for automatic configuration"
+msgstr "留空以自动配置"
+
+#: selfdrive/ui/layouts/settings/device.py:134
+#, python-format
+msgid "left"
+msgstr "左"
+
+#: system/ui/widgets/network.py:142
+#, python-format
+msgid "metered"
+msgstr "计量"
+
+#: selfdrive/ui/onroad/hud_renderer.py:177
+#, python-format
+msgid "mph"
+msgstr "英里/时"
+
+#: selfdrive/ui/layouts/settings/software.py:20
+#, python-format
+msgid "never"
+msgstr "从不"
+
+#: selfdrive/ui/layouts/settings/software.py:31
+#, python-format
+msgid "now"
+msgstr "现在"
+
+#: selfdrive/ui/layouts/settings/developer.py:71
+#, python-format
+msgid "openpilot Longitudinal Control (Alpha)"
+msgstr "openpilot 纵向控制（Alpha）"
+
+#: selfdrive/ui/onroad/alert_renderer.py:51
+#, python-format
+msgid "openpilot Unavailable"
+msgstr "openpilot 无法使用"
+
+#: selfdrive/ui/layouts/settings/toggles.py:158
+#, python-format
+msgid ""
+"openpilot defaults to driving in chill mode. Experimental mode enables alpha-"
+"level features that aren't ready for chill mode. Experimental features are "
+"listed below:<br><h4>End-to-End Longitudinal Control</h4><br>Let the driving "
+"model control the gas and brakes. openpilot will drive as it thinks a human "
+"would, including stopping for red lights and stop signs. Since the driving "
+"model decides the speed to drive, the set speed will only act as an upper "
+"bound. This is an alpha quality feature; mistakes should be expected."
+"<br><h4>New Driving Visualization</h4><br>The driving visualization will "
+"transition to the road-facing wide-angle camera at low speeds to better show "
+"some turns. The Experimental mode logo will also be shown in the top right "
+"corner."
+msgstr ""
+"openpilot 默认以安稳模式行驶。实验模式会启用尚未准备好用于安稳模式的 Alpha 级"
+"功能。实验功能如下：<br><h4>端到端纵向控制</h4><br>让驾驶模型控制油门与刹车。"
+"openpilot 会像人类一样驾驶，包括在红灯与停牌前停车。由于驾驶模型决定行驶速"
+"度，设定速度仅作为上限。这是 Alpha 质量功能；预期会有错误。<br><h4>全新驾驶可"
+"视化</h4><br>在低速时，驾驶可视化将切换至面向道路的广角摄像头以更好显示部分转"
+"弯。右上角也会显示实验模式图标。"
+
+#: selfdrive/ui/layouts/settings/device.py:165
+#, python-format
+msgid ""
+"openpilot is continuously calibrating, resetting is rarely required. "
+"Resetting calibration will restart openpilot if the car is powered on."
+msgstr ""
+"openpilot 持续进行校准，通常无需重置。若车辆通电，重置校准将会重启 "
+"openpilot。"
+
+#: selfdrive/ui/layouts/settings/firehose.py:20
+msgid ""
+"openpilot learns to drive by watching humans, like you, drive.\n"
+"\n"
+"Firehose Mode allows you to maximize your training data uploads to improve "
+"openpilot's driving models. More data means bigger models, which means "
+"better Experimental Mode."
+msgstr ""
+"openpilot 通过观察人类（例如您）的驾驶来学习。\n"
+"\n"
+"Firehose 模式可让您最大化上传训练数据，以改进 openpilot 的驾驶模型。更多数据"
+"意味着更大的模型，也意味着更好的实验模式。"
+
+#: selfdrive/ui/layouts/settings/toggles.py:183
+#, python-format
+msgid "openpilot longitudinal control may come in a future update."
+msgstr "openpilot 纵向控制可能会在未来更新中提供。"
+
+#: selfdrive/ui/layouts/settings/device.py:26
+msgid ""
+"openpilot requires the device to be mounted within 4° left or right and "
+"within 5° up or 9° down."
+msgstr "openpilot 要求设备安装在左右 4°、上 5° 或下 9° 以内。"
+
+#: selfdrive/ui/layouts/settings/device.py:134
+#, python-format
+msgid "right"
+msgstr "右"
+
+#: system/ui/widgets/network.py:142
+#, python-format
+msgid "unmetered"
+msgstr "不限流量"
+
+#: selfdrive/ui/layouts/settings/device.py:133
+#, python-format
+msgid "up"
+msgstr "上"
+
+#: selfdrive/ui/layouts/settings/software.py:117
+#, python-format
+msgid "up to date, last checked never"
+msgstr "已是最新，最后检查：从未"
+
+#: selfdrive/ui/layouts/settings/software.py:115
+#, python-format
+msgid "up to date, last checked {}"
+msgstr "已是最新，最后检查：{}"
+
+#: selfdrive/ui/layouts/settings/software.py:109
+#, python-format
+msgid "update available"
+msgstr "有可用更新"
+
+#: selfdrive/ui/layouts/home.py:169
+#, python-format
+msgid "{} ALERT"
+msgid_plural "{} ALERTS"
+msgstr[0] "{} 条警报"
+msgstr[1] "{} 条警报"
+
+#: selfdrive/ui/layouts/settings/software.py:40
+#, python-format
+msgid "{} day ago"
+msgid_plural "{} days ago"
+msgstr[0] "{} 天前"
+msgstr[1] "{} 天前"
+
+#: selfdrive/ui/layouts/settings/software.py:37
+#, python-format
+msgid "{} hour ago"
+msgid_plural "{} hours ago"
+msgstr[0] "{} 小时前"
+msgstr[1] "{} 小时前"
+
+#: selfdrive/ui/layouts/settings/software.py:34
+#, python-format
+msgid "{} minute ago"
+msgid_plural "{} minutes ago"
+msgstr[0] "{} 分钟前"
+msgstr[1] "{} 分钟前"
+
+#: selfdrive/ui/layouts/settings/firehose.py:111
+#, python-format
+msgid "{} segment of your driving is in the training dataset so far."
+msgid_plural "{} segments of your driving is in the training dataset so far."
+msgstr[0] "目前已有 {} 个您的驾驶片段被纳入训练数据集。"
+msgstr[1] "目前已有 {} 个您的驾驶片段被纳入训练数据集。"
+
+#: selfdrive/ui/widgets/prime.py:62
+#, python-format
+msgid "✓ SUBSCRIBED"
+msgstr "✓ 已订阅"
+
+#: selfdrive/ui/widgets/setup.py:22
+#, python-format
+msgid "🔥 Firehose Mode 🔥"
+msgstr "🔥 Firehose 模式 🔥"
+
+#: selfdrive/ui/onroad/starpilot/navigation_card.py
+msgid "Then"
+msgstr "然后"
+
+# ===== StarPilot 补充翻译 =====
+
+msgid "1 min"
+msgstr "1 分钟"
+
+msgid "A backup with this name already exists."
+msgstr "已存在同名备份。"
+
+msgid "A model download is already in progress."
+msgstr "模型下载已在进行中。"
+
+msgid "A toggle backup with this name already exists."
+msgstr "已存在同名开关备份。"
+
+msgid "ALL TIME"
+msgstr "累计"
+
+msgid "AVAILABLE"
+msgstr "可用"
+
+msgid "Above Speed"
+msgstr "高于设定速度"
+
+msgid "Active"
+msgstr "已激活"
+
+msgid "Adaptive Speed Controls"
+msgstr "自适应速度控制"
+
+msgid "Add"
+msgstr "添加"
+
+msgid "Add favorites in Navigation"
+msgstr "在导航中添加收藏"
+
+msgid "Add to Blacklist"
+msgstr "加入黑名单"
+
+msgid "Adjust actuator delay, EV/Truck tuning, and launch/stop speeds/rates."
+msgstr "调整执行器延迟、电动车/卡车调校，以及起步/停止速度与加速度。"
+
+msgid "Adjust actuator delay, steer ratio, Kp, friction, and neural network feedforward controllers."
+msgstr "调整执行器延迟、转向比、Kp、摩擦以及神经网络前馈控制器。"
+
+msgid "Adjust radar plots, lead vehicle info, and stop sign metrics."
+msgstr "调整雷达图、前车信息和停车标志指标。"
+
+msgid "Advanced Actuators"
+msgstr "高级执行器"
+
+msgid "Advanced Lateral Tuning"
+msgstr "高级横向调校"
+
+msgid "Advanced Metrics"
+msgstr "高级设置"
+
+msgid "Alerts"
+msgstr "警报"
+
+msgid "All Available"
+msgstr "全部可用"
+
+msgid "All Models On Device"
+msgstr "设备上的全部模型"
+
+msgid "All options in this panel are hidden or unavailable."
+msgstr "此面板中的所有选项均已隐藏或不可用。"
+
+msgid "Almost done"
+msgstr "即将完成"
+
+msgid "Applying update..."
+msgstr "正在应用更新…"
+
+msgid "Are you sure you want to reset driver monitoring calibration?"
+msgstr "确定要重置驾驶员监控校准吗？"
+
+msgid "Are you sure you want to unpair from Galaxy?"
+msgstr "确定要解除与 Galaxy 的配对吗？"
+
+msgid "Auto"
+msgstr "自动"
+
+msgid "Auto Lock Doors"
+msgstr "自动锁车门"
+
+msgid "Auto Unlock Doors"
+msgstr "自动解锁车门"
+
+msgid "Auto Update Schedule"
+msgstr "自动更新计划"
+
+msgid "Automatically Install Updates"
+msgstr "自动安装更新"
+
+msgid "Automatically install updates when parked with an active internet connection."
+msgstr "停车且网络可用时自动安装更新。"
+
+msgid "Available for Download"
+msgstr "可下载"
+
+msgid "Available to Download"
+msgstr "可下载"
+
+msgid "Backup creation started."
+msgstr "备份创建已开始。"
+
+msgid "Backup deleted."
+msgstr "备份已删除。"
+
+msgid "Backups: {}  •  Snapshots: {}"
+msgstr "备份：{}  •  快照：{}"
+
+msgid "Below Speed"
+msgstr "低于设定速度"
+
+msgid "Best week"
+msgstr "最佳一周"
+
+msgid "Blacklist"
+msgstr "黑名单"
+
+msgid "Bluetooth"
+msgstr "蓝牙"
+
+msgid "Bluetooth audio test"
+msgstr "蓝牙音频测试"
+
+msgid "Bluetooth audio test failed"
+msgstr "蓝牙音频测试失败"
+
+msgid "Bluetooth device"
+msgstr "蓝牙设备"
+
+msgid "Bluetooth is not available on this device."
+msgstr "此设备不支持蓝牙。"
+
+msgid "Bluetooth is off."
+msgstr "蓝牙已关闭。"
+
+msgid "Boot Logo"
+msgstr "开机标志"
+
+msgid "Built-in"
+msgstr "内置"
+
+msgid "CAN Ignition Only"
+msgstr "仅 CAN 点火"
+
+msgid "CAN Ignition Only requires a Panda firmware update."
+msgstr "\"仅 CAN 点火\"需要更新 Panda 固件。"
+
+msgid "CANCEL"
+msgstr "取消"
+
+msgid "CONDITIONAL CHILL"
+msgstr "条件 Chill 模式"
+
+msgid "CONDITIONAL EXPERIMENTAL"
+msgstr "条件实验模式"
+
+msgid "Calculating..."
+msgstr "计算中..."
+
+msgid "Camera & System Startup"
+msgstr "摄像头与系统启动"
+
+msgid "Camera View"
+msgstr "摄像头视角"
+
+msgid "Cancel Download"
+msgstr "取消下载"
+
+msgid "Cancel the current map download?"
+msgstr "取消当前地图下载？"
+
+msgid "Cancelling Download"
+msgstr "正在取消下载"
+
+msgid "Cancelling..."
+msgstr "正在取消…"
+
+msgid "Cannot delete model files while a download is in progress."
+msgstr "下载进行中时无法删除模型文件。"
+
+msgid "Cannot delete model files while driving."
+msgstr "行驶中无法删除模型文件。"
+
+msgid "Cannot download models while driving."
+msgstr "行驶中无法下载模型。"
+
+msgid "Cannot refresh the model catalog during an active download."
+msgstr "下载进行中无法刷新模型目录。"
+
+msgid "Cannot refresh the model catalog while driving."
+msgstr "行驶中无法刷新模型目录。"
+
+msgid "Cannot update while driving"
+msgstr "行驶中无法更新"
+
+msgid "Checking Offline Maps"
+msgstr "正在检查离线地图"
+
+msgid "Chill"
+msgstr "Chill 模式"
+
+msgid "Choose a short name"
+msgstr "选择一个简短名称"
+
+msgid "Clean-drive streak"
+msgstr "无警报连续驾驶"
+
+msgid "Clear Driving Data"
+msgstr "清除驾驶数据"
+
+msgid "Clear Error Logs"
+msgstr "清除错误日志"
+
+msgid "Comma"
+msgstr "Comma"
+
+msgid "Community Picks"
+msgstr "社区精选"
+
+msgid "Complete"
+msgstr "完成"
+
+msgid "Conditional Chill"
+msgstr "条件 Chill 模式"
+
+msgid "Conditional Drive Mode"
+msgstr "条件驾驶模式"
+
+msgid "Conditional Experimental"
+msgstr "条件实验模式"
+
+msgid "Configure Always On Lateral (AOL), pause speed thresholds, and turn signal behaviors."
+msgstr "配置常开横向控制（AOL）、暂停速度阈值和转向灯行为。"
+
+msgid "Configure Curve Speed Controller and Conditional Experimental Mode triggers."
+msgstr "配置弯道速度控制器和条件实验模式的触发条件。"
+
+msgid "Configure acceleration profiles, lane changes, and route speed control."
+msgstr "配置加速度曲线、变道和路线速度控制。"
+
+msgid "Configure automated switching between Experimental and Chill Modes based on set conditions."
+msgstr "配置根据设定条件在实验模式与 Chill 模式之间自动切换。"
+
+msgid "Configure automatic lane changes, speed/width thresholds, and smoothing parameters."
+msgstr "配置自动变道、速度/宽度阈值和平滑参数。"
+
+msgid "Configure compass, dynamic pedals, signals, and screen borders."
+msgstr "配置指南针、动态踏板、信号灯和屏幕边框。"
+
+msgid "Configure cruise intervals, standstill behaviors, gear mapping, and weather presets."
+msgstr "配置巡航间隔、静止行为、档位映射和天气预设。"
+
+msgid "Configure road names, Vienna signs, and offroad routes."
+msgstr "配置道路名称、维也纳标志和越野路线。"
+
+msgid "Configure speed control on curves and reset collected calibration data."
+msgstr "配置弯道速度控制并重置已采集的标定数据。"
+
+msgid "Connect to the internet"
+msgstr "连接互联网"
+
+msgid "Connected"
+msgstr "已连接"
+
+msgid "Consecutive drive days"
+msgstr "连续驾驶天数"
+
+msgid "Could not determine that location. Try another result."
+msgstr "无法确定该位置，请尝试其他结果。"
+
+msgid "Create Backup"
+msgstr "创建备份"
+
+msgid "Current"
+msgstr "当前"
+
+msgid "Curve Speed Controller"
+msgstr "弯道速度控制器"
+
+msgid "Curves"
+msgstr "弯道"
+
+msgid "Curves w/ Lead"
+msgstr "有前车的弯道"
+
+msgid "Custom Series"
+msgstr "自定义系列"
+
+msgid "Customize dynamic lane paths, road edges, and colors."
+msgstr "自定义动态车道线、道路边缘和颜色。"
+
+msgid "Customize follow distance and jerk/response metrics for each personality profile."
+msgstr "为每种驾驶风格自定义跟车距离和加加速度/响应指标。"
+
+msgid "DELETE"
+msgstr "删除"
+
+msgid "DISTANCE THIS WEEK"
+msgstr "本周里程"
+
+msgid "Date (Newest)"
+msgstr "日期（最新）"
+
+msgid "Date (Oldest)"
+msgstr "日期（最早）"
+
+msgid "Debug Mode"
+msgstr "调试模式"
+
+msgid "Default"
+msgstr "默认"
+
+msgid "Delete"
+msgstr "删除"
+
+msgid "Delete \"{name}\"?"
+msgstr "删除\"{name}\"？"
+
+msgid "Delete Backup"
+msgstr "删除备份"
+
+msgid "Delete Named Snapshot"
+msgstr "删除命名快照"
+
+msgid "Delete Toggle Backup"
+msgstr "删除开关备份"
+
+msgid "Delete all downloaded offline map data?"
+msgstr "删除所有已下载的离线地图数据？"
+
+msgid "Delete all driving data and footage?"
+msgstr "删除所有行车数据与影像？"
+
+msgid "Delete all error logs?"
+msgstr "删除所有错误日志？"
+
+msgid "Delete backup '{}'?"
+msgstr "删除备份\"{}\"？"
+
+msgid "Delete toggle backup '{}'?"
+msgstr "删除开关备份\"{}\"？"
+
+msgid "Destination"
+msgstr "目的地"
+
+msgid "Detect and display speed-limit signs without enabling Speed Limit Controller."
+msgstr "检测并显示限速标志，但不启用限速控制器。"
+
+msgid "Disable"
+msgstr "禁用"
+
+msgid "Disable Logging"
+msgstr "禁用日志记录"
+
+msgid "Disable Onroad Uploads"
+msgstr "禁用行驶中上传"
+
+msgid "Disable Uploads"
+msgstr "禁用上传"
+
+msgid "Disable openpilot Long"
+msgstr "禁用 openpilot 纵向控制"
+
+msgid "Disable openpilot longitudinal control?"
+msgstr "禁用 openpilot 纵向控制？"
+
+msgid "Disabled"
+msgstr "已禁用"
+
+msgid "Disconnect"
+msgstr "断开连接"
+
+msgid "Discord Username"
+msgstr "Discord 用户名"
+
+msgid "Disengage to Reset Driver Monitoring"
+msgstr "解除接管以重置驾驶员监控"
+
+msgid "Display"
+msgstr "显示"
+
+msgid "Do you want to perform a full factory reset? All saved assets and settings will be permanently deleted!"
+msgstr "是否执行完整恢复出厂设置？所有已保存的资源与设置都将被永久删除！"
+
+msgid "Don't trigger on turn signal if lines are clear."
+msgstr "车道线清晰时不因转向灯触发。"
+
+msgid "Done"
+msgstr "完成"
+
+msgid "Download Offline Maps"
+msgstr "下载离线地图"
+
+msgid "Download Readiness"
+msgstr "下载就绪状态"
+
+msgid "Download in progress"
+msgstr "下载进行中"
+
+msgid "Download {name}s to see them here."
+msgstr "下载{name}后可在此查看。"
+
+msgid "Downloaded"
+msgstr "已下载"
+
+msgid "Downloaded on device"
+msgstr "已在设备上"
+
+msgid "Downloading"
+msgstr "下载中"
+
+msgid "Downloading Maps"
+msgstr "正在下载地图"
+
+msgid "Downloading model files..."
+msgstr "正在下载模型文件…"
+
+msgid "Downloads Pause Onroad"
+msgstr "行驶中暂停下载"
+
+msgid "Downloads and removals pause while driving."
+msgstr "行驶时下载和删除会暂停。"
+
+msgid "Drive-cycle requested for immediate apply."
+msgstr "已请求在驾驶循环中立即应用。"
+
+msgid "Driving Personalities"
+msgstr "驾驶风格"
+
+msgid "Driving Widgets & HUD"
+msgstr "驾驶小组件与 HUD"
+
+msgid "Driving data deletion started."
+msgstr "驾驶数据删除已开始。"
+
+msgid "EV Remote Climate"
+msgstr "电动车远程空调"
+
+msgid "EV Remote Climate requires a Panda firmware update."
+msgstr "\"电动车远程空调\"需要更新 Panda 固件。"
+
+msgid "Enable the openpilot longitudinal control (alpha) toggle to allow Experimental mode."
+msgstr "启用 openpilot 纵向控制（alpha）开关以允许实验模式。"
+
+msgid "Enable {} to configure settings."
+msgstr "启用{}以配置设置。"
+
+msgid "Enabled"
+msgstr "已启用"
+
+msgid "Enter a place or address"
+msgstr "输入地点或地址"
+
+msgid "Enter at least 3 characters to search."
+msgstr "输入至少 3 个字符以搜索。"
+
+msgid "Enter {} for {}"
+msgstr "为{}输入{}"
+
+msgid "Error Log"
+msgstr "错误日志"
+
+msgid "Error logs deleted."
+msgstr "错误日志已删除。"
+
+msgid "Experimental"
+msgstr "实验模式"
+
+msgid "Experimental mode is currently unavailable on this car since the car's stock ACC is used for longitudinal control."
+msgstr "由于此车辆使用自带的ACC纵向控制，当前无法使用试验模式。"
+
+msgid "FAST UPDATE"
+msgstr "快速更新"
+
+msgid "Factory Reset"
+msgstr "恢复出厂设置"
+
+msgid "Failed to pair with Galaxy."
+msgstr "与 Galaxy 配对失败。"
+
+msgid "Failed: {}"
+msgstr "失败：{}"
+
+msgid "Fast Update"
+msgstr "快速更新"
+
+msgid "Fast update will replace the current installation without backup and reboot the device. Continue?"
+msgstr "快速更新将替换当前安装且不做备份，并重启设备。是否继续？"
+
+msgid "Favorite"
+msgstr "收藏"
+
+msgid "Favorite destination"
+msgstr "收藏的目的地"
+
+msgid "Favorite destinations"
+msgstr "收藏的目的地"
+
+msgid "Favorites"
+msgstr "收藏"
+
+msgid "Features"
+msgstr "功能"
+
+msgid "Fetching latest commit..."
+msgstr "正在获取最新提交…"
+
+msgid "Flash"
+msgstr "刷写"
+
+msgid "Flash Panda"
+msgstr "刷写 Panda"
+
+msgid "Flash Panda firmware?"
+msgstr "刷写 Panda 固件？"
+
+msgid "For"
+msgstr "用于"
+
+msgid "Forget Bluetooth device \"{}\"?"
+msgstr "忘记蓝牙设备\"{}\"？"
+
+msgid "GPU required"
+msgstr "需要 GPU"
+
+msgid "Galaxy"
+msgstr "Galaxy"
+
+msgid "Galaxy is not paired yet."
+msgstr "Galaxy 尚未配对。"
+
+msgid "High Bitrate Recording"
+msgstr "高码率录制"
+
+msgid "Highest streak"
+msgstr "最长连续记录"
+
+msgid "Hold after ACC times out at a stop and resume when traffic moves."
+msgstr "停车时 ACC 超时后保持，车流移动时恢复。"
+
+msgid "Home"
+msgstr "家"
+
+msgid "In Pool"
+msgstr "在池中"
+
+msgid "Incomplete"
+msgstr "未完成"
+
+msgid "Instant"
+msgstr "即时"
+
+msgid "Issue reported. Thank you!"
+msgstr "问题已上报，谢谢！"
+
+msgid "Jeep Brake Hold"
+msgstr "Jeep 制动保持"
+
+msgid "Keep manual Chill override through reboots."
+msgstr "重启后保留手动 Chill 覆盖。"
+
+msgid "Keep manual Experimental override through reboots."
+msgstr "重启后保留手动实验模式覆盖。"
+
+msgid "Konik"
+msgstr "Konik"
+
+msgid "LIMIT"
+msgstr "限速"
+
+msgid "LOCKED"
+msgstr "已锁定"
+
+msgid "Lane Change Smoothing"
+msgstr "变道平顺度"
+
+msgid "Lane Changes"
+msgstr "变道"
+
+msgid "Last Updated"
+msgstr "最后更新"
+
+msgid "Launch Assist"
+msgstr "起步辅助"
+
+msgid "Lead Ahead"
+msgstr "前方车辆"
+
+msgid "Lead Detection Threshold"
+msgstr "前车检测阈值"
+
+msgid "Limited while driving"
+msgstr "行驶中受限"
+
+msgid "Load"
+msgstr "载入"
+
+msgid "Load Saved Settings"
+msgstr "载入已保存设置"
+
+msgid "Load {} and overwrite your current settings?"
+msgstr "载入{}并覆盖当前设置？"
+
+msgid "Loaded {} settings from {}."
+msgstr "已从{}载入{}项设置。"
+
+msgid "Lock Doors Timer"
+msgstr "锁车门延时"
+
+msgid "Longest drive"
+msgstr "最长单次驾驶"
+
+msgid "Longest undistracted drive"
+msgstr "最长无分心驾驶"
+
+msgid "Longitudinal Tuning"
+msgstr "纵向调校"
+
+msgid "Looking up destinations"
+msgstr "正在查找目的地"
+
+msgid "Low Voltage Shutdown"
+msgstr "低电压关机"
+
+msgid "MANAGE"
+msgstr "管理"
+
+msgid "Maintenance"
+msgstr "维护"
+
+msgid "Manage"
+msgstr "管理"
+
+msgid "Manage Blacklist"
+msgstr "管理黑名单"
+
+msgid "Manage auto speed matching, confirmation, offsets, and source priority."
+msgstr "管理自动速度匹配、确认、偏移和来源优先级。"
+
+msgid "Manage driver monitoring cameras, boot logos, and startup sounds."
+msgstr "管理驾驶员监控摄像头、开机 logo 和启动音效。"
+
+msgid "Manual Parking Brake SNG"
+msgstr "手动驻车制动 SNG"
+
+msgid "Map Packages & Regions"
+msgstr "地图包与区域"
+
+msgid "Mapbox search is not configured on this device."
+msgstr "此设备未配置 Mapbox 搜索。"
+
+msgid "Master Package - Full country map data"
+msgstr "主包 - 完整国家地图数据"
+
+msgid "Model & Path Visualization"
+msgstr "模型与路径可视化"
+
+msgid "Model Randomizer"
+msgstr "模型随机器"
+
+msgid "Model Randomizer Active"
+msgstr "模型随机器已激活"
+
+msgid "Model Randomizer will change your driving model each drive."
+msgstr "模型随机器会在每次驾驶时更换驾驶模型。"
+
+msgid "Model is already on this device."
+msgstr "模型已在此设备上。"
+
+msgid "Model is not available on this device."
+msgstr "此设备上没有该模型。"
+
+msgid "Models are selected automatically each drive. Disable Randomizer to choose manually."
+msgstr "每次驾驶会自动选择模型。禁用随机器以手动选择。"
+
+msgid "Most engaged day"
+msgstr "参与驾驶最多的一天"
+
+msgid "Muted"
+msgstr "静音"
+
+msgid "NEW SPEED LIMIT"
+msgstr "新限速"
+
+msgid "Name your backup"
+msgstr "为备份命名"
+
+msgid "Name your toggle backup"
+msgstr "为开关备份命名"
+
+msgid "Navigation & Mapping"
+msgstr "导航与地图"
+
+msgid "Navigation active"
+msgstr "导航已激活"
+
+msgid "Needs Turn Signal speed > 0"
+msgstr "需要转向灯速度 > 0"
+
+msgid "Never"
+msgstr "从不"
+
+msgid "No Bluetooth devices found."
+msgstr "未找到蓝牙设备。"
+
+msgid "No backups found."
+msgstr "未找到备份。"
+
+msgid "No clean drives"
+msgstr "无无警报驾驶"
+
+msgid "No destinations yet"
+msgstr "暂无目的地"
+
+msgid "No drives"
+msgstr "暂无驾驶记录"
+
+msgid "No error log found."
+msgstr "未找到错误日志。"
+
+msgid "No fingerprint list available."
+msgstr "无可用的指纹列表。"
+
+msgid "No full-system backups saved yet."
+msgstr "尚未保存全系统备份。"
+
+msgid "No matching destinations"
+msgstr "无匹配的目的地"
+
+msgid "No model ratings found."
+msgstr "未找到模型评分。"
+
+msgid "No models available"
+msgstr "无可用模型"
+
+msgid "No models available for this make."
+msgstr "此品牌无可用模型。"
+
+msgid "No options available."
+msgstr "无可用选项。"
+
+msgid "No regions available"
+msgstr "无可用区域"
+
+msgid "No regions selected"
+msgstr "未选择区域"
+
+msgid "No regions selected yet"
+msgstr "尚未选择区域"
+
+msgid "No regions selected yet. Tap 'Whole U.S.' or pick specific states below to get started."
+msgstr "尚未选择区域。点击\"全美国\"或在下方选择具体州开始。"
+
+msgid "No settings to display"
+msgstr "无设置可显示"
+
+msgid "No toggle backups found."
+msgstr "未找到开关备份。"
+
+msgid "No toggle snapshots saved yet."
+msgstr "尚未保存开关快照。"
+
+msgid "No {name}s"
+msgstr "无{name}"
+
+msgid "No {name}s are currently downloaded."
+msgstr "当前没有已下载的{name}。"
+
+msgid "None"
+msgstr "无"
+
+msgid "Nostalgia Mode"
+msgstr "怀旧模式"
+
+msgid "Nothing to Delete"
+msgstr "无可删除项"
+
+msgid "OFF"
+msgstr "关闭"
+
+msgid "Off"
+msgstr "关闭"
+
+msgid "Offline Maps"
+msgstr "离线地图"
+
+msgid "Offroad"
+msgstr "停车"
+
+msgid "Offroad Brightness"
+msgstr "停车亮度"
+
+msgid "Offroad Screen Timeout"
+msgstr "停车熄屏时间"
+
+msgid "Offsets on Dash Spoof"
+msgstr "仪表伪装偏移"
+
+msgid "On"
+msgstr "开启"
+
+msgid "On Device"
+msgstr "设备上"
+
+msgid "Onroad"
+msgstr "行驶"
+
+msgid "Onroad Brightness"
+msgstr "行驶亮度"
+
+msgid "Onroad Screen Timeout"
+msgstr "行驶熄屏时间"
+
+msgid "Options"
+msgstr "选项"
+
+msgid "Other Countries"
+msgstr "其他国家"
+
+msgid "Overwrite"
+msgstr "覆盖"
+
+msgid "Overwrite {} with your current settings?"
+msgstr "用当前设置覆盖{}？"
+
+msgid "PAST WEEK"
+msgstr "近一周"
+
+msgid "PENDING"
+msgstr "待生效"
+
+msgid "PERSONAL RECORDS"
+msgstr "个人记录"
+
+msgid "Pair"
+msgstr "配对"
+
+msgid "Pair with Galaxy"
+msgstr "与 Galaxy 配对"
+
+msgid "Pair with {}?"
+msgstr "与{}配对？"
+
+msgid "Pair your device with comma connect (connect.comma.ai) and claim your comma prime offer."
+msgstr "将您的设备与comma connect （connect.comma.ai）配对并领取您的comma prime优惠。"
+
+msgid "Paired - tap to connect"
+msgstr "已配对 - 点击连接"
+
+msgid "Pairing with {}."
+msgstr "正在与{}配对。"
+
+msgid "Panda flashing started. Device will reboot when finished."
+msgstr "Panda 刷写已开始，完成后设备将重启。"
+
+msgid "Park the vehicle to download"
+msgstr "请停车后下载"
+
+msgid "Park to remove downloaded maps."
+msgstr "请停车以删除已下载地图。"
+
+msgid "Password must be at least 6 characters."
+msgstr "密码至少需要 6 个字符。"
+
+msgid "Pause Lateral Below"
+msgstr "低于此速度暂停横向控制"
+
+msgid "Pedal for Long"
+msgstr "长途踩踏板"
+
+msgid "Persist Chill State"
+msgstr "保持 Chill 状态"
+
+msgid "Persist Exp State"
+msgstr "保持实验状态"
+
+msgid "Playing in {}..."
+msgstr "正在{}播放…"
+
+msgid "Playing now"
+msgstr "正在播放"
+
+msgid "Please connect to Wi-Fi to complete initial pairing."
+msgstr "请连接 Wi-Fi 以完成初始配对。"
+
+msgid "Please connect to Wi-Fi to update."
+msgstr "请连接 Wi-Fi 以更新。"
+
+msgid "Please select 'Whole U.S.' or pick individual states from the list below."
+msgstr "请选择\"全美国\"或从下方列表中选择具体州。"
+
+msgid "Please select a Car Make first!"
+msgstr "请先选择汽车品牌！"
+
+msgid "Popular"
+msgstr "热门"
+
+msgid "Power"
+msgstr "电源"
+
+msgid "Predicted Stop In"
+msgstr "预测停车时间"
+
+msgid "Preparing the selected regions for download."
+msgstr "正在准备选中的区域以供下载。"
+
+msgid "Profile Slot A"
+msgstr "配置槽 A"
+
+msgid "Profile Slot B"
+msgstr "配置槽 B"
+
+msgid "Profiles & Snapshots"
+msgstr "配置与快照"
+
+msgid "Protected"
+msgstr "受保护"
+
+msgid "Pulse and Glide Delta"
+msgstr "脉冲滑行差值"
+
+msgid "Quality of Life"
+msgstr "体验优化"
+
+msgid "REBOOTING"
+msgstr "正在重启"
+
+msgid "RETRY"
+msgstr "重试"
+
+msgid "Ratings"
+msgstr "评分"
+
+msgid "Ready to download {}."
+msgstr "准备下载{}。"
+
+msgid "Ready to navigate"
+msgstr "导航就绪"
+
+msgid "Reboot required. Reboot now?"
+msgstr "需要重启。现在重启？"
+
+msgid "Recent destination"
+msgstr "最近的目的地"
+
+msgid "Recent destinations"
+msgstr "最近的目的地"
+
+msgid "Refresh Catalog"
+msgstr "刷新目录"
+
+msgid "Refreshing model catalog"
+msgstr "正在刷新模型目录"
+
+msgid "Refreshing the driving model catalog in the background."
+msgstr "正在后台刷新驾驶模型目录。"
+
+msgid "Refreshing..."
+msgstr "正在刷新…"
+
+msgid "Remap Cancel Button"
+msgstr "重映射 CANCEL 按键"
+
+msgid "Remote Start Panda"
+msgstr "远程启动 Panda"
+
+msgid "Remote Start requires a Panda firmware update."
+msgstr "远程启动需要更新 Panda 固件。"
+
+msgid "Remove"
+msgstr "移除"
+
+msgid "Remove Maps"
+msgstr "移除地图"
+
+msgid "Remove from Blacklist"
+msgstr "从黑名单移除"
+
+msgid "Remove {} from favorites?"
+msgstr "将{}从收藏中移除？"
+
+msgid "Removing offline maps..."
+msgstr "正在删除离线地图…"
+
+msgid "Rename"
+msgstr "重命名"
+
+msgid "Rename favorite"
+msgstr "重命名收藏"
+
+msgid "Report Issue"
+msgstr "报告问题"
+
+msgid "Reset All"
+msgstr "全部重置"
+
+msgid "Reset Driver Monitoring"
+msgstr "重置驾驶员监控"
+
+msgid "Reset To Stock"
+msgstr "重置为原厂"
+
+msgid "Reset Toggles"
+msgstr "重置开关"
+
+msgid "Reset all sound volumes, cooldown, and custom alerts to their defaults?"
+msgstr "将所有音量、冷却时间和自定义警报重置为默认值？"
+
+msgid "Reset all toggles to defaults?"
+msgstr "将所有开关重置为默认值？"
+
+msgid "Reset all toggles to stock openpilot?"
+msgstr "将所有开关重置为原厂 openpilot？"
+
+msgid "Restore"
+msgstr "恢复"
+
+msgid "Restore Backup"
+msgstr "恢复备份"
+
+msgid "Restore Named Snapshot"
+msgstr "恢复命名快照"
+
+msgid "Restoring... device will reboot."
+msgstr "正在恢复…设备将重启。"
+
+msgid "Revert to stock longitudinal control."
+msgstr "恢复为原厂纵向控制。"
+
+msgid "Right Hand Driving"
+msgstr "右舵驾驶"
+
+msgid "SET/+ TO CONFIRM  RES/- TO DENY"
+msgstr "SET/+ 确认  RES/- 取消"
+
+msgid "SLC Primary Priority"
+msgstr "SLC 主优先级"
+
+msgid "SLC Secondary Priority"
+msgstr "SLC 次优先级"
+
+msgid "SOURCES"
+msgstr "来源"
+
+msgid "SPEED"
+msgstr "速度"
+
+msgid "START NAVIGATION"
+msgstr "开始导航"
+
+msgid "Safe Mode"
+msgstr "安全模式"
+
+msgid "Save Current Settings"
+msgstr "保存当前设置"
+
+msgid "Save Named Snapshot"
+msgstr "保存命名快照"
+
+msgid "Saved current settings to {}."
+msgstr "当前设置已保存到{}。"
+
+msgid "Scan"
+msgstr "扫描"
+
+msgid "Scan to open Galaxy"
+msgstr "扫码打开 Galaxy"
+
+msgid "Scanning"
+msgstr "扫描中"
+
+msgid "Scanning for Bluetooth devices..."
+msgstr "正在扫描蓝牙设备…"
+
+msgid "Screen Declutter & Visibility"
+msgstr "屏幕精简与可见性"
+
+msgid "Search"
+msgstr "搜索"
+
+msgid "Search destination"
+msgstr "搜索目的地"
+
+msgid "Search for a destination"
+msgstr "搜索目的地"
+
+msgid "Search for a place or address to begin."
+msgstr "搜索地点或地址以开始。"
+
+msgid "Search is unavailable. Check your connection and try again."
+msgstr "搜索不可用。请检查网络连接后重试。"
+
+msgid "Search results"
+msgstr "搜索结果"
+
+msgid "Search unavailable"
+msgstr "搜索不可用"
+
+msgid "Searching…"
+msgstr "正在搜索…"
+
+msgid "Select Backup"
+msgstr "选择备份"
+
+msgid "Select Issue"
+msgstr "选择问题"
+
+msgid "Select Make"
+msgstr "选择品牌"
+
+msgid "Select Map Data"
+msgstr "选择地图数据"
+
+msgid "Select Model"
+msgstr "选择模型"
+
+msgid "Select Regions Below"
+msgstr "在下方选择区域"
+
+msgid "Select Toggle Backup"
+msgstr "选择开关备份"
+
+msgid "Selected"
+msgstr "已选择"
+
+msgid "Selected for download"
+msgstr "已选择下载"
+
+msgid "Selected for next drive"
+msgstr "已选择用于下次驾驶"
+
+msgid "Set Galaxy Password"
+msgstr "设置 Galaxy 密码"
+
+msgid "Set Speed Margin"
+msgstr "设置速度余量"
+
+msgid "Set a password to secure your Galaxy access. Min 6 characters."
+msgstr "设置密码以保护 Galaxy 访问，至少 6 个字符。"
+
+msgid "Settings Profiles & Snapshots"
+msgstr "设置配置与快照"
+
+msgid "Settings profiles can only be loaded while parked."
+msgstr "仅在停车时才能载入设置配置。"
+
+msgid "Settings profiles can only be saved while parked."
+msgstr "仅在停车时才能保存设置配置。"
+
+msgid "Show FPS"
+msgstr "显示 FPS"
+
+msgid "Show QR"
+msgstr "显示二维码"
+
+msgid "Show condition trigger on the drive screen."
+msgstr "在驾驶屏幕上显示条件触发。"
+
+msgid "Shutdown Delay"
+msgstr "关机延时"
+
+msgid "Signal Lane Detect"
+msgstr "转向灯变道检测"
+
+msgid "Skip"
+msgstr "跳过"
+
+msgid "Slower Lead"
+msgstr "较慢前车"
+
+msgid "Speed Limit Controller"
+msgstr "限速控制器"
+
+msgid "Speed w/ Lead"
+msgstr "有前车时的速度"
+
+msgid "Stable Lead Ahead"
+msgstr "前方稳定车辆"
+
+msgid "Standby Mode"
+msgstr "待机模式"
+
+msgid "StarPilot"
+msgstr "StarPilot"
+
+msgid "StarPilot is pulling the latest driving model list. This panel will populate automatically when the refresh completes."
+msgstr "StarPilot 正在获取最新驾驶模型列表，刷新完成后此面板会自动填充。"
+
+msgid "Start"
+msgstr "开始"
+
+msgid "Start downloading offline maps for the selected regions?"
+msgstr "开始下载所选区域的离线地图？"
+
+msgid "Starting Download"
+msgstr "开始下载"
+
+msgid "Starting fast update..."
+msgstr "正在开始快速更新…"
+
+msgid "Starting..."
+msgstr "正在启动…"
+
+msgid "Startup Alert"
+msgstr "启动提醒"
+
+msgid "Status Widget"
+msgstr "状态小组件"
+
+msgid "Steering Behavior"
+msgstr "转向行为"
+
+msgid "Steering Controls"
+msgstr "转向控制"
+
+msgid "Stock"
+msgstr "原厂"
+
+msgid "Stop Lights/Signs"
+msgstr "停车灯/标志"
+
+msgid "Stop and Go"
+msgstr "停走"
+
+msgid "Stop request sent. The current transfer will wind down safely."
+msgstr "已发送停止请求，当前传输将安全结束。"
+
+msgid "Stop using for audio"
+msgstr "停止用于音频"
+
+msgid "Stop-and-Go Hack"
+msgstr "停走破解"
+
+msgid "Stopped Lead"
+msgstr "停止前车"
+
+msgid "Storage"
+msgstr "存储"
+
+msgid "Storage: {}"
+msgstr "存储：{}"
+
+msgid "Switch"
+msgstr "切换"
+
+msgid "Switch Connect endpoint to {}?"
+msgstr "将 Connect 端点切换到{}？"
+
+msgid "Switch on curves even when following a lead."
+msgstr "跟随前车时也在弯道切换。"
+
+msgid "Switch sources to keep browsing maps."
+msgstr "切换来源以继续浏览地图。"
+
+msgid "Switch specifically for slower leads."
+msgstr "专门针对较慢的前车切换。"
+
+msgid "Switch specifically for stopped leads."
+msgstr "专门针对停止的前车切换。"
+
+msgid "Switch to Chill Mode"
+msgstr "切换到 Chill 模式"
+
+msgid "Switch to Chill Mode when following a steady lead."
+msgstr "跟随稳定前车时切换到 Chill 模式。"
+
+msgid "Switch to Experimental Mode"
+msgstr "切换到实验模式"
+
+msgid "Switch to Experimental Mode on open-road curves."
+msgstr "在开阔道路弯道切换到实验模式。"
+
+msgid "Switch when a slower/stopped vehicle is ahead."
+msgstr "前方有较慢/停止的车辆时切换。"
+
+msgid "Switch when openpilot detects a stop."
+msgstr "openpilot 检测到停车时切换。"
+
+msgid "System Backups"
+msgstr "系统备份"
+
+msgid "System Status"
+msgstr "系统状态"
+
+msgid "Tap a downloaded model to set it as active."
+msgstr "点击已下载的模型将其设为激活。"
+
+msgid "Tap anywhere to dismiss"
+msgstr "点击任意处关闭"
+
+msgid "Tap to pair"
+msgstr "点击配对"
+
+msgid "Tap to select state"
+msgstr "点击选择州"
+
+msgid "Temporarily force driving-affecting StarPilot settings back to safe defaults, stock tuning, and the branch default model until disabled."
+msgstr "在关闭前，临时将影响驾驶的 StarPilot 设置强制恢复为安全默认值、原厂调校和分支默认模型。"
+
+msgid "Temporarily switch to Chill from a stop."
+msgstr "从停车状态临时切换到 Chill。"
+
+msgid "Test audio"
+msgstr "测试音频"
+
+msgid "That destination is missing a valid location."
+msgstr "该目的地缺少有效位置。"
+
+msgid "That destination is not valid."
+msgstr "该目的地无效。"
+
+msgid "That result did not include a usable location."
+msgstr "该结果不包含可用的位置。"
+
+msgid "The experimental visualization and driving-model features remain available."
+msgstr "实验可视化与驾驶模型功能仍可使用。"
+
+msgid "This is a complete factory reset and cannot be undone. Are you absolutely sure?"
+msgstr "这是完整的恢复出厂设置，无法撤销。确定要继续吗？"
+
+msgid "This model is protected and cannot be removed."
+msgstr "该模型受保护，无法移除。"
+
+msgid "This model requires a detected external GPU."
+msgstr "该模型需要检测到外部 GPU。"
+
+msgid "This will overwrite your current toggles."
+msgstr "这将覆盖你当前的开关设置。"
+
+msgid "This will prevent your drives from being logged. Are you sure?"
+msgstr "这将阻止记录驾驶数据。确定吗？"
+
+msgid "This will prevent your drives from being uploaded to comma connect which may impact receiving support. Are you sure?"
+msgstr "这将阻止将驾驶数据上传到 comma connect，可能影响获取支持。确定吗？"
+
+msgid "Toggle backup created."
+msgstr "开关备份已创建。"
+
+msgid "Toggle backup deleted."
+msgstr "开关备份已删除。"
+
+msgid "Toggle speed limits, alert banners, and driver monitoring icon."
+msgstr "开关限速、警报横幅和驾驶员监控图标。"
+
+msgid "Toggles reset to defaults."
+msgstr "开关已重置为默认值。"
+
+msgid "Toggles reset to stock openpilot."
+msgstr "开关已重置为原厂 openpilot。"
+
+msgid "Toggles restored."
+msgstr "开关已恢复。"
+
+msgid "Treat the Cancel button as an extra mappable steering-wheel button."
+msgstr "将取消按钮视为额外的可映射方向盘按键。"
+
+msgid "Try a different place or address."
+msgstr "请尝试其他地点或地址。"
+
+msgid "Try refreshing the catalog once the device is offroad and connected."
+msgstr "请在设备停车并联网后尝试刷新目录。"
+
+msgid "Turn Signal Below"
+msgstr "转向灯低速阈值"
+
+msgid "Turn off Disable Uploads first"
+msgstr "请先关闭\"禁用上传\""
+
+msgid "Turn off Model Randomizer to choose a model manually."
+msgstr "关闭模型随机器以手动选择模型。"
+
+msgid "Turn on Curves first"
+msgstr "请先开启弯道"
+
+msgid "Turn on Lead first"
+msgstr "请先开启前车"
+
+msgid "U.S. States & Regions"
+msgstr "美国各州与区域"
+
+msgid "UI Debug Mode"
+msgstr "UI 调试模式"
+
+msgid "Unable to read model ratings."
+msgstr "无法读取模型评分。"
+
+msgid "Unavailable"
+msgstr "不可用"
+
+msgid "Unfavorite"
+msgstr "取消收藏"
+
+msgid "Unknown model."
+msgstr "未知模型。"
+
+msgid "Unnamed favorite"
+msgstr "未命名收藏"
+
+msgid "Unpair"
+msgstr "解除配对"
+
+msgid "Update applied, rebooting..."
+msgstr "更新已应用，正在重启…"
+
+msgid "Updating submodules..."
+msgstr "正在更新子模块…"
+
+msgid "Uploads must stay enabled"
+msgstr "上传必须保持启用"
+
+msgid "Use Konik Server"
+msgstr "使用 Konik 服务器"
+
+msgid "Use Panda firmware that ignores the physical ignition line and starts only from CAN ignition."
+msgstr "使用忽略物理点火线、仅从 CAN 点火启动的 Panda 固件。"
+
+msgid "Use for audio"
+msgstr "用于音频"
+
+msgid "Use the left paddle to pause openpilot acceleration and braking."
+msgstr "使用左拨片暂停 openpilot 的加速和制动。"
+
+msgid "Use the on-device keyboard to search Mapbox locations"
+msgstr "使用设备键盘搜索 Mapbox 位置"
+
+msgid "Vehicle Identity"
+msgstr "车辆识别"
+
+msgid "Vision Speed Limits"
+msgstr "视觉限速"
+
+msgid "Volt SNG Hack"
+msgstr "Volt SNG 补丁"
+
+msgid "When"
+msgstr "当"
+
+msgid "Whole U.S."
+msgstr "全美国"
+
+msgid "Whole U.S. (56 states)"
+msgstr "全美国（56 州）"
+
+msgid "Whole U.S. (All 50 States & Territories)"
+msgstr "全美国（全部 50 州及属地）"
+
+msgid "Whole U.S. Selected"
+msgstr "已选择全美国"
+
+msgid "Whole U.S. package"
+msgstr "全美国地图包"
+
+msgid "Work"
+msgstr "单位"
+
+msgid "You have all available {name}s."
+msgstr "你已拥有全部可用的{name}。"
+
+msgid "You must accept the Terms and Conditions to use openpilot. Read the latest terms at https://comma.ai/terms before continuing."
+msgstr "你必须接受条款才能使用 openpilot。继续前请阅读 https://comma.ai/terms 上的最新条款。"
+
+msgid "audio"
+msgstr "音频"
+
+msgid "audio output"
+msgstr "音频输出"
+
+msgid "checking..."
+msgstr "正在检查…"
+
+msgid "controller"
+msgstr "控制器"
+
+msgid "downloading..."
+msgstr "正在下载…"
+
+msgid "drives"
+msgstr "驾驶记录"
+
+msgid "finalizing update..."
+msgstr "正在完成更新…"
+
+msgid "hour"
+msgstr "小时"
+
+msgid "hours"
+msgstr "小时"
+
+msgid "km"
+msgstr "公里"
+
+msgid "mi"
+msgstr "英里"
+
+msgid "miles"
+msgstr "英里"
+
+msgid "min"
+msgstr "分钟"
+
+msgid "no alerts"
+msgstr "无警报"
+
+msgid "pairing"
+msgstr "配对中"
+
+msgid "this destination"
+msgstr "此目的地"
+
+msgid "{} + {} more"
+msgstr "{} + 另外 {} 个"
+
+msgid "{} / {} ({}%)"
+msgstr "{} / {}（{}%）"
+
+msgid "{} / {} ({}%)\\nElapsed {} | ETA {}"
+msgstr "{} / {}（{}%）\\n已用 {} | 预计 {}"
+
+msgid "{} available"
+msgstr "{} 可用"
+
+msgid "{} available - Tap to select"
+msgstr "{} 可用 - 点击选择"
+
+msgid "{} controls + {} toggles"
+msgstr "{} 个控制项 + {} 个开关"
+
+msgid "{} full | {} toggle"
+msgstr "{} 完整 | {} 开关"
+
+msgid "{} saved"
+msgstr "{} 已保存"
+
+msgid "{} selected | {} available"
+msgstr "{} 已选 | {} 可用"
+
+msgid "{}\\nElapsed {} | ETA {}"
+msgstr "{}\\n已用 {} | 预计 {}"
+
+msgid "Abbreviated Sources"
+msgstr "简称来源"
+
+msgid "Accel Smoothness"
+msgstr "加速平顺度"
+
+msgid "Acceleration Path"
+msgstr "加速路径"
+
+msgid "Acceleration Profile"
+msgstr "加速曲线"
+
+msgid "Acceleration feels harsh or jerky"
+msgstr "加速感觉生硬或顿挫"
+
+msgid "Acceleration tuning for EV and direct-drive vehicles."
+msgstr "电动车与直驱车辆的加速调校。"
+
+msgid "Active Sources Only"
+msgstr "仅显示活动来源"
+
+msgid "Actuator Delay"
+msgstr "执行器延迟"
+
+msgid "Adjacent Lane Metrics"
+msgstr "相邻车道指标"
+
+msgid "Adjacent Lanes"
+msgstr "相邻车道"
+
+msgid "Adjust driving parameters for this weather condition."
+msgstr "调整此天气条件下的驾驶参数。"
+
+msgid "Adjust parameters for fog, mist, and poor visibility conditions."
+msgstr "调整雾、薄雾和低能见度条件下的参数。"
+
+msgid "Adjust parameters for heavy rain and storms."
+msgstr "调整大雨和暴风雨条件下的参数。"
+
+msgid "Adjust parameters for light to moderate rain."
+msgstr "调整小到中雨条件下的参数。"
+
+msgid "Adjust parameters for snowy and icy conditions."
+msgstr "调整积雪和结冰条件下的参数。"
+
+msgid "Adopt Current Speed Limit"
+msgstr "采用当前限速"
+
+msgid "Allow navigation to request lane keep and turns."
+msgstr "允许导航请求车道保持与转向。"
+
+msgid "An alert was unclear and I'm not sure what it meant"
+msgstr "警报含义不明确，我不确定是什么意思"
+
+msgid "Appearance"
+msgstr "界面显示"
+
+msgid "Auto Lane Changes"
+msgstr "自动变道"
+
+msgid "Auto Match Speed Limits"
+msgstr "自动匹配限速"
+
+msgid "Automatically adjust driving behavior based on real-time weather."
+msgstr "根据实时天气自动调整驾驶行为。"
+
+msgid "Blind Spot Borders"
+msgstr "盲区边框"
+
+msgid "Blind Spot Path"
+msgstr "盲区路径"
+
+msgid "Border Width"
+msgstr "边框宽度"
+
+msgid "Brake Smoothness"
+msgstr "刹车平顺度"
+
+msgid "Brake force to hold the vehicle at a complete stop."
+msgstr "保持车辆完全停止的制动力。"
+
+msgid "Braking is too sudden or uncomfortable"
+msgstr "刹车太突然或不舒适"
+
+msgid "CC Main Button"
+msgstr "巡航主按键"
+
+msgid "CPU Metrics"
+msgstr "CPU 指标"
+
+msgid "CSC Status Widget"
+msgstr "CSC 状态组件"
+
+msgid "Calibrated Lateral Accel"
+msgstr "标定后的横向加速度"
+
+msgid "Calibration Progress"
+msgstr "标定进度"
+
+msgid "Cancel Button"
+msgstr "取消按键"
+
+msgid "Car Make"
+msgstr "汽车品牌"
+
+msgid "Car Model"
+msgstr "汽车型号"
+
+msgid "Change Personality"
+msgstr "切换驾驶风格"
+
+msgid "Choose how firmly openpilot slows the car down."
+msgstr "选择 openpilot 减速的力度。"
+
+msgid "Choose how quickly openpilot speeds up."
+msgstr "选择 openpilot 加速的快慢。"
+
+msgid "Clear Route When Offroad"
+msgstr "停车时清除路线"
+
+msgid "Clear the active navigation destination when the device goes offroad."
+msgstr "设备进入停车状态时清除当前导航目的地。"
+
+msgid "Clears the saved driver monitoring wheel-side calibration and any manual right-hand-driving override."
+msgstr "清除已保存的驾驶员监控方向盘侧标定及手动右舵覆盖。"
+
+msgid "Close Gap On Lane Change"
+msgstr "变道时缩短车距"
+
+msgid "Compact display only; the unified card always shows nonzero offsets."
+msgstr "仅精简显示；统一卡片始终显示非零偏移。"
+
+msgid "Compass"
+msgstr "指南针"
+
+msgid "Compensates for steering friction around center."
+msgstr "补偿中位附近的转向摩擦。"
+
+msgid "Configure"
+msgstr "配置"
+
+msgid "Configure follow distance, smoothness, and response for aggressive driving."
+msgstr "配置激进驾驶时的跟车距离、平顺度和响应。"
+
+msgid "Configure follow distance, smoothness, and response for everyday driving."
+msgstr "配置日常驾驶时的跟车距离、平顺度和响应。"
+
+msgid "Configure follow distance, smoothness, and response for relaxed driving."
+msgstr "配置轻松驾驶时的跟车距离、平顺度和响应。"
+
+msgid "Configure follow distance, smoothness, and response for traffic conditions."
+msgstr "配置拥堵路况下的跟车距离、平顺度和响应。"
+
+msgid "Configure steering behavior and lane changes."
+msgstr "配置转向行为和变道。"
+
+msgid "Confirm"
+msgstr "确认"
+
+msgid "Confirm Higher"
+msgstr "确认更高"
+
+msgid "Confirm Lower"
+msgstr "确认更低"
+
+msgid "Confirm New Limits"
+msgstr "确认新限速"
+
+msgid "Control how aggressively openpilot detects and reacts to vehicles ahead."
+msgstr "控制 openpilot 检测和反应前方车辆的灵敏度。"
+
+msgid "Convenience features for everyday driving."
+msgstr "日常驾驶的便利功能。"
+
+msgid "Create Bookmark"
+msgstr "创建书签"
+
+msgid "Cruise Interval"
+msgstr "巡航间隔"
+
+msgid "Cruise Long"
+msgstr "长途巡航"
+
+msgid "Customize follow distance and smoothness for this driving personality."
+msgstr "自定义此驾驶风格的跟车距离和平顺度。"
+
+msgid "Customize your display, driving widgets, model visualization, and themes."
+msgstr "自定义显示、驾驶组件、模型可视化和主题。"
+
+msgid "Daily QOL & Weather"
+msgstr "日常便利与天气"
+
+msgid "Deceleration Profile"
+msgstr "减速曲线"
+
+msgid "Delay before lateral resumes after signal off. 0 = Off."
+msgstr "转向灯关闭后横向控制恢复的延迟。0 = 关闭。"
+
+msgid "Delay before the start of an automatic lane change. 0 = Instant."
+msgstr "自动变道开始前的延迟。0 = 立即。"
+
+msgid "Detect and display speed-limit signs without enabling the Speed Limit Controller."
+msgstr "检测并显示限速标志，但不启用限速控制器。"
+
+msgid "Developer Metrics"
+msgstr "开发者指标"
+
+msgid "Developer Sidebar"
+msgstr "开发者侧栏"
+
+msgid "Developer Sidebar Metrics"
+msgstr "开发者侧栏指标"
+
+msgid "Developer-only: coast this far below the current cruise target before accelerating back up."
+msgstr "仅开发者：滑行至比当前巡航目标低此数值后再加速恢复。"
+
+msgid "Disable Fingerprinting"
+msgstr "禁用指纹识别"
+
+msgid "Disabled while auto-learned delay is enabled."
+msgstr "启用自动学习延迟时此选项被禁用。"
+
+msgid "Disengage AOL on Brake"
+msgstr "刹车时解除 AOL"
+
+msgid "Disengagement Alert"
+msgstr "解除警报"
+
+msgid "Display camera-detected speed-limit signs; optionally use them with Speed Limit Controller."
+msgstr "显示摄像头检测到的限速标志；可选择与限速控制器配合使用。"
+
+msgid "Distance Button"
+msgstr "车距按键"
+
+msgid "Distracted Driver"
+msgstr "分心驾驶"
+
+msgid "Driving Model"
+msgstr "驾驶模型"
+
+msgid "Driving metrics panel on the right"
+msgstr "右侧驾驶指标面板"
+
+msgid "Dynamic Path"
+msgstr "动态路径"
+
+msgid "Dynamic Pedals"
+msgstr "动态踏板"
+
+msgid "EV Active"
+msgstr "电动车模式激活"
+
+msgid "EV Tuning"
+msgstr "电动车调校"
+
+msgid "Engagement Chime"
+msgstr "接合提示音"
+
+msgid "Engagement Refused"
+msgstr "接合被拒绝"
+
+msgid "Enter or remove your weather data API key."
+msgstr "输入或删除天气数据 API 密钥。"
+
+msgid "Exact full delay between steering command and vehicle response."
+msgstr "转向指令与车辆响应之间的完整延迟。"
+
+msgid "Extra acceleration when moving away from a stop."
+msgstr "起步时的额外加速度。"
+
+msgid "FPS Display"
+msgstr "FPS 显示"
+
+msgid "Fallback Speed"
+msgstr "备用速度"
+
+msgid "Favorite #1"
+msgstr "收藏 #1"
+
+msgid "Favorite #2"
+msgstr "收藏 #2"
+
+msgid "Favorite #3"
+msgstr "收藏 #3"
+
+msgid "Fine-tune acceleration, braking, and driving behavior."
+msgstr "微调加速、刹车和驾驶行为。"
+
+msgid "Follow Distance"
+msgstr "跟车距离"
+
+msgid "Follow High"
+msgstr "高跟车"
+
+msgid "Follow turn intent below min lane change speed."
+msgstr "低于最低变道速度时跟随转向意图。"
+
+msgid "Following Distance"
+msgstr "跟车距离"
+
+msgid "Force Auto-Tune Off"
+msgstr "强制关闭自动调校"
+
+msgid "Force Auto-Tune On"
+msgstr "强制开启自动调校"
+
+msgid "Force Coast"
+msgstr "强制滑行"
+
+msgid "Force Standstill"
+msgstr "强制静止"
+
+msgid "Force Stop Offset"
+msgstr "强制停车偏移"
+
+msgid "Force Stops"
+msgstr "强制停车"
+
+msgid "Force Torque Ctrl"
+msgstr "强制扭矩控制"
+
+msgid "Force Turn Desires"
+msgstr "强制转向意图"
+
+msgid "Force-disable learned lateral values and use your set values."
+msgstr "强制禁用学习到的横向参数，改用你设定的值。"
+
+msgid "Force-enable live auto-tuning for friction and lateral accel."
+msgstr "强制启用摩擦和横向加速度的实时自动调校。"
+
+msgid "Friction"
+msgstr "摩擦"
+
+msgid "GPU Metrics"
+msgstr "GPU 指标"
+
+msgid "Gap to use during lane changes, only when shorter than your normal gap."
+msgstr "变道时使用的车距，仅在短于常规车距时生效。"
+
+msgid "Gas / Brake"
+msgstr "油门 / 刹车"
+
+msgid "Gas/Brake"
+msgstr "油门/刹车"
+
+msgid "General Prompt"
+msgstr "通用提示"
+
+msgid "Green Light"
+msgstr "绿灯"
+
+msgid "Hide Alerts"
+msgstr "隐藏警报"
+
+msgid "Hide Changing Lanes Banner"
+msgstr "隐藏变道横幅"
+
+msgid "Hide Distance Profile Banner"
+msgstr "隐藏车距曲线横幅"
+
+msgid "Hide Driver Monitoring Icon"
+msgstr "隐藏驾驶员监控图标"
+
+msgid "Hide Lead Marker"
+msgstr "隐藏前车标记"
+
+msgid "Hide Max Speed"
+msgstr "隐藏最高速度"
+
+msgid "Hide Speed"
+msgstr "隐藏速度"
+
+msgid "Hide Steering Wheel"
+msgstr "隐藏方向盘"
+
+msgid "Hide Turning Banner"
+msgstr "隐藏转弯横幅"
+
+msgid "Hide source rows that have no current speed limit reading."
+msgstr "隐藏当前无限速读数的来源行。"
+
+msgid "Higher Lookahead"
+msgstr "更大预判距离"
+
+msgid "How much curve data has been collected. Normal for the value to stay low."
+msgstr "已采集的弯道数据量。数值偏低属于正常。"
+
+msgid "How quickly braking ramps up to bring the car to a stop."
+msgstr "刹车逐渐增强至停车的速率。"
+
+msgid "How strongly openpilot corrects lateral position."
+msgstr "openpilot 修正横向位置的强度。"
+
+msgid "Human-Like Lane Changes"
+msgstr "拟人化变道"
+
+msgid "I'm not sure if this is normal or a bug:"
+msgstr "我不确定这是正常现象还是 bug："
+
+msgid "Immediate Warning"
+msgstr "立即警告"
+
+msgid "Keep steering off after pressing the brake until openpilot is engaged again."
+msgstr "踩刹车后保持转向断开，直到 openpilot 重新接合。"
+
+msgid "Kp Factor"
+msgstr "Kp 系数"
+
+msgid "LKAS Button"
+msgstr "LKAS 按键"
+
+msgid "Lane Change Delay"
+msgstr "变道延迟"
+
+msgid "Lane Line Color"
+msgstr "车道线颜色"
+
+msgid "Lane Line Width"
+msgstr "车道线宽度"
+
+msgid "Lateral Acceleration"
+msgstr "横向加速度"
+
+msgid "Lateral-only experimental mode is enabled for this stock-ACC vehicle for testing. Openpilot will not control gas or brakes; the stock ACC remains responsible for speed."
+msgstr "此原厂 ACC 车辆已启用纯横向实验模式用于测试。openpilot 不控制油门或刹车，速度仍由原厂 ACC 负责。"
+
+msgid "Lead Departure"
+msgstr "前车起步"
+
+msgid "Lead Detection Sensitivity"
+msgstr "前车检测灵敏度"
+
+msgid "Lead Vehicle Metrics"
+msgstr "前车指标"
+
+msgid "Learn the full steering delay automatically. The manual value below is ignored while enabled."
+msgstr "自动学习完整转向延迟。启用时下方手动值将被忽略。"
+
+msgid "Lightweight NNFF when full model is off."
+msgstr "完整模型关闭时使用轻量神经网络前馈。"
+
+msgid "Loaded trailer weight for tow-aware gas, brake, and conservative lateral assist."
+msgstr "已装载拖车重量，用于考虑拖挂的油门、刹车和保守横向辅助。"
+
+msgid "Long Press"
+msgstr "长按"
+
+msgid "Loud Blindspot"
+msgstr "盲区警报加响"
+
+msgid "Loud While Paused"
+msgstr "暂停时也响"
+
+msgid "Low Speed Alert"
+msgstr "低速警报"
+
+msgid "Low Visibility"
+msgstr "低能见度"
+
+msgid "Lower Lookahead"
+msgstr "更小预判距离"
+
+msgid "Lowest speed at which openpilot will change lanes."
+msgstr "openpilot 执行变道的最低速度。"
+
+msgid "Manually select vehicle instead of auto-detecting."
+msgstr "手动选择车辆而非自动识别。"
+
+msgid "Map Acceleration"
+msgstr "映射加速度"
+
+msgid "Map Data"
+msgstr "地图数据"
+
+msgid "Map Deceleration"
+msgstr "映射减速度"
+
+msgid "Map Gears"
+msgstr "映射档位"
+
+msgid "Mapbox Fallback"
+msgstr "Mapbox 备用"
+
+msgid "Maps steering torque to turning response."
+msgstr "将转向扭矩映射为转向响应。"
+
+msgid "Maximum Acceleration"
+msgstr "最大加速度"
+
+msgid "Min Lane Change Speed"
+msgstr "最低变道速度"
+
+msgid "Min Lane Width"
+msgstr "最小车道宽度"
+
+msgid "Mode Button"
+msgstr "模式按键"
+
+msgid "My steering wheel buttons aren't working"
+msgstr "我的方向盘按键不起作用"
+
+msgid "NNFF"
+msgstr "NNFF"
+
+msgid "NNFF Lite"
+msgstr "NNFF 轻量版"
+
+msgid "Navigation"
+msgstr "导航"
+
+msgid "Navigation Widgets"
+msgstr "导航组件"
+
+msgid "Needs BSM"
+msgstr "需要盲区监测"
+
+msgid "Needs Speed Limits"
+msgstr "需要限速数据"
+
+msgid "Neural net feedforward steering controller."
+msgstr "神经网络前馈转向控制器。"
+
+msgid "No Action"
+msgstr "无操作"
+
+msgid "Not Available"
+msgstr "不可用"
+
+msgid "One Per Signal"
+msgstr "每次信号一次"
+
+msgid "One lane change per signal activation."
+msgstr "每次激活转向灯只变道一次。"
+
+msgid "Only pause steering when turn signal is active."
+msgstr "仅在转向灯激活时暂停转向。"
+
+msgid "Pair your device with Galaxy for remote access to The Galaxy."
+msgstr "将设备与 Galaxy 配对以远程访问 The Galaxy。"
+
+msgid "Path Color"
+msgstr "路径颜色"
+
+msgid "Path Edge Color"
+msgstr "路径边缘颜色"
+
+msgid "Path Edge Width"
+msgstr "路径边缘宽度"
+
+msgid "Path Width"
+msgstr "路径宽度"
+
+msgid "Pause AOL On Brake"
+msgstr "刹车时暂停 AOL"
+
+msgid "Pause AOL below this speed while brake is pressed."
+msgstr "踩刹车时低于此速度暂停 AOL。"
+
+msgid "Pause Accel/Brake"
+msgstr "暂停加速/刹车"
+
+msgid "Pause Steering"
+msgstr "暂停转向"
+
+msgid "Pause steering below the set speed."
+msgstr "低于设定速度时暂停转向。"
+
+msgid "Pedal Indicators"
+msgstr "踏板指示器"
+
+msgid "Per-limit speed adjustments for the Speed Limit Controller."
+msgstr "限速控制器的逐条限速调整。"
+
+msgid "Performance data, sensor readings, and system metrics."
+msgstr "性能数据、传感器读数和系统指标。"
+
+msgid "Personality Button"
+msgstr "驾驶风格按键"
+
+msgid "Pick which metrics appear in the developer sidebar on the driving screen."
+msgstr "选择驾驶屏幕上开发者侧栏显示的指标。"
+
+msgid "Press"
+msgstr "按下"
+
+msgid "Press + above a limit for a persistent override; hold the gas pedal for a temporary override."
+msgstr "在限速以上按 + 可持久覆盖；踩住油门踏板可临时覆盖。"
+
+msgid "Prevent lane changes into narrower lanes."
+msgstr "阻止变道进入较窄车道。"
+
+msgid "Preview the driver facing camera to ensure that driver monitoring has good visibility. (vehicle must be off)"
+msgstr "预览驾驶员摄像头，确保驾驶员监控视野良好。（车辆必须熄火）"
+
+msgid "Pulse and Glide"
+msgstr "脉冲滑行"
+
+msgid "RAM Metrics"
+msgstr "内存指标"
+
+msgid "Radar Point Display"
+msgstr "雷达点显示"
+
+msgid "Radar for Takeoffs"
+msgstr "起步用雷达"
+
+msgid "Radar-informed behavior during lane changes."
+msgstr "变道时使用雷达信息。"
+
+msgid "Rain"
+msgstr "雨"
+
+msgid "Rainbow Path"
+msgstr "彩虹路径"
+
+msgid "Rainstorms"
+msgstr "暴雨"
+
+msgid "Record and store microphone audio while driving. The audio will be included in the dashcam video in comma connect."
+msgstr "行驶时录制并保存麦克风音频，该音频会包含在 comma connect 的行车记录视频中。"
+
+msgid "Reduce Accel"
+msgstr "降低加速度"
+
+msgid "Reduce Curve Speed"
+msgstr "降低弯道速度"
+
+msgid "Relationship between steering wheel and road-wheel angle."
+msgstr "方向盘与车轮转角的关系。"
+
+msgid "Remove API Key?"
+msgstr "删除 API 密钥？"
+
+msgid "Render speed-limit sources as compact text labels (e.g. Dash-45)."
+msgstr "将限速来源渲染为紧凑文字标签（如 Dash-45）。"
+
+msgid "Reset Curve Data"
+msgstr "重置弯道数据"
+
+msgid "Reset Curve Data?"
+msgstr "重置弯道数据？"
+
+msgid "Reset collected user data for Curve Speed Controller."
+msgstr "重置弯道速度控制器采集的用户数据。"
+
+msgid "Reset to Defaults"
+msgstr "重置为默认值"
+
+msgid "Reset to Defaults?"
+msgstr "重置为默认值？"
+
+msgid "Resume Delay"
+msgstr "恢复延迟"
+
+msgid "Reverse Cruise Increase"
+msgstr "反向巡航增速"
+
+msgid "Road Edge Width"
+msgstr "道路边缘宽度"
+
+msgid "Road Name"
+msgstr "道路名称"
+
+msgid "Rotating Wheel"
+msgstr "旋转方向盘"
+
+msgid "SLC Offsets"
+msgstr "SLC 偏移"
+
+msgid "Safety Gap Bias"
+msgstr "安全车距偏置"
+
+msgid "Set Key"
+msgstr "设置密钥"
+
+msgid "Set Speed Offset"
+msgstr "设置速度偏移"
+
+msgid "Set Weather Key"
+msgstr "设置天气密钥"
+
+msgid "Show SLC Offset"
+msgstr "显示 SLC 偏移"
+
+msgid "Show Sources"
+msgstr "显示来源"
+
+msgid "Show Speed Limits"
+msgstr "显示限速"
+
+msgid "Show Stop Sign"
+msgstr "显示停车标志"
+
+msgid "Show a curved torque-utilization indicator at the bottom of the driving screen."
+msgstr "在驾驶屏幕底部显示弧形扭矩利用率指示器。"
+
+msgid "Show navigation info on the driving screen."
+msgstr "在驾驶屏幕上显示导航信息。"
+
+msgid "Show the Curve Speed Controller target speed and ambient border glow."
+msgstr "显示弯道速度控制器目标速度和氛围边框光效。"
+
+msgid "Signal triggers automatic lane change."
+msgstr "转向灯触发自动变道。"
+
+msgid "Slowdown Response"
+msgstr "减速响应"
+
+msgid "Smoothness of lane change commit. 10 = Stock, 1 = Smoothest."
+msgstr "变道执行的平顺度。10 = 原厂，1 = 最平顺。"
+
+msgid "Snow"
+msgstr "雪"
+
+msgid "Soft Warning"
+msgstr "柔和警告"
+
+msgid "Something else (please describe)"
+msgstr "其他情况（请描述）"
+
+msgid "Sounds"
+msgstr "声音"
+
+msgid "Source Priority"
+msgstr "来源优先级"
+
+msgid "Speed Limit"
+msgstr "限速"
+
+msgid "Speed where openpilot considers the vehicle fully stopped."
+msgstr "openpilot 判定车辆完全停止的速度。"
+
+msgid "Speed where openpilot exits the stopped state."
+msgstr "openpilot 退出停止状态的速度。"
+
+msgid "Speed-Up Response"
+msgstr "加速响应"
+
+msgid "Star Button"
+msgstr "星标按键"
+
+msgid "Start Acceleration"
+msgstr "起步加速度"
+
+msgid "Start Speed"
+msgstr "起步速度"
+
+msgid "Static Pedals"
+msgstr "静态踏板"
+
+msgid "Steer Ratio"
+msgstr "转向比"
+
+msgid "Steering"
+msgstr "转向"
+
+msgid "Steering Torque Indicator"
+msgstr "转向扭矩指示器"
+
+msgid "Stop Acceleration"
+msgstr "停车减速度"
+
+msgid "Stop Distance"
+msgstr "停车距离"
+
+msgid "Stop Speed"
+msgstr "停车速度"
+
+msgid "Stopped Distance"
+msgstr "停止距离"
+
+msgid "Stopped Timer"
+msgstr "停止计时"
+
+msgid "Stopping Rate"
+msgstr "停车速率"
+
+msgid "Stronger launch and acceleration for heavier vehicles."
+msgstr "为较重车辆提供更强的起步和加速。"
+
+msgid "Strongest acceleration openpilot is allowed to command."
+msgstr "openpilot 可指令的最大加速度。"
+
+msgid "Swap Toyota/Lexus steps: short press changes dash set speed by 5; hold changes it by 1."
+msgstr "交换丰田/雷克萨斯步进：短按使仪表设定速度变化 5；长按变化 1。"
+
+msgid "Switchback Cooldown"
+msgstr "往返冷却"
+
+msgid "System Settings"
+msgstr "系统设置"
+
+msgid "Tap to acknowledge."
+msgstr "点击确认。"
+
+msgid "Temperature Metrics"
+msgstr "温度指标"
+
+msgid "Temporarily shorten the following gap and allow acceleration while changing lanes."
+msgstr "变道时临时缩短跟车距离并允许加速。"
+
+msgid "Temporary Follow Distance"
+msgstr "临时跟车距离"
+
+msgid "The learned lateral acceleration from collected driving data. Higher values allow faster cornering."
+msgstr "从驾驶数据学习到的横向加速度。数值越高允许过弯越快。"
+
+msgid "Time between command and the vehicle's response."
+msgstr "指令与车辆响应之间的时间。"
+
+msgid "Toggle Always On Lateral"
+msgstr "开关常开横向控制"
+
+msgid "Toggle Experimental"
+msgstr "开关实验模式"
+
+msgid "Toggle Switchback"
+msgstr "开关往返"
+
+msgid "Toggle Traffic"
+msgstr "开关拥堵"
+
+msgid "Torque Bar"
+msgstr "扭矩条"
+
+msgid "Torque-based steering for smoother lane keeping."
+msgstr "基于扭矩的转向，使车道保持更平顺。"
+
+msgid "Traffic"
+msgstr "拥堵"
+
+msgid "Trailer Load"
+msgstr "拖车负载"
+
+msgid "Truck Active"
+msgstr "卡车模式激活"
+
+msgid "Truck Tuning"
+msgstr "卡车调校"
+
+msgid "Turn Signal Borders"
+msgstr "转向灯边框"
+
+msgid "Turn Signal Only"
+msgstr "仅转向灯"
+
+msgid "U.S. Midwest Region (12 States)"
+msgstr "美国中西部区域（12 州）"
+
+msgid "U.S. Northeast Region (9 States)"
+msgstr "美国东北部区域（9 州）"
+
+msgid "U.S. South Region (17 States)"
+msgstr "美国南部区域（17 州）"
+
+msgid "U.S. Territories (5 Territories)"
+msgstr "美国属地（5 个）"
+
+msgid "U.S. West Region (13 States)"
+msgstr "美国西部区域（13 州）"
+
+msgid "Upload data from the driver facing camera and help improve the driver monitoring algorithm."
+msgstr "上传驾驶员摄像头数据，帮助改进驾驶员监控算法。"
+
+msgid "Use Auto-Learned Delay"
+msgstr "使用自动学习延迟"
+
+msgid "Use Route Desires"
+msgstr "使用路线转向意图"
+
+msgid "Use Route Speed Control"
+msgstr "使用路线速度控制"
+
+msgid "Use radar to track leads at standstill and respond faster when they move."
+msgstr "使用雷达跟踪静止前车，在其移动时更快响应。"
+
+msgid "Use right-hand-drive driver monitoring. This follows the auto-detected side until changed manually."
+msgstr "使用右舵驾驶员监控。在手动更改前会跟随自动识别的方向。"
+
+msgid "Use the active route to reduce cruise speed for upcoming turns, ramps, and roundabouts."
+msgstr "使用当前路线为即将到来的转弯、匝道和环岛降低巡航速度。"
+
+msgid "Vehicle Settings"
+msgstr "车辆设置"
+
+msgid "Very Long"
+msgstr "很长"
+
+msgid "Vienna Signs"
+msgstr "维也纳标志"
+
+msgid "Vision Detection"
+msgstr "视觉检测"
+
+msgid "Weather API Key"
+msgstr "天气 API 密钥"
+
+msgid "Weather Condition Offsets"
+msgstr "天气条件偏移"
+
+msgid "Week of"
+msgstr "本周"
+
+msgid "Wheel Speed"
+msgstr "轮速"
+
+msgid "days"
+msgstr "天"
+
+msgid "openpilot disengages when I don't expect it"
+msgstr "openpilot 在意料之外时解除"
+
+msgid "openpilot feels sluggish or slow to respond"
+msgstr "openpilot 感觉迟钝或响应慢"
+
+msgid "openpilot requires the device to be mounted within 4° left or right and within 5° up or 9° down."
+msgstr "openpilot 要求设备安装角度在左右 4° 以内、上 5° 或下 9° 以内。"
+
+msgid "Elapsed {} | ETA {}"
+msgstr "已用 {} | 预计 {}"
+
+msgid "{} ALERTS"
+msgstr "{} 条警报"
+
+msgid "{} days ago"
+msgstr "{} 天前"
+
+msgid "{} hours ago"
+msgstr "{} 小时前"
+
+msgid "{} minutes ago"
+msgstr "{} 分钟前"
+
+msgid "{} regions selected"
+msgstr "已选择 {} 个区域"
+
+msgid "ACC Bolt Long Tune"
+msgstr "ACC Bolt 长途调校"
+
+msgid "Acts like a short press of the car's RES/+ cruise button."
+msgstr "等同于短按车辆 RES/+ 巡航按键。"
+
+msgid "Acts like a short press of the car's SET/- cruise button."
+msgstr "等同于短按车辆 SET/- 巡航按键。"
+
+msgid "Africa"
+msgstr "非洲"
+
+msgid "Antarctica"
+msgstr "南极洲"
+
+msgid "Asia"
+msgstr "亚洲"
+
+msgid "Baseline Fix"
+msgstr "基线修正"
+
+msgid "Blind Spot Support"
+msgstr "盲区监测支持"
+
+msgid "BoltLongTune A/B sandbox for GM ACC longitudinal testing."
+msgstr "用于通用 ACC 纵向测试的 BoltLongTune A/B 沙盒。"
+
+msgid "Bookmark"
+msgstr "书签"
+
+msgid "CAN Valid"
+msgstr "CAN 有效"
+
+msgid "Captures the driver camera and saves it in Sentry history."
+msgstr "抓拍驾驶员摄像头并保存到哨兵历史。"
+
+msgid "Cleanup Pass"
+msgstr "清理阶段"
+
+msgid "Console"
+msgstr "控制台"
+
+msgid "Countries"
+msgstr "国家"
+
+msgid "Creates a driving bookmark without changing the on-screen Favorites."
+msgstr "创建驾驶书签，不改变屏幕上的收藏。"
+
+msgid "Cruise Available"
+msgstr "巡航可用"
+
+msgid "Cruise Engaged"
+msgstr "巡航已接合"
+
+msgid "Cruise Fault"
+msgstr "巡航故障"
+
+msgid "Current Driving Model"
+msgstr "当前驾驶模型"
+
+msgid "Cycle Driving Personality"
+msgstr "循环切换驾驶风格"
+
+msgid "Cycles Aggressive → Standard → Relaxed. Requires longitudinal control and Safe Mode off; leaves Traffic Mode unchanged."
+msgstr "循环切换 激进 → 标准 → 轻松。需要纵向控制且安全模式关闭；不改变拥堵模式。"
+
+msgid "Diagnostic Only"
+msgstr "仅诊断"
+
+msgid "Disengage Openpilot"
+msgstr "解除 openpilot"
+
+msgid "Distance + / RES"
+msgstr "车距 + / RES"
+
+msgid "Distance - / SET"
+msgstr "车距 - / SET"
+
+msgid "Driving Controls"
+msgstr "驾驶控制"
+
+msgid "EV6 GT-Line Long"
+msgstr "EV6 GT-Line 纵向"
+
+msgid "Engage Openpilot"
+msgstr "接合 openpilot"
+
+msgid "Engages or disengages Traffic Mode while openpilot is actively controlling."
+msgstr "在 openpilot 主动控制时接合或解除拥堵模式。"
+
+msgid "Europe"
+msgstr "欧洲"
+
+msgid "Fingerprint"
+msgstr "指纹识别"
+
+msgid "Force Coasting"
+msgstr "强制滑行"
+
+msgid "Genesis G90 2017 lateral A/B sandbox."
+msgstr "捷尼赛思 G90 2017 横向 A/B 沙盒。"
+
+msgid "Genesis G90 Lateral"
+msgstr "G90 横向"
+
+msgid "Hardware Detected"
+msgstr "检测到硬件"
+
+msgid "Identifier"
+msgstr "标识符"
+
+msgid "Immediately changes the software-controlled cruise set speed while engaged."
+msgstr "接合时立即改变软件控制的巡航设定速度。"
+
+msgid "Immediately disengages openpilot like the vehicle cancel button."
+msgstr "立即解除 openpilot，等同于车辆取消按键。"
+
+msgid "Jwarm's Kia EV6 lateral sandbox."
+msgstr "Jwarm 的起亚 EV6 横向沙盒。"
+
+msgid "Kia EV6 GT-Line longitudinal tuning sandbox."
+msgstr "起亚 EV6 GT-Line 纵向调校沙盒。"
+
+msgid "LAN IP"
+msgstr "局域网 IP"
+
+msgid "LKAS Fault"
+msgstr "LKAS 故障"
+
+msgid "Label"
+msgstr "标签"
+
+msgid "Lateral (Steering) › Advanced Lateral Tuning"
+msgstr "横向（转向）› 高级横向调校"
+
+msgid "Longitudinal (Speed & Following) › Advanced Longitudinal Tuning"
+msgstr "纵向（速度与跟车）› 高级纵向调校"
+
+msgid "Longitudinal (Speed & Following) › Driving Personalities"
+msgstr "纵向（速度与跟车）› 驾驶风格"
+
+msgid "Longitudinal (Speed & Following) › Longitudinal control mode"
+msgstr "纵向（速度与跟车）› 纵向控制模式"
+
+msgid "Midwest"
+msgstr "中西部"
+
+msgid "Modified Civic Lateral"
+msgstr "改装思域横向"
+
+msgid "Modified Honda Civic Bosch lateral sandbox."
+msgstr "改装本田思域博世横向沙盒。"
+
+msgid "Navigation & Maps"
+msgstr "导航与地图"
+
+msgid "North America"
+msgstr "北美洲"
+
+msgid "Northeast"
+msgstr "东北部"
+
+msgid "Oceania"
+msgstr "大洋洲"
+
+msgid "Pedal Detected"
+msgstr "检测到踏板"
+
+msgid "Plexy's Car"
+msgstr "Plexy 的车"
+
+msgid "Radar Support"
+msgstr "雷达支持"
+
+msgid "Requests engagement through the normal openpilot readiness and safety checks."
+msgstr "通过 openpilot 常规就绪与安全检查请求接合。"
+
+msgid "SASCM Detected"
+msgstr "检测到 SASCM"
+
+msgid "SDSU Detected"
+msgstr "检测到 SDSU"
+
+msgid "SDSU Support"
+msgstr "SDSU 支持"
+
+msgid "Safety Param"
+msgstr "安全参数"
+
+msgid "Selected Personality Profile"
+msgstr "已选驾驶风格"
+
+msgid "Set Speed To"
+msgstr "设定速度为"
+
+msgid "Sounds & Alerts"
+msgstr "声音与警报"
+
+msgid "South"
+msgstr "南部"
+
+msgid "South America"
+msgstr "南美洲"
+
+msgid "Standard-tire Volt lateral A/B sandbox, separate from Plexy's custom tire-size tune."
+msgstr "标准轮胎 Volt 横向 A/B 沙盒，独立于 Plexy 的自定义轮胎尺寸调校。"
+
+msgid "StarPilot Sentry Mode"
+msgstr "StarPilot 哨兵模式"
+
+msgid "Stop-and-Go Support"
+msgstr "走走停停支持"
+
+msgid "System"
+msgstr "系统"
+
+msgid "Take Comma Selfie"
+msgstr "拍摄 Comma 自拍"
+
+msgid "Territories"
+msgstr "属地"
+
+msgid "Toggle AOL"
+msgstr "开关 AOL"
+
+msgid "Toggle Screen Off"
+msgstr "开关熄屏"
+
+msgid "Toggle Traffic Mode"
+msgstr "开关拥堵模式"
+
+msgid "Toggles Pulse and Glide using the same transient control as a mapped vehicle button."
+msgstr "使用与映射车辆按键相同的瞬时控制来切换脉冲滑行。"
+
+msgid "Toggles forced coasting using the same transient control as a mapped vehicle button."
+msgstr "使用与映射车辆按键相同的瞬时控制来切换强制滑行。"
+
+msgid "U.S. States"
+msgstr "美国各州"
+
+msgid "Unused"
+msgstr "未使用"
+
+msgid "Use the broad knobs first to get the car into the right zip code before touching narrower cleanup layers."
+msgstr "先用粗略旋钮让车辆进入大致范围，再调整更细的清理层级。"
+
+msgid "Use the narrow band-specific knobs first so you can clean up one behavior without disturbing the rest of the tune."
+msgstr "先用窄带专用旋钮，这样清理某一行为时不会干扰其余调校。"
+
+msgid "Volt Lateral"
+msgstr "Volt 横向"
+
+msgid "Volt Long Tune"
+msgstr "Volt 长途调校"
+
+msgid "Volt lateral A/B sandbox for Plexy's baseline torque tuning."
+msgstr "用于 Plexy 基线扭矩调校的 Volt 横向 A/B 沙盒。"
+
+msgid "Volt longitudinal tuning sandbox."
+msgstr "Volt 纵向调校沙盒。"
+
+msgid "West"
+msgstr "西部"
+
+msgid "ZSS Detected"
+msgstr "检测到 ZSS"
+
+msgid "comma Pedal Support"
+msgstr "comma 踏板支持"
+
+msgid "openpilot Longitudinal Support"
+msgstr "openpilot 纵向支持"
+
+msgid "ACC Target"
+msgstr "ACC 目标"
+
+msgid "AVH On at Startup (Experimental)"
+msgstr "启动时开启 AVH（实验）"
+
+msgid "Above"
+msgstr "高于"
+
+msgid "Above (With Lead)"
+msgstr "高于（有前车）"
+
+msgid "Acceleration Smoothness"
+msgstr "加速平顺度"
+
+msgid "Adaptive Acceleration Limit"
+msgstr "自适应加速度上限"
+
+msgid "Advanced Longitudinal Tuning"
+msgstr "高级纵向调校"
+
+msgid "Advanced UI Controls"
+msgstr "高级界面控制"
+
+msgid "Alert Volume Controller"
+msgstr "警报音量控制"
+
+msgid "Allow Impossible Acceleration"
+msgstr "允许不可行加速度"
+
+msgid "Always Allow Uploads"
+msgstr "始终允许上传"
+
+msgid "Always On Lateral"
+msgstr "常开横向控制"
+
+msgid "Apply Offsets To Dash Spoof"
+msgstr "将偏移应用到仪表伪装"
+
+msgid "Auto-Bookmark Vision Signs"
+msgstr "自动为视觉标志加书签"
+
+msgid "Automatic Lane Changes"
+msgstr "自动变道"
+
+msgid "Automatic Lane Changes Only When Engaged"
+msgstr "仅接合时自动变道"
+
+msgid "Below"
+msgstr "低于"
+
+msgid "Below (With Lead)"
+msgstr "低于（有前车）"
+
+msgid "Blind Spot Alert When Disengaged"
+msgstr "解除时盲区警报"
+
+msgid "Bluetooth or steering wheel button"
+msgstr "蓝牙或方向盘按键"
+
+msgid "Braking Smoothness"
+msgstr "刹车平顺度"
+
+msgid "Breakpoint Count"
+msgstr "断点数量"
+
+msgid "C3/C3X Aggressive Cooling"
+msgstr "C3/C3X 激进散热"
+
+msgid "Camera Offset"
+msgstr "摄像头偏移"
+
+msgid "Cancel Button (Extra Long Press)"
+msgstr "取消按键（超长按）"
+
+msgid "Cancel Button (Long Press)"
+msgstr "取消按键（长按）"
+
+msgid "Cancel Button (Short Press)"
+msgstr "取消按键（短按）"
+
+msgid "Car Model (Fingerprint)"
+msgstr "汽车型号（指纹）"
+
+msgid "Clear Route Delay"
+msgstr "清除路线延时"
+
+msgid "Collect Extra Vision Training Samples"
+msgstr "采集额外视觉训练样本"
+
+msgid "Conditional Chill Mode"
+msgstr "条件 Chill 模式"
+
+msgid "Conditional Experimental Mode"
+msgstr "条件实验模式"
+
+msgid "Confidence Threshold"
+msgstr "置信度阈值"
+
+msgid "Confirm Higher Limits"
+msgstr "确认更高限速"
+
+msgid "Confirm Lower Limits"
+msgstr "确认更低限速"
+
+msgid "Confirm New Speed Limits"
+msgstr "确认新限速"
+
+msgid "Critical / takeover alerts"
+msgstr "严重／接管警报"
+
+msgid "Cruise Interval (Hold)"
+msgstr "巡航间隔（长按）"
+
+msgid "Curvature Lane-Change Factor"
+msgstr "曲率变道系数"
+
+msgid "Curve Detected Ahead"
+msgstr "前方检测到弯道"
+
+msgid "Custom Accel Profile"
+msgstr "自定义加速曲线"
+
+msgid "Dashboard"
+msgstr "仪表盘"
+
+msgid "Dashboard Speed Offset"
+msgstr "仪表盘速度偏移"
+
+msgid "Developer UI"
+msgstr "开发者界面"
+
+msgid "Device Settings"
+msgstr "设备设置"
+
+msgid "Device Shutdown Timer (Hours)"
+msgstr "设备关机定时（小时）"
+
+msgid "Disable Automatic Fingerprint Detection"
+msgstr "禁用自动指纹识别"
+
+msgid "Disable Wide Road Camera"
+msgstr "禁用广角摄像头"
+
+msgid "Disable openpilot Longitudinal"
+msgstr "禁用 openpilot 纵向控制"
+
+msgid "Disengage Volume"
+msgstr "解除音量"
+
+msgid "Disengagement"
+msgstr "解除"
+
+msgid "Distance Button (Extra Long Press)"
+msgstr "车距按键（超长按）"
+
+msgid "Distance Button (Long Press)"
+msgstr "车距按键（长按）"
+
+msgid "Distance Button (Short Press)"
+msgstr "车距按键（短按）"
+
+msgid "Driver"
+msgstr "驾驶员"
+
+msgid "Driving Personality Button"
+msgstr "驾驶风格按键"
+
+msgid "Driving Screen Widgets"
+msgstr "行驶屏幕组件"
+
+msgid "Dynamic"
+msgstr "动态"
+
+msgid "Dynamic Path Width"
+msgstr "动态路径宽度"
+
+msgid "E2E Override Strength"
+msgstr "端到端覆盖强度"
+
+msgid "Eco"
+msgstr "经济"
+
+msgid "Enable Developer Mode"
+msgstr "启用开发者模式"
+
+msgid "Enable PiP Side Preview"
+msgstr "启用画中画侧视预览"
+
+msgid "Enable V-ASM"
+msgstr "启用 V-ASM"
+
+msgid "Engage Volume"
+msgstr "接合音量"
+
+msgid "Engagement"
+msgstr "接合"
+
+msgid "Favorite Slots"
+msgstr "收藏槽位"
+
+msgid "Force Offroad"
+msgstr "强制停车"
+
+msgid "Force Standstill State"
+msgstr "强制静止状态"
+
+msgid "Force Stop Distance Offset"
+msgstr "强制停车距离偏移"
+
+msgid "Force Torque Controller"
+msgstr "强制扭矩控制器"
+
+msgid "Force Turn Desires Below Lane Change Speed"
+msgstr "低于变道速度时强制转向意图"
+
+msgid "Fused Tracks"
+msgstr "融合轨迹"
+
+msgid "GM Auto Hold"
+msgstr "GM 自动驻车"
+
+msgid "GPU Model Ready Sound"
+msgstr "GPU 模型就绪音效"
+
+msgid "Goat Scream"
+msgstr "山羊尖叫"
+
+msgid "Goat Scream Critical Alerts"
+msgstr "山羊尖叫严重警报"
+
+msgid "Green Light Alert"
+msgstr "绿灯警报"
+
+msgid "Hands-Free Cluster Display"
+msgstr "免手仪表显示"
+
+msgid "Heavy Rain"
+msgstr "大雨"
+
+msgid "Hide Current Speed"
+msgstr "隐藏当前速度"
+
+msgid "Hide Non-Critical Alerts"
+msgstr "隐藏非严重警报"
+
+msgid "High Speed Following Distance"
+msgstr "高速跟车距离"
+
+msgid "High-Quality Recording"
+msgstr "高质量录制"
+
+msgid "Higher Limit Lookahead Time"
+msgstr "更高限速预判时间"
+
+msgid "Highest"
+msgstr "最高"
+
+msgid "Holiday Themes"
+msgstr "节日主题"
+
+msgid "Honda PID Ki Scale"
+msgstr "本田 PID Ki 系数"
+
+msgid "Honda PID Kp Scale"
+msgstr "本田 PID Kp 系数"
+
+msgid "Ignore At or Below"
+msgstr "等于或低于时忽略"
+
+msgid "Ignore Low Vision Speed Limits"
+msgstr "忽略低视觉限速"
+
+msgid "Increase Following Distance by:"
+msgstr "增加跟车距离："
+
+msgid "Increase Stopped Distance by:"
+msgstr "增加停止距离："
+
+msgid "Informational alerts"
+msgstr "信息类警报"
+
+msgid "Invert Side View Orientation"
+msgstr "反转侧视方向"
+
+msgid "Keep Screen On While eGPU Loads"
+msgstr "eGPU 加载时保持屏幕常亮"
+
+msgid "Lane Center Offset"
+msgstr "车道中心偏移"
+
+msgid "Lane Centering"
+msgstr "车道居中"
+
+msgid "Lane Lines Width"
+msgstr "车道线宽度"
+
+msgid "Large-Curve Prediction Blend"
+msgstr "大弯道预测混合"
+
+msgid "Lateral Resume Delay"
+msgstr "横向恢复延迟"
+
+msgid "Lateral Tuning"
+msgstr "横向调校"
+
+msgid "Lead Departing Alert"
+msgstr "前车驶离警报"
+
+msgid "Lead Detected Ahead"
+msgstr "前方检测到前车"
+
+msgid "Lead Indicator"
+msgstr "前车指示器"
+
+msgid "Light/Medium Rain"
+msgstr "小/中雨"
+
+msgid "Low Visibility (fog)"
+msgstr "低能见度（雾）"
+
+msgid "Low-Voltage Cutoff"
+msgstr "低电压切断"
+
+msgid "Lower Limit Lookahead Time"
+msgstr "更低限速预判时间"
+
+msgid "Lowest"
+msgstr "最低"
+
+msgid "Manual Turn Release"
+msgstr "手动释放转向"
+
+msgid "Map Accel/Decel to Gears"
+msgstr "将加速/减速映射到档位"
+
+msgid "Match Speed Limit on Engage"
+msgstr "接合时匹配限速"
+
+msgid "Min Steer Speed Alert Volume"
+msgstr "最低转向速度警报音量"
+
+msgid "Minimum Lane Change Speed"
+msgstr "最低变道速度"
+
+msgid "Minimum Lane Width"
+msgstr "最小车道宽度"
+
+msgid "Mode Button (Extra Long Press)"
+msgstr "模式按键（超长按）"
+
+msgid "Mode Button (Long Press)"
+msgstr "模式按键（长按）"
+
+msgid "Mode Button (Short Press)"
+msgstr "模式按键（短按）"
+
+msgid "Model Lateral Smoothing (s)"
+msgstr "模型横向平滑（秒）"
+
+msgid "Model Longitudinal Smoothing (s)"
+msgstr "模型纵向平滑（秒）"
+
+msgid "Model UI"
+msgstr "模型界面"
+
+msgid "Mute Turn Limit Alert Below"
+msgstr "低于此速度静音转向极限警报"
+
+msgid "Neural Network Feedforward (NNFF)"
+msgstr "神经网络前馈（NNFF）"
+
+msgid "Neural Network Feedforward (NNFF) Lite"
+msgstr "神经网络前馈（NNFF）精简版"
+
+msgid "Offset Set Speed by:"
+msgstr "设定速度偏移："
+
+msgid "Force Stop at \\\"Detected\\\" Stop Lights/Signs"
+msgstr "在\"检测到的\"停车灯/标志处强制停车"
+
+msgid "Loud \\\"Car Detected in Blindspot\\\" Alert"
+msgstr "盲区检测警报加响"
+
+msgid "One Lane Change Per Signal"
+msgstr "每次信号一次变道"
+
+msgid "Only Show Sources With Speed Limits"
+msgstr "仅显示有限速的来源"
+
+msgid "Only Without Lead"
+msgstr "仅无前车时"
+
+msgid "Open Road"
+msgstr "开阔道路"
+
+msgid "Path Edges Width"
+msgstr "路径边缘宽度"
+
+msgid "Pause Lane Centering On Turn Signal"
+msgstr "转向灯时暂停车道居中"
+
+msgid "Pause Steering Below"
+msgstr "低于此速度暂停转向"
+
+msgid "Pause on Brake Press Below"
+msgstr "低于此速度刹车时暂停"
+
+msgid "Pedal CAN Bus"
+msgstr "踏板 CAN 总线"
+
+msgid "Pedal Calibration Complete"
+msgstr "踏板校准完成"
+
+msgid "Pedal Calibration Factor"
+msgstr "踏板校准系数"
+
+msgid "Pedal Calibration Zero"
+msgstr "踏板校准零点"
+
+msgid "Pedal-Responsive Wheel"
+msgstr "踏板响应式方向盘"
+
+msgid "Persist Experimental State"
+msgstr "保持实验状态"
+
+msgid "Point 1 Max Accel"
+msgstr "点 1 最大加速度"
+
+msgid "Point 1 Speed"
+msgstr "点 1 速度"
+
+msgid "Point 2 Max Accel"
+msgstr "点 2 最大加速度"
+
+msgid "Point 2 Speed"
+msgstr "点 2 速度"
+
+msgid "Point 3 Max Accel"
+msgstr "点 3 最大加速度"
+
+msgid "Point 3 Speed"
+msgstr "点 3 速度"
+
+msgid "Point 4 Max Accel"
+msgstr "点 4 最大加速度"
+
+msgid "Point 4 Speed"
+msgstr "点 4 速度"
+
+msgid "Point 5 Max Accel"
+msgstr "点 5 最大加速度"
+
+msgid "Point 5 Speed"
+msgstr "点 5 速度"
+
+msgid "Point 6 Max Accel"
+msgstr "点 6 最大加速度"
+
+msgid "Point 6 Speed"
+msgstr "点 6 速度"
+
+msgid "Point 7 Max Accel"
+msgstr "点 7 最大加速度"
+
+msgid "Point 7 Speed"
+msgstr "点 7 速度"
+
+msgid "Point 8 Max Accel"
+msgstr "点 8 最大加速度"
+
+msgid "Point 8 Speed"
+msgstr "点 8 速度"
+
+msgid "Point 9 Max Accel"
+msgstr "点 9 最大加速度"
+
+msgid "Point 9 Speed"
+msgstr "点 9 速度"
+
+msgid "Point 10 Max Accel"
+msgstr "点 10 最大加速度"
+
+msgid "Point 10 Speed"
+msgstr "点 10 速度"
+
+msgid "Point 11 Max Accel"
+msgstr "点 11 最大加速度"
+
+msgid "Point 11 Speed"
+msgstr "点 11 速度"
+
+msgid "Point 12 Max Accel"
+msgstr "点 12 最大加速度"
+
+msgid "Point 12 Speed"
+msgstr "点 12 速度"
+
+msgid "Preserve Auto-Bookmarked Segments"
+msgstr "保留自动书签的分段"
+
+msgid "Previous Limit"
+msgstr "上一个限速"
+
+msgid "Primary Speed Limit Source"
+msgstr "主限速来源"
+
+msgid "Prompt Distracted Volume"
+msgstr "分心提示音量"
+
+msgid "Prompt Volume"
+msgstr "提示音量"
+
+msgid "Pulse and Glide Speed Delta"
+msgstr "脉冲滑行速度差"
+
+msgid "RAV4 Radar (Experimental)"
+msgstr "RAV4 雷达（实验）"
+
+msgid "Radar Behind Nosecone"
+msgstr "前罩后方雷达"
+
+msgid "Radar Offset"
+msgstr "雷达偏移"
+
+msgid "Rainbow Road"
+msgstr "彩虹之路"
+
+msgid "Raise Temperature Limits"
+msgstr "提高温度上限"
+
+msgid "Redneck Cruise"
+msgstr "乡巴佬巡航"
+
+msgid "Reduce Acceleration by:"
+msgstr "降低加速度："
+
+msgid "Reduce Speed in Curves by:"
+msgstr "弯道降速："
+
+msgid "Refuse Volume"
+msgstr "拒绝音量"
+
+msgid "Remote Start Boots Comma (GM)"
+msgstr "远程启动时启动 Comma（GM）"
+
+msgid "Remote Start Boots Comma (HKG)"
+msgstr "远程启动时启动 Comma（HKG）"
+
+msgid "Rivian Angle Steering"
+msgstr "Rivian 角度转向"
+
+msgid "Road Edges Width"
+msgstr "道路边缘宽度"
+
+msgid "Rotating Steering Wheel"
+msgstr "旋转方向盘"
+
+msgid "Screen Brightness (Offroad)"
+msgstr "屏幕亮度（停车）"
+
+msgid "Screen Brightness (Onroad)"
+msgstr "屏幕亮度（行驶）"
+
+msgid "Screen Recorder"
+msgstr "屏幕录制"
+
+msgid "Screen Settings"
+msgstr "屏幕设置"
+
+msgid "Screen Timeout (Offroad)"
+msgstr "熄屏超时（停车）"
+
+msgid "Screen Timeout (Onroad)"
+msgstr "熄屏超时（行驶）"
+
+msgid "Secondary Speed Limit Source"
+msgstr "次限速来源"
+
+msgid "Set Speed"
+msgstr "设定速度"
+
+msgid "Show Abbreviated Icon Sources"
+msgstr "显示简称图标来源"
+
+msgid "Show Driver Camera When In Reverse"
+msgstr "倒车时显示驾驶员摄像头"
+
+msgid "Show Mode Status Banner"
+msgstr "显示模式状态横幅"
+
+msgid "Show Speed Limit Offset"
+msgstr "显示限速偏移"
+
+msgid "Show Speed Limit Sources"
+msgstr "显示限速来源"
+
+msgid "Show Speed Limits from Mapbox"
+msgstr "显示 Mapbox 限速"
+
+msgid "Show on Blind Spot Detection"
+msgstr "盲区检测时显示"
+
+msgid "Show on Turn Signal"
+msgstr "转向灯时显示"
+
+msgid "Simple Mode"
+msgstr "简洁模式"
+
+msgid "Small-Curve Prediction Blend"
+msgstr "小弯道预测混合"
+
+msgid "Smooth Pedal Response on Hills"
+msgstr "坡道上的平顺踏板响应"
+
+msgid "Smoothing Duration"
+msgstr "平滑时长"
+
+msgid "Speed Limit Changed Alert"
+msgstr "限速变化警报"
+
+msgid "Speed Offset (0–24 mph)"
+msgstr "速度偏移（0–24 mph）"
+
+msgid "Speed Offset (25–34 mph)"
+msgstr "速度偏移（25–34 mph）"
+
+msgid "Speed Offset (35–44 mph)"
+msgstr "速度偏移（35–44 mph）"
+
+msgid "Speed Offset (45–54 mph)"
+msgstr "速度偏移（45–54 mph）"
+
+msgid "Speed Offset (55–64 mph)"
+msgstr "速度偏移（55–64 mph）"
+
+msgid "Speed Offset (65–74 mph)"
+msgstr "速度偏移（65–74 mph）"
+
+msgid "Speed Offset (75–99 mph)"
+msgstr "速度偏移（75–99 mph）"
+
+msgid "Sport"
+msgstr "运动"
+
+msgid "Sport+"
+msgstr "运动+"
+
+msgid "Star Button (Extra Long Press)"
+msgstr "星标按键（超长按）"
+
+msgid "Star Button (Long Press)"
+msgstr "星标按键（长按）"
+
+msgid "Star Button (Short Press)"
+msgstr "星标按键（短按）"
+
+msgid "Static"
+msgstr "静态"
+
+msgid "Stinger Object Logging Beta"
+msgstr "Stinger 目标记录（测试版）"
+
+msgid "Stock Confidence Ball Widget"
+msgstr "原厂置信球组件"
+
+msgid "Stop and Go for Manual Parking Brake"
+msgstr "手动驻车制动的走走停停"
+
+msgid "Stop/Start Off at Startup"
+msgstr "启动时关闭启停"
+
+msgid "Subaru Redneck Cruise"
+msgstr "斯巴鲁乡巴佬巡航"
+
+msgid "Switchback Mode Cooldown"
+msgstr "往返模式冷却"
+
+msgid "Tesla Model 3 Cooperative Steering"
+msgstr "特斯拉 Model 3 协同转向"
+
+msgid "Tesla Pre-AP Bosch Radar"
+msgstr "特斯拉 Pre-AP 博世雷达"
+
+msgid "Tesla Pre-AP comma Pedal Longitudinal"
+msgstr "特斯拉 Pre-AP comma 踏板纵向"
+
+msgid "Three-Finger AOL Tap"
+msgstr "三指点击 AOL"
+
+msgid "Toyota Auto Hold"
+msgstr "丰田自动驻车"
+
+msgid "Traffic Mode"
+msgstr "拥堵模式"
+
+msgid "Turn signals"
+msgstr "转向灯"
+
+msgid "Use CAN Ignition Only"
+msgstr "仅使用 CAN 点火"
+
+msgid "Use Galaxy (new) by Default"
+msgstr "默认使用 Galaxy（新版）"
+
+msgid "Use Mapbox as Fallback"
+msgstr "使用 Mapbox 作为备用"
+
+msgid "Use Pedal For Longitudinal"
+msgstr "使用踏板做纵向控制"
+
+msgid "Use Route Desires for Lane Positioning"
+msgstr "使用路线意图做车道定位"
+
+msgid "Use Route Desires for Turns"
+msgstr "使用路线意图转弯"
+
+msgid "Use Vienna-Style Speed Signs"
+msgstr "使用维也纳式限速标志"
+
+msgid "Use Wheel Speed"
+msgstr "使用轮速"
+
+msgid "Vision"
+msgstr "视觉"
+
+msgid "Vision Speed Limit Detection"
+msgstr "视觉限速检测"
+
+msgid "Volt One Pedal Mode"
+msgstr "Volt 单踏板模式"
+
+msgid "Wake Comma with Tesla"
+msgstr "随特斯拉唤醒 Comma"
+
+msgid "Warning Immediate Volume"
+msgstr "立即警告音量"
+
+msgid "Warning Soft Volume"
+msgstr "柔和警告音量"
+
+msgid "Warning alerts"
+msgstr "警告类警报"
+
+msgid "Wide"
+msgstr "宽"
+
+msgid "\\\"Detected\\\" Stop Lights/Signs"
+msgstr "\"检测到的\"停车灯/标志"
+
+msgid "\\\"Taco Bell Run\\\" Turn Speed Hack"
+msgstr "\"Taco Bell Run\" 转向速度补丁"
+
+msgid "Controller Actions"
+msgstr "控制动作"
+
+msgid "Turns only the display off while driving. Press again, touch the screen, or go offroad to wake it. Driving controls stay active."
+msgstr "行驶时仅关闭屏幕。再次按下、触摸屏幕或停车即可唤醒。驾驶控制保持激活。"
+
+msgid "Arms or disarms Always On Lateral for the current drive and updates the blue AOL border. The AOL master setting is unchanged."
+msgstr "为本次驾驶启用或停用常开横向控制（AOL），并更新蓝色 AOL 边框。AOL 主开关设置不变。"
+
+msgid "A lightweight version of Twilsonco's \"Neural Network FeedForward\" controller. Uses the \"look-ahead\" planned lateral jerk logic from the full model to help smoothen steering adjustments in curves, but does not use the full neural network for torque calculation."
+msgstr "Twilsonco\"神经网络前馈\"控制器的轻量版。使用完整模型的\"前瞻\"规划横向加加速度逻辑来平滑弯道转向调整，但不使用完整神经网络计算扭矩。"
+
+msgid "Acceleration and braking control changes to fine-tune how openpilot drives."
+msgstr "加速与刹车控制调整，用于微调 openpilot 的驾驶表现。"
+
+msgid "Action performed when the \"Distance\" button is pressed for more than 0.5 seconds."
+msgstr "长按\"车距\"按键超过 0.5 秒时执行的动作。"
+
+msgid "Action performed when the \"Distance\" button is pressed for more than 2.5 seconds."
+msgstr "长按\"车距\"按键超过 2.5 秒时执行的动作。"
+
+msgid "Action performed when the \"Distance\" button is pressed."
+msgstr "短按\"车距\"按键时执行的动作。"
+
+msgid "Action performed when the \"LKAS\" button is pressed."
+msgstr "按下\"LKAS\"按键时执行的动作。"
+
+msgid "Action performed when the \"Mode\" button is pressed for more than 0.5 seconds. Hyundai CAN-FD only."
+msgstr "长按\"模式\"按键超过 0.5 秒时执行的动作。仅限现代 CAN-FD。"
+
+msgid "Action performed when the \"Mode\" button is pressed for more than 2.5 seconds. Hyundai CAN-FD only."
+msgstr "长按\"模式\"按键超过 2.5 秒时执行的动作。仅限现代 CAN-FD。"
+
+msgid "Action performed when the \"Mode\" button is pressed. Hyundai CAN-FD only."
+msgstr "按下\"模式\"按键时执行的动作。仅限现代 CAN-FD。"
+
+msgid "Action performed when the \"Star\" button is pressed for more than 0.5 seconds. Hyundai CAN-FD only."
+msgstr "长按\"星标\"按键超过 0.5 秒时执行的动作。仅限现代 CAN-FD。"
+
+msgid "Action performed when the \"Star\" button is pressed for more than 2.5 seconds. Hyundai CAN-FD only."
+msgstr "长按\"星标\"按键超过 2.5 秒时执行的动作。仅限现代 CAN-FD。"
+
+msgid "Action performed when the \"Star\" button is pressed. Hyundai CAN-FD only."
+msgstr "按下\"星标\"按键时执行的动作。仅限现代 CAN-FD。"
+
+msgid "Action performed when the cruise control main button is pressed."
+msgstr "按下巡航控制主按键时执行的动作。"
+
+msgid "Action performed when the remapped \"Cancel\" button is pressed for more than 0.5 seconds."
+msgstr "长按重映射的\"取消\"按键超过 0.5 秒时执行的动作。"
+
+msgid "Action performed when the remapped \"Cancel\" button is pressed for more than 2.5 seconds."
+msgstr "长按重映射的\"取消\"按键超过 2.5 秒时执行的动作。"
+
+msgid "Action performed when the remapped \"Cancel\" button is pressed."
+msgstr "按下重映射的\"取消\"按键时执行的动作。"
+
+msgid "Add a button to the driving screen to record the display."
+msgstr "在驾驶屏幕上添加一个录制屏幕的按钮。"
+
+msgid "Add extra buffer when stopped behind vehicles in a rainstorm. Increase for more room; decrease for shorter gaps."
+msgstr "暴雨中停在车辆后方时增加额外缓冲。调大留出更多空间，调小缩短间距。"
+
+msgid "Add extra buffer when stopped behind vehicles in low visibility. Increase for more room; decrease for shorter gaps."
+msgstr "低能见度下停在车辆后方时增加额外缓冲。调大留出更多空间，调小缩短间距。"
+
+msgid "Add extra buffer when stopped behind vehicles in rain. Increase for more room; decrease for shorter gaps."
+msgstr "雨天停在车辆后方时增加额外缓冲。调大留出更多空间，调小缩短间距。"
+
+msgid "Add extra buffer when stopped behind vehicles in snow. Increase for more room; decrease for shorter gaps."
+msgstr "雪天停在车辆后方时增加额外缓冲。调大留出更多空间，调小缩短间距。"
+
+msgid "Add extra space behind lead vehicles in a rainstorm. Increase for more space; decrease for tighter gaps."
+msgstr "暴雨中增加与前车的额外间距。调大留出更多空间，调小拉近距离。"
+
+msgid "Add extra space behind lead vehicles in low visibility. Increase for more space; decrease for tighter gaps."
+msgstr "低能见度下增加与前车的额外间距。调大留出更多空间，调小拉近距离。"
+
+msgid "Add extra space behind lead vehicles in rain. Increase for more space; decrease for tighter gaps."
+msgstr "雨天增加与前车的额外间距。调大留出更多空间，调小拉近距离。"
+
+msgid "Add extra space behind lead vehicles in snow. Increase for more space; decrease for tighter gaps."
+msgstr "雪天增加与前车的额外间距。调大留出更多空间，调小拉近距离。"
+
+msgid "Add extra space when stopped behind vehicles. Increase for more room; decrease for shorter gaps."
+msgstr "停在车辆后方时增加额外间距。调大留出更多空间，调小缩短间距。"
+
+msgid "Add trailer weight to vehicle mass for tow-aware gas, brake, and conservative lateral assist. Enter the loaded trailer weight in pounds."
+msgstr "将拖车重量计入整车质量，用于拖挂感知的油门、刹车和保守横向辅助。请输入载重后的拖车重量（磅）。"
+
+msgid "Adjust the radar position offset in meters if the radar alignment needs a small correction."
+msgstr "若雷达对位需要小幅修正，以米为单位调整雷达位置偏移。"
+
+msgid "Advanced acceleration and braking control changes to fine-tune how openpilot drives."
+msgstr "高级加速与刹车控制调整，用于微调 openpilot 的驾驶表现。"
+
+msgid "Advanced steering control changes to fine-tune how openpilot drives."
+msgstr "高级转向控制调整，用于微调 openpilot 的驾驶表现。"
+
+msgid "Advanced visual changes to fine-tune how the driving screen looks."
+msgstr "高级视觉调整，用于微调驾驶屏幕的外观。"
+
+msgid "Allow an active navigation route to reduce cruise speed for upcoming turns, ramps, and roundabouts."
+msgstr "允许当前导航路线为即将到来的转弯、匝道和环岛降低巡航速度。"
+
+msgid "Allow an active navigation route to request low-speed turn desires."
+msgstr "允许当前导航路线请求低速转向意图。"
+
+msgid "Allow openpilot to change lanes."
+msgstr "允许 openpilot 自动变道。"
+
+msgid "Allow route lane bias only after steering torque confirms the requested direction. It never initiates a lane change by itself."
+msgstr "仅在转向扭矩确认所请求的方向后，才允许路线车道偏移。它绝不会自行发起变道。"
+
+msgid "Allows for a temporary shorter follow distance behind lead so that openpilot merges smoothly out of current lane, it will allow car to accelerate as it changes lanes."
+msgstr "允许变道时临时缩短与前车的跟车距离，使 openpilot 平顺地驶出当前车道，并允许车辆在变道过程中加速。"
+
+msgid "Also send a real bookmark for confirmed auto-bookmarks so loggerd preserves the route segment. Leave this off unless you specifically want the extra storage usage."
+msgstr "为已确认的自动书签同时发送真实书签，以便 loggerd 保留该路线分段。除非确实需要额外存储占用，否则请保持关闭。"
+
+msgid "Ask before changing to a new speed limit. To accept, tap the flashing on-screen widget or press the Cruise Increase button. To deny, press the Cruise Decrease button or ignore the prompt for 30 seconds."
+msgstr "切换到新限速前先询问。点按闪烁的屏幕组件或按\"巡航加速\"键接受；按\"巡航减速\"键或忽略提示 30 秒则拒绝。"
+
+msgid "Automatically adjust driving behavior based on real-time weather. Helps maintain comfort and safety in low visibility, rain, or snow."
+msgstr "根据实时天气自动调整驾驶行为。有助于在低能见度、雨雪天气中保持舒适与安全。"
+
+msgid "Automatically apply seasonal theme assets during holiday windows. Turn this off to keep your normal theme year-round."
+msgstr "在节日期间自动应用季节性主题素材。关闭则全年保持常规主题。"
+
+msgid "Automatically learn the full steering delay. The manual actuator delay is ignored while enabled."
+msgstr "自动学习完整转向延迟。启用时手动执行器延迟将被忽略。"
+
+msgid "Automatically save confirmed vision-detected speed limit signs into the speed-limit debug session so they can be imported into the training set later."
+msgstr "自动将已确认的视觉检测限速标志保存到限速调试会话，便于之后导入训练集。"
+
+msgid "Automatically slow down for upcoming curves using data learned from your driving style, adapting to curves as you would."
+msgstr "使用从你的驾驶风格学习到的数据，自动为即将到来的弯道减速，像你一样适应弯道。"
+
+msgid "Automatically switch to \"Experimental Mode\" when set conditions are met. Allows the model to handle challenging situations with smarter decision making."
+msgstr "满足设定条件时自动切换到\"实验模式\"。让模型以更智能的决策应对复杂路况。"
+
+msgid "Blend model-predicted curvature into gentle turns. 0 uses planner curvature only; 1 uses model prediction only."
+msgstr "将模型预测曲率混合进缓弯。0 表示仅使用规划器曲率；1 表示仅使用模型预测。"
+
+msgid "Blend model-predicted curvature into tighter turns. 0 uses planner curvature only; 1 uses model prediction only."
+msgstr "将模型预测曲率混合进急弯。0 表示仅使用规划器曲率；1 表示仅使用模型预测。"
+
+msgid "Camera-based adjacent spot monitoring using the driver camera. Supplements factory blind spot monitoring."
+msgstr "使用驾驶员摄像头进行基于视觉的相邻盲区监测，作为原厂盲区监测的补充。"
+
+msgid "Change the path width based on engagement."
+msgstr "根据接合状态改变路径宽度。"
+
+msgid "Choose Auto to follow ambient light with an adjustable offset, or Manual to set a fixed brightness while driving."
+msgstr "选择\"自动\"可根据环境光并带可调偏移；选择\"手动\"可在行驶时设定固定亮度。"
+
+msgid "Choose how many points define the custom acceleration curve."
+msgstr "选择用多少个点来定义自定义加速曲线。"
+
+msgid "Choose how strongly the vision model may override lane centering when it sees a hazard."
+msgstr "选择视觉模型在发现危险时覆盖车道居中的强度。"
+
+msgid "Choose the backup speed-limit source when the primary one is unavailable."
+msgstr "选择主限速来源不可用时的备用限速来源。"
+
+msgid "Choose the fingerprint platform to use when automatic detection is disabled."
+msgstr "禁用自动识别时，选择要使用的指纹平台。"
+
+msgid "Choose the first speed-limit source to trust when more than one is available."
+msgstr "有多个限速来源时，选择优先信任的第一个来源。"
+
+msgid "Choose the speed to use when no speed limit source is currently available."
+msgstr "当前没有可用限速来源时使用的速度。"
+
+msgid "Choose which camera feed the driving screen uses: Auto, Driver, Standard, or Wide."
+msgstr "选择驾驶屏幕使用的摄像头画面：自动、驾驶员、标准或广角。"
+
+msgid "Clear learned Curve Speed Controller data and begin training again from the default lateral acceleration."
+msgstr "清除弯道速度控制器已学习的数据，并从默认横向加速度重新开始训练。"
+
+msgid "Collect candidate object data on the 2022-2023 Kia Stinger for validation. Logging only: this does not enable radar-based braking or change steering. Default off. Keep driving normally, stay attentive, and upload full rlogs with bookmarked observations."
+msgstr "在 2022-2023 起亚 Stinger 上采集候选目标数据用于验证。仅记录：不会启用基于雷达的制动，也不会改变转向。默认关闭。请正常驾驶、保持注意力，并上传带书签观察的完整 rlog。"
+
+msgid "Color the driving path by planned acceleration and braking."
+msgstr "按规划的加速与刹车为驾驶路径着色。"
+
+msgid "Color the driving path like a rainbow road."
+msgstr "将驾驶路径着成彩虹色。"
+
+msgid "Configure up to three favorite toggles for on-road buttons and steering-wheel bindings."
+msgstr "最多配置三个收藏开关，用于行驶屏幕按钮和方向盘绑定。"
+
+msgid "Control and view the current driving personality via a driving screen widget."
+msgstr "通过驾驶屏幕组件控制并查看当前驾驶风格。"
+
+msgid "Controls how smoothly openpilot commits to a lane change. 10 is stock behavior; lower values produce a gentler, more gradual maneuver. 1 stretches the maneuver to ~8 seconds."
+msgstr "控制 openpilot 执行变道的平顺度。10 为原厂行为；数值越低变道越轻柔渐进。1 会把变道拉长到约 8 秒。"
+
+msgid "Custom StarPilot widgets for the driving screen."
+msgstr "驾驶屏幕的自定义 StarPilot 组件。"
+
+msgid "Customise settings for driving in heavy rain"
+msgstr "自定义大雨驾驶的设置"
+
+msgid "Customise settings for driving in light & medium rain"
+msgstr "自定义小到中雨驾驶的设置"
+
+msgid "Customise settings for driving in low visibility situations"
+msgstr "自定义低能见度驾驶的设置"
+
+msgid "Customise settings for driving in snow"
+msgstr "自定义雪天驾驶的设置"
+
+msgid "Customize braking, acceleration, and following distance for each profile."
+msgstr "为每种风格自定义刹车、加速和跟车距离。"
+
+msgid "Customize the \"Aggressive\" personality profile. Designed for assertive driving with tighter gaps."
+msgstr "自定义\"激进\"驾驶风格。为更果断、跟车更近的驾驶而设计。"
+
+msgid "Customize the \"Relaxed\" personality profile. Designed for smoother, more comfortable driving with larger gaps."
+msgstr "自定义\"轻松\"驾驶风格。为更平顺舒适、跟车更远的驾驶而设计。"
+
+msgid "Customize the \"Standard\" personality profile. Designed for balanced driving with moderate gaps."
+msgstr "自定义\"标准\"驾驶风格。为均衡、跟车间距适中的驾驶而设计。"
+
+msgid "Customize the \"Traffic Mode\" personality profile. Designed for stop-and-go driving."
+msgstr "自定义\"拥堵模式\"驾驶风格。为走走停停的路况而设计。"
+
+msgid "Delay before lateral control resumes after the turn signal is turned off. Only applies when the vehicle speed dropped below half the \"Pause Steering Below\" speed during the turn signal. Set to 0 to disable."
+msgstr "转向灯关闭后横向控制恢复的延迟。仅在转向灯期间车速降至\"低于此速度暂停转向\"的一半以下时生效。设为 0 可禁用。"
+
+msgid "Delay between turn signal activation and the start of an automatic lane change."
+msgstr "转向灯激活到自动变道开始之间的延迟。"
+
+msgid "Detailed information about openpilot's internal operations."
+msgstr "关于 openpilot 内部运行的详细信息。"
+
+msgid "Developer-only model lateral action smoothing. Default is 0.10 seconds."
+msgstr "仅开发者：模型横向动作平滑。默认 0.10 秒。"
+
+msgid "Developer-only model longitudinal action smoothing. Default is 0.30 seconds."
+msgstr "仅开发者：模型纵向动作平滑。默认 0.30 秒。"
+
+msgid "Developer-only: when Pulse and Glide is assigned to a wheel button, coast this far below the current cruise target before accelerating back up."
+msgstr "仅开发者：当脉冲滑行绑定到方向盘按键时，滑行至比当前巡航目标低此数值后再加速恢复。"
+
+msgid "Display the road name at the bottom of the driving screen using data from \"OpenStreetMap (OSM)\"."
+msgstr "使用\"OpenStreetMap (OSM)\"的数据在驾驶屏幕底部显示道路名称。"
+
+msgid "Display the side preview when a vehicle is detected in the blind spot, whether from factory BSM, V-ASM, or both."
+msgstr "当盲区检测到车辆时显示侧视预览，来源可以是原厂 BSM、V-ASM 或两者。"
+
+msgid "Display the side preview while the corresponding turn signal is engaged."
+msgstr "相应转向灯开启期间显示侧视预览。"
+
+msgid "Display the speed-limit sources and their current values on the driving screen."
+msgstr "在驾驶屏幕上显示限速来源及其当前数值。"
+
+msgid "Enable only after entering valid Tesla pedal calibration values. Pedal-long stays inactive until this is on."
+msgstr "仅在输入有效的特斯拉踏板校准值后才能启用。在开启之前，踏板纵向保持不激活。"
+
+msgid "Enable openpilot longitudinal control for vehicles that support it. This replaces the vehicle's stock ACC and may disable automatic emergency braking. Changing this setting restarts the driving stack."
+msgstr "为支持的车辆启用 openpilot 纵向控制。这会替换车辆原厂 ACC，并可能禁用自动紧急制动。更改此设置会重启驾驶栈。"
+
+msgid "Enable this if the Bosch radar is mounted behind the nosecone instead of being exposed."
+msgstr "如果博世雷达安装在前罩后方而非外露，请启用此项。"
+
+msgid "Experimentally bias the model command toward the detected lane center. Requires two confident lane lines and remains subject to normal curvature and jerk limits."
+msgstr "实验性地将模型指令偏向检测到的车道中心。需要两条置信车道线，且仍受常规曲率与加加速度限制。"
+
+msgid "Fade lane-centering correction out when a turn signal is active so it does not fight a lane change or turn."
+msgstr "转向灯激活时淡出车道居中修正，避免与变道或转向相争。"
+
+msgid "Fade the gas and brake indicators based on how much openpilot is accelerating or braking."
+msgstr "根据 openpilot 的加速或刹车强度淡化油门与刹车指示器。"
+
+msgid "Flips the camera horizontally to switch whether your car's body appears on the inner/left or outer/right edge of the preview."
+msgstr "水平翻转摄像头，用于切换车身出现在预览的内侧/左侧还是外侧/右侧。"
+
+msgid "Follow distance to hold while changing lanes. Only applied when shorter than your normal gap."
+msgstr "变道时保持的跟车距离。仅在短于常规车距时生效。"
+
+msgid "Following distance for higher speeds in the \"Aggressive\" profile. openpilot smoothly blends from the base value to this value as speed rises."
+msgstr "\"激进\"风格在高速时的跟车距离。车速升高时 openpilot 会从基础值平滑过渡到此值。"
+
+msgid "Following distance for higher speeds in the \"Relaxed\" profile. openpilot smoothly blends from the base value to this value as speed rises."
+msgstr "\"轻松\"风格在高速时的跟车距离。车速升高时 openpilot 会从基础值平滑过渡到此值。"
+
+msgid "Following distance for higher speeds in the \"Standard\" profile. openpilot smoothly blends from the base value to this value as speed rises."
+msgstr "\"标准\"风格在高速时的跟车距离。车速升高时 openpilot 会从基础值平滑过渡到此值。"
+
+msgid "For Tesla Model 3 only. Converts light driver steering input into bounded steering-wheel rotation while lateral control remains active. Change while parked."
+msgstr "仅限特斯拉 Model 3。在横向控制保持激活时，将轻微的驾驶员转向输入转换为受限的方向盘转动。请在停车时更改。"
+
+msgid "For supported Subaru Outback 2023-24 and Legacy 2025 vehicles, send one momentary Stop/Start request after ignition while stationary and in Park or Neutral."
+msgstr "对支持的斯巴鲁 Outback 2023-24 和 Legacy 2025，在点火后静止且处于 P 档或 N 档时发送一次瞬时启停请求。"
+
+msgid "For the 2025 Subaru Legacy, request Auto Vehicle Hold once at startup while stopped in Park with the engine running. Manual choices are preserved. Enable before the next drive."
+msgstr "对 2025 斯巴鲁 Legacy，在启动时于 P 档停车且发动机运转状态下请求一次自动驻车。手动选择会被保留。请在下次驾驶前启用。"
+
+msgid "Force openpilot to stop whenever the driving model \"detects\" a red light or stop sign."
+msgstr "当驾驶模型\"检测到\"红灯或停车标志时，强制 openpilot 停车。"
+
+msgid "Force stop-and-go on Lexus/Toyota vehicles without stock stop-and-go functionality."
+msgstr "为没有原厂走走停停功能的雷克萨斯/丰田车辆强制启用走走停停。"
+
+msgid "Force stop-and-go on the 2017 Chevy Volt."
+msgstr "为 2017 款雪佛兰 Volt 强制启用走走停停。"
+
+msgid "Force the selected fingerprint and prevent it from changing automatically."
+msgstr "强制使用所选指纹，并阻止其自动更改。"
+
+msgid "Force-disable openpilot's live auto-tuning for \"Friction\" and \"Lateral Acceleration\" and use the set value instead."
+msgstr "强制禁用 openpilot 对\"摩擦\"和\"横向加速度\"的实时自动调校，改用设定值。"
+
+msgid "Force-enable openpilot's live auto-tuning for \"Friction\" and \"Lateral Acceleration\"."
+msgstr "强制启用 openpilot 对\"摩擦\"和\"横向加速度\"的实时自动调校。"
+
+msgid "Hide non-critical alerts from the driving screen."
+msgstr "在驾驶屏幕上隐藏非严重警报。"
+
+msgid "Hide source rows that have no current speed limit reading. Works with both abbreviated and full display."
+msgstr "隐藏当前无限速读数的来源行。简称和完整显示均适用。"
+
+msgid "Hide the 'Changing Lanes' banner from the driving screen."
+msgstr "在驾驶屏幕上隐藏\"正在变道\"横幅。"
+
+msgid "Hide the 'Turning Left/Right' banner from the driving screen."
+msgstr "在驾驶屏幕上隐藏\"左转/右转\"横幅。"
+
+msgid "Hide the current speed from the driving screen."
+msgstr "在驾驶屏幕上隐藏当前速度。"
+
+msgid "Hide the driver monitoring icon from the driving screen."
+msgstr "在驾驶屏幕上隐藏驾驶员监控图标。"
+
+msgid "Hide the driving personality banner when changing distance profiles."
+msgstr "切换车距风格时隐藏驾驶风格横幅。"
+
+msgid "Hide the max speed from the driving screen."
+msgstr "在驾驶屏幕上隐藏最高速度。"
+
+msgid "Hide the steering-wheel button from the top-right of the driving screen."
+msgstr "隐藏驾驶屏幕右上角的方向盘按键。"
+
+msgid "Hold supported GM vehicles at a stop until the gas pedal is pressed."
+msgstr "让支持的 GM 车辆在停车后保持静止，直到踩下油门。"
+
+msgid "Hold the brake pedal for over one second at a complete stop with cruise main on and cruise disengaged to hold until you press the gas pedal. Normal cruise stop-and-go is unchanged."
+msgstr "在完全停止状态下，巡航主开关开启且巡航未接合时，踩住刹车超过一秒即可保持静止，直到踩下油门。常规巡航的走走停停不受影响。"
+
+msgid "Hold the brakes after Jeep ACC times out at a stop, then send resume when traffic moves again."
+msgstr "Jeep ACC 在停车时超时后保持刹车，待车流移动时发送恢复指令。"
+
+msgid "How far ahead openpilot anticipates upcoming higher speed limits from downloaded map data."
+msgstr "openpilot 根据已下载地图数据提前预判更高限速的距离。"
+
+msgid "How far ahead openpilot anticipates upcoming lower speed limits from downloaded map data."
+msgstr "openpilot 根据已下载地图数据提前预判更低限速的距离。"
+
+msgid "How far below the set speed the car must be before open-road Conditional Chill can engage."
+msgstr "在开阔道路启用条件 Chill 模式时，车速需低于设定速度多少。"
+
+msgid "How firmly openpilot slows down. \"Eco\" favors coasting, \"Sport\" applies stronger braking."
+msgstr "openpilot 减速的力度。\"经济\"倾向滑行，\"运动\"施加更强制动。"
+
+msgid "How long the device can stay offroad before clearing the active route. Set to 0 for immediate clearing."
+msgstr "设备停车后多久清除当前路线。设为 0 表示立即清除。"
+
+msgid "How long the driving screen stays awake before Standby Mode turns it off."
+msgstr "待机模式关闭前驾驶屏幕保持唤醒的时长。"
+
+msgid "How long the parked screen stays awake after a touch."
+msgstr "停车屏幕在触摸后保持唤醒的时长。"
+
+msgid "How many hours the device stays on after a drive before it shuts down automatically."
+msgstr "一次驾驶结束后设备在自动关机前保持开机的小时数。"
+
+msgid "How many seconds openpilot follows behind lead vehicles when using the \"Aggressive\" profile. Increase for more space; decrease for tighter gaps."
+msgstr "使用\"激进\"风格时 openpilot 与前车保持的秒数。调大留出更多空间，调小拉近距离。"
+
+msgid "How many seconds openpilot follows behind lead vehicles when using the \"Relaxed\" profile. Increase for more space; decrease for tighter gaps."
+msgstr "使用\"轻松\"风格时 openpilot 与前车保持的秒数。调大留出更多空间，调小拉近距离。"
+
+msgid "How many seconds openpilot follows behind lead vehicles when using the \"Standard\" profile. Increase for more space; decrease for tighter gaps."
+msgstr "使用\"标准\"风格时 openpilot 与前车保持的秒数。调大留出更多空间，调小拉近距离。"
+
+msgid "How much extra space openpilot keeps from the vehicle ahead. Increase for larger gaps and more cautious following; decrease for tighter gaps and closer following."
+msgstr "openpilot 与前车保持的额外间距。调大跟车更远更谨慎，调小跟车更近。"
+
+msgid "How much the set speed increases or decreases for each + or – cruise control button press."
+msgstr "每次短按 + 或 – 巡航键时设定速度变化多少。"
+
+msgid "How much the set speed increases or decreases while holding the + or – cruise control buttons."
+msgstr "长按 + 或 – 巡航键时设定速度变化多少。"
+
+msgid "How much to offset posted speed-limits between 0 and 24 mph."
+msgstr "对 0–24 mph 区间限速的偏移量。"
+
+msgid "How much to offset posted speed-limits between 25 and 34 mph."
+msgstr "对 25–34 mph 区间限速的偏移量。"
+
+msgid "How much to offset posted speed-limits between 35 and 44 mph."
+msgstr "对 35–44 mph 区间限速的偏移量。"
+
+msgid "How much to offset posted speed-limits between 45 and 54 mph."
+msgstr "对 45–54 mph 区间限速的偏移量。"
+
+msgid "How much to offset posted speed-limits between 55 and 64 mph."
+msgstr "对 55–64 mph 区间限速的偏移量。"
+
+msgid "How much to offset posted speed-limits between 65 and 74 mph."
+msgstr "对 65–74 mph 区间限速的偏移量。"
+
+msgid "How much to offset posted speed-limits between 75 and 99 mph."
+msgstr "对 75–99 mph 区间限速的偏移量。"
+
+msgid "How quickly openpilot speeds up. \"Eco\" is gentle and efficient, \"Sport\" is firmer and more responsive, and \"Sport+\" accelerates at the maximum rate allowed."
+msgstr "openpilot 加速的快慢。\"经济\"轻柔高效，\"运动\"更果断灵敏，\"运动+\"以允许的最大速率加速。"
+
+msgid "How sensitive openpilot is to detecting vehicles. Higher sensitivity allows quicker detection at longer distances but may react to non-vehicle objects; lower sensitivity is more conservative and reduces false detections."
+msgstr "openpilot 检测车辆的灵敏度。灵敏度越高，远距离检测越快，但可能对非车辆物体作出反应；灵敏度越低越保守，可减少误检。"
+
+msgid "How smoothly openpilot accelerates. Increase for gentler starts; decrease for faster but more abrupt takeoffs."
+msgstr "openpilot 加速的平顺度。调大起步更柔和，调小起步更快但更突兀。"
+
+msgid "How smoothly openpilot brakes. Increase for gentler stops; decrease for quicker but sharper braking."
+msgstr "openpilot 刹车的平顺度。调大停车更柔和，调小刹车更快但更生硬。"
+
+msgid "How smoothly openpilot slows down. Increase for more gradual deceleration; decrease for faster but sharper slowdowns."
+msgstr "openpilot 减速的平顺度。调大减速更渐进，调小减速更快但更生硬。"
+
+msgid "How smoothly openpilot speeds up. Increase for more gradual acceleration; decrease for quicker but more jolting acceleration."
+msgstr "openpilot 加速的平顺度。调大加速更渐变，调小加速更快但更颠簸。"
+
+msgid "Increase the set speed by the chosen offset. For example, set +5 if you usually drive 5 over the limit."
+msgstr "按所选偏移量提高设定速度。例如你通常超速 5，就设为 +5。"
+
+msgid "Keep \"Experimental Mode\" on by default, but temporarily switch to \"Chill Mode\" in simple cruising scenes where speed holding is usually better."
+msgstr "默认保持\"实验模式\"，但在速度保持通常更好的简单巡航场景下临时切换到\"Chill 模式\"。"
+
+msgid "Keep Experimental Mode active on an open road after reaching the set speed when no lead vehicle is detected. This can help the model anticipate braking sooner."
+msgstr "在开阔道路达到设定速度且未检测到前车时保持实验模式激活。这有助于模型更早预判制动。"
+
+msgid "Keep openpilot in the standstill state until you press the gas pedal or the Resume/+ cruise button."
+msgstr "让 openpilot 保持静止状态，直到你踩下油门或按下 RES/+ 巡航键。"
+
+msgid "Keep the driving screen awake while an eGPU model loads so you can watch its status. The normal timeout resumes when loading finishes. A manual Screen Off action still works."
+msgstr "在 eGPU 模型加载期间保持驾驶屏幕常亮，方便查看状态。加载结束后恢复正常超时。手动熄屏操作仍然有效。"
+
+msgid "Keep your manual Conditional Chill override through reboots until you manually clear it."
+msgstr "重启后保留手动条件 Chill 覆盖，直到你手动清除。"
+
+msgid "Keep your manual Conditional Experimental override through reboots until you manually clear it."
+msgstr "重启后保留手动条件实验模式覆盖，直到你手动清除。"
+
+msgid "Lane-change behavior that mimics human drivers by anticipating and tracking adjacent vehicles during lane changes."
+msgstr "模仿人类驾驶员的变道行为，在变道过程中预判并跟踪相邻车辆。"
+
+msgid "Limit automatic lane changes to one per turn-signal activation."
+msgstr "限制每次转向灯激活只能自动变道一次。"
+
+msgid "Limit openpilot's maximum driving speed using configured map, dashboard, and optional vision sources. Press + above a limit for a persistent override; hold the gas pedal for a temporary override."
+msgstr "使用已配置的地图、仪表和可选视觉来源限制 openpilot 的最高行驶速度。在限速以上按 + 可持久覆盖；踩住油门可临时覆盖。"
+
+msgid "Limit the strongest acceleration openpilot can command."
+msgstr "限制 openpilot 可指令的最大加速度。"
+
+msgid "Lower the desired speed while driving through curves in a rainstorm. Increase for safer, gentler turns; decrease for more aggressive driving in curves."
+msgstr "暴雨中过弯时降低目标速度。调大过弯更安全柔和，调小过弯更激进。"
+
+msgid "Lower the desired speed while driving through curves in low visibility. Increase for safer, gentler turns; decrease for more aggressive driving in curves."
+msgstr "低能见度下过弯时降低目标速度。调大过弯更安全柔和，调小过弯更激进。"
+
+msgid "Lower the desired speed while driving through curves in rain. Increase for safer, gentler turns; decrease for more aggressive driving in curves."
+msgstr "雨天过弯时降低目标速度。调大过弯更安全柔和，调小过弯更激进。"
+
+msgid "Lower the desired speed while driving through curves in snow. Increase for safer, gentler turns; decrease for more aggressive driving in curves."
+msgstr "雪天过弯时降低目标速度。调大过弯更安全柔和，调小过弯更激进。"
+
+msgid "Lower the maximum acceleration in a rainstorm. Increase for softer takeoffs; decrease for quicker but less stable takeoffs."
+msgstr "降低暴雨中的最大加速度。调大起步更柔和，调小起步更快但更不稳。"
+
+msgid "Lower the maximum acceleration in low visibility. Increase for softer takeoffs; decrease for quicker but less stable takeoffs."
+msgstr "降低低能见度下的最大加速度。调大起步更柔和，调小起步更快但更不稳。"
+
+msgid "Lower the maximum acceleration in rain. Increase for softer takeoffs; decrease for quicker but less stable takeoffs."
+msgstr "降低雨天的最大加速度。调大起步更柔和，调小起步更快但更不稳。"
+
+msgid "Lower the maximum acceleration in snow. Increase for softer takeoffs; decrease for quicker but less stable takeoffs."
+msgstr "降低雪天的最大加速度。调大起步更柔和，调小起步更快但更不稳。"
+
+msgid "Map the Acceleration or Deceleration profiles to the vehicle's \"Eco\" and \"Sport\" gear modes."
+msgstr "将加速或减速曲线映射到车辆的\"经济\"和\"运动\"档位模式。"
+
+msgid "Add Favorite {}"
+msgstr "添加收藏 {}"
+
+msgid "Tap to configure"
+msgstr "点击配置"
+
+msgid "Assign Favorite {}"
+msgstr "指派收藏 {}"
+
+msgid "Assign Favorite"
+msgstr "指派收藏"
+
+msgid "Set Speed: configure in New Galaxy"
+msgstr "设定速度：请在 New Galaxy 中配置"
+
+msgid "No selectable favorites are available for this vehicle."
+msgstr "此车辆没有可选的收藏项。"
+
+msgid "{}–{} of {}"
+msgstr "{}–{} / 共 {}"
+
+msgid "{} STATES"
+msgstr "{} 个州"
+
+msgid "Set Speed To {} {}"
+msgstr "设定速度为 {} {}"
+
+msgid "ACTION"
+msgstr "动作"
+
+msgid "TOGGLE"
+msgstr "开关"
+
+msgid "AEB: Risk of Collision"
+msgstr "AEB：碰撞风险"
+
+msgid "Adaptive Cruise Disabled"
+msgstr "自适应巡航已禁用"
+
+msgid "Arm Stock Cruise to Enable Speed Control"
+msgstr "启用原厂巡航以开启速度控制"
+
+msgid "BRAKE!"
+msgstr "刹车！"
+
+msgid "Big Model Failed"
+msgstr "大模型加载失败"
+
+msgid "Big Model Loading"
+msgstr "大模型加载中"
+
+msgid "Bookmark Saved"
+msgstr "书签已保存"
+
+msgid "CAN Bus Disconnected"
+msgstr "CAN 总线断开"
+
+msgid "CAN Bus Disconnected: Check Connections"
+msgstr "CAN 总线断开：请检查连接"
+
+msgid "CAN Bus Disconnected: Likely Faulty Cable"
+msgstr "CAN 总线断开：线缆可能故障"
+
+msgid "Calibrating"
+msgstr "校准中"
+
+msgid "Calibration Invalid"
+msgstr "校准无效"
+
+msgid "Calibration Invalid: Remount Device & Recalibrate"
+msgstr "校准无效：请重新安装设备并校准"
+
+msgid "Calibration in Progress"
+msgstr "校准进行中"
+
+msgid "Camera Frame Rate Low"
+msgstr "摄像头帧率过低"
+
+msgid "Camera Frame Rate Low: Reboot Your Device"
+msgstr "摄像头帧率过低：请重启设备"
+
+msgid "Camera Malfunction"
+msgstr "摄像头故障"
+
+msgid "Camera Malfunction: Reboot Your Device"
+msgstr "摄像头故障：请重启设备"
+
+msgid "Cancel Pressed"
+msgstr "已按下取消"
+
+msgid "Car Detected in Blindspot"
+msgstr "盲区检测到车辆"
+
+msgid "Car Unrecognized"
+msgstr "车辆未识别"
+
+msgid "Car in Blindspot"
+msgstr "盲区有车"
+
+msgid "Changing Lanes"
+msgstr "正在变道"
+
+msgid "Check Calibration"
+msgstr "检查校准"
+
+msgid "Check Hardware"
+msgstr "检查硬件"
+
+msgid "Communication Issue Between Processes"
+msgstr "进程间通信异常"
+
+msgid "Confirm Lane Change"
+msgstr "确认变道"
+
+msgid "Controls Mismatch"
+msgstr "控制不匹配"
+
+msgid "Cruise Fault: Restart the Car"
+msgstr "巡航故障：请重启车辆"
+
+msgid "Cruise Fault: Restart the car to engage"
+msgstr "巡航故障：重启车辆以接合"
+
+msgid "Cruise Is Off"
+msgstr "巡航已关闭"
+
+msgid "DISENGAGE IMMEDIATELY"
+msgstr "立即解除！"
+
+msgid "Dashcam Mode"
+msgstr "行车记录模式"
+
+msgid "Dashcam mode"
+msgstr "行车记录模式"
+
+msgid "Device Fell Off Mount"
+msgstr "设备已从支架脱落"
+
+msgid "Don't use the 'Development' branch!"
+msgstr "不要使用 'Development' 分支！"
+
+msgid "Donate logs to Twilsonco to get your car supported!"
+msgstr "请把日志捐给 Twilsonco 以支持你的车型！"
+
+msgid "Door Open"
+msgstr "车门未关"
+
+msgid "Drive to Calibrate"
+msgstr "行驶以完成校准"
+
+msgid "Driver Distracted"
+msgstr "驾驶员分心"
+
+msgid "Driver Unresponsive"
+msgstr "驾驶员无响应"
+
+msgid "Driving Model Lagging"
+msgstr "驾驶模型延迟"
+
+msgid "Electronic Stability Control Active"
+msgstr "车身稳定系统已介入"
+
+msgid "Electronic Stability Control Disabled"
+msgstr "车身稳定系统已关闭"
+
+msgid "Emergency Braking: Risk of Collision"
+msgstr "紧急制动：碰撞风险"
+
+msgid "Ensure road ahead is clear"
+msgstr "请确认前方道路畅通"
+
+msgid "Excessive Actuation"
+msgstr "执行器动作过度"
+
+msgid "Fan Malfunction"
+msgstr "风扇故障"
+
+msgid "Forcing you into 'Dashcam Mode' for your safety..."
+msgstr "为安全起见，已强制进入\"行车记录模式\"…"
+
+msgid "Gear not D"
+msgstr "档位不在 D 档"
+
+msgid "Great Scott!"
+msgstr "天哪！"
+
+msgid "Harness Relay Malfunction"
+msgstr "线束继电器故障"
+
+msgid "High CPU Usage"
+msgstr "CPU 占用过高"
+
+msgid "Holding the car at a stop"
+msgstr "正在保持车辆停止"
+
+msgid "I ain't giving you no tree-fiddy"
+msgstr "我不给你三块五"
+
+msgid "I'm afraid I can't do that..."
+msgstr "恐怕我做不到…"
+
+msgid "I'm sorry Dave"
+msgstr "对不起，Dave"
+
+msgid "IE Has Stopped Responding..."
+msgstr "IE 已停止响应…"
+
+msgid "Invalid LKAS setting"
+msgstr "LKAS 设置无效"
+
+msgid "JESUS TAKE THE WHEEL!!"
+msgstr "快接管方向盘！！"
+
+msgid "Joystick Mode"
+msgstr "摇杆模式"
+
+msgid "LKAS Fault: Restart the Car"
+msgstr "LKAS 故障：请重启车辆"
+
+msgid "LKAS Fault: Restart the car to engage"
+msgstr "LKAS 故障：重启车辆以接合"
+
+msgid "Lane Departure Detected"
+msgstr "检测到车道偏离"
+
+msgid "Lateral Maneuver Mode"
+msgstr "横向机动模式"
+
+msgid "Lead Departed"
+msgstr "前车已驶离"
+
+msgid "Light Turned Green"
+msgstr "绿灯已亮"
+
+msgid "Likely Hardware Issue"
+msgstr "可能是硬件问题"
+
+msgid "Lol 69"
+msgstr "哈哈 69"
+
+msgid "Low Battery"
+msgstr "电量低"
+
+msgid "Low Communication Rate Between Processes"
+msgstr "进程间通信速率过低"
+
+msgid "Low Memory"
+msgstr "内存不足"
+
+msgid "Low Memory: Reboot Your Device"
+msgstr "内存不足：请重启设备"
+
+msgid "Max Regen Being Used"
+msgstr "已使用最大能量回收"
+
+msgid "Model uncertain at this speed"
+msgstr "此速度下模型置信度低"
+
+msgid "NNFF Torque Controller loaded with:"
+msgstr "NNFF 扭矩控制器已加载："
+
+msgid "NNFF Torque Controller not available"
+msgstr "NNFF 扭矩控制器不可用"
+
+msgid "No Lane Available"
+msgstr "暂无可用车道"
+
+msgid "Out of Storage"
+msgstr "存储空间不足"
+
+msgid "Parking Brake Engaged"
+msgstr "驻车制动已启用"
+
+msgid "Pay Attention"
+msgstr "请集中注意力"
+
+msgid "Pay Attention to Engage"
+msgstr "注视前方以接合"
+
+msgid "Pedal Cruise Disengaged"
+msgstr "踏板巡航已解除"
+
+msgid "Pedal Cruise Engaged"
+msgstr "踏板巡航已接合"
+
+msgid "Pedal Not Calibrated"
+msgstr "踏板未校准"
+
+msgid "Pedal Not Calibrated: Check Calibration"
+msgstr "踏板未校准：请检查校准"
+
+msgid "Pedal Pressed"
+msgstr "踏板被踩下"
+
+msgid "Please post the 'Error Log' in the StarPilot Discord!"
+msgstr "请把\"错误日志\"发到 StarPilot Discord！"
+
+msgid "Posenet Speed Invalid"
+msgstr "Posenet 速度无效"
+
+msgid "Possible Hardware Issue"
+msgstr "可能存在硬件问题"
+
+msgid "Press Resume"
+msgstr "按 RES 键"
+
+msgid "Press Resume to Exit Standstill"
+msgstr "按 RES 键以退出静止状态"
+
+msgid "Press Set to Engage"
+msgstr "按 SET 键以接合"
+
+msgid "Press the gas pedal or 'Resume' button to override"
+msgstr "踩油门或按 RES 键以覆盖"
+
+msgid "Process Not Running"
+msgstr "进程未运行"
+
+msgid "Radar Error: Restart the Car"
+msgstr "雷达错误：请重启车辆"
+
+msgid "Radar Temporarily Unavailable"
+msgstr "雷达暂时不可用"
+
+msgid "Reboot your Device"
+msgstr "请重启设备"
+
+msgid "Recording Audio Feedback"
+msgstr "正在录制音频反馈"
+
+msgid "Release Brake to Engage"
+msgstr "松开刹车以接合"
+
+msgid "Remount Detected: Recalibrating"
+msgstr "检测到重新安装：正在重新校准"
+
+msgid "Restart the car to retry,"
+msgstr "请重启车辆重试，"
+
+msgid "small model is still available"
+msgstr "小模型仍可用"
+
+msgid "Resume Driving Manually"
+msgstr "请手动恢复驾驶"
+
+msgid "Reverse"
+msgstr "倒车"
+
+msgid "Gear"
+msgstr "档位"
+
+msgid "Reverse Gear"
+msgstr "倒档"
+
+msgid "Risk of Collision"
+msgstr "碰撞风险"
+
+msgid "Seatbelt Unlatched"
+msgstr "安全带未系"
+
+msgid "Security Key Not Available"
+msgstr "安全密钥不可用"
+
+msgid "Selfdrive Process Lagging: Reboot Your Device"
+msgstr "自驾进程延迟：请重启设备"
+
+msgid "Sensor Data Invalid"
+msgstr "传感器数据无效"
+
+msgid "Slow down to engage"
+msgstr "减速以接合"
+
+msgid "Speed Too High"
+msgstr "速度过高"
+
+msgid "Speed limit changed"
+msgstr "限速已变化"
+
+msgid "Speed too low"
+msgstr "速度过低"
+
+msgid "Steer Left"
+msgstr "向左转向"
+
+msgid "Steer Left to Start Lane Change Once Safe"
+msgstr "安全时向左打灯开始变道"
+
+msgid "Steer Right"
+msgstr "向右转向"
+
+msgid "Steer Right to Start Lane Change Once Safe"
+msgstr "安全时向右打灯开始变道"
+
+msgid "Steering Assist Temporarily Unavailable"
+msgstr "转向辅助暂时不可用"
+
+msgid "Steering Pressed"
+msgstr "方向盘被干预"
+
+msgid "Steering Temporarily Unavailable"
+msgstr "转向暂时不可用"
+
+msgid "Stock AEB: Risk of Collision"
+msgstr "原厂 AEB：碰撞风险"
+
+msgid "Switchback Mode"
+msgstr "往返模式"
+
+msgid "Switchback Mode Disabled"
+msgstr "往返模式已禁用"
+
+msgid "System Initializing"
+msgstr "系统初始化中"
+
+msgid "System Overheated"
+msgstr "系统过热"
+
+msgid "TAKE CONTROL"
+msgstr "请接管"
+
+msgid "Take Control"
+msgstr "请接管"
+
+msgid "Tesla Cruise Disengaged"
+msgstr "特斯拉巡航已解除"
+
+msgid "Tesla Cruise Engaged"
+msgstr "特斯拉巡航已接合"
+
+msgid "This is fine ☕"
+msgstr "这样挺好的 ☕"
+
+msgid "To be continued..."
+msgstr "未完待续…"
+
+msgid "Too Distracted"
+msgstr "分心过度"
+
+msgid "Touch Steering Wheel"
+msgstr "请触摸方向盘"
+
+msgid "Touch Steering Wheel: No Face Detected"
+msgstr "请触摸方向盘：未检测到人脸"
+
+msgid "Traffic Mode Disabled"
+msgstr "拥堵模式已禁用"
+
+msgid "Traffic Mode enabled"
+msgstr "拥堵模式已启用"
+
+msgid "Turn Exceeds Steering Limit"
+msgstr "转向超过极限"
+
+msgid "USB Error: Reboot Your Device"
+msgstr "USB 错误：请重启设备"
+
+msgid "Unknown Vehicle Variant"
+msgstr "未知车辆型号"
+
+msgid "UwU u went a bit fast there!"
+msgstr "UwU 你开得有点快哦！"
+
+msgid "Vehicle Sensors Calibrating"
+msgstr "车辆传感器校准中"
+
+msgid "Vehicle Sensors Invalid"
+msgstr "车辆传感器无效"
+
+msgid "Vehicle Steering Time Limit"
+msgstr "方向盘握持超时"
+
+msgid "You damn Loch Ness Monsta!"
+msgstr "你这只该死的尼斯湖水怪！"
+
+msgid "You've got mail! 📧"
+msgstr "你有新邮件！📧"
+
+msgid "Your Frog tried to kill me..."
+msgstr "你的青蛙想害死我…"
+
+msgid "locationd Permanent Error"
+msgstr "locationd 永久错误"
+
+msgid "locationd Temporary Error"
+msgstr "locationd 临时错误"
+
+msgid "openpilot Canceled"
+msgstr "openpilot 已取消"
+
+msgid "openpilot crashed"
+msgstr "openpilot 崩溃"
+
+msgid "openpilot crashed 💩"
+msgstr "openpilot 崩溃 💩"
+
+msgid "paramsd Permanent Error"
+msgstr "paramsd 永久错误"
+
+msgid "paramsd Temporary Error"
+msgstr "paramsd 临时错误"
+
+msgid "take control"
+msgstr "请接管"
+
+msgid "turn exceeds limit"
+msgstr "转向超过极限"
+
+msgid "Auto: Monthly"
+msgstr "自动：每月"
+
+msgid "Auto: Off"
+msgstr "自动：关闭"
+
+msgid "Auto: Weekly"
+msgstr "自动：每周"
+
+msgid "Forget Wi-Fi Network \"{}\"?"
+msgstr "忘记 Wi-Fi 网络\"{}\"？"
+
+msgid "for \"{}\""
+msgstr "用于\"{}\""
+
+msgid "openpilot's steering remains active even when the accelerator or brake pedals are pressed."
+msgstr "即使踩下油门或刹车踏板，openpilot 的转向仍保持激活。"
+
+msgid "Show the current offset on the compact driving display. The unified Max Set / Speed Limit card always shows nonzero offsets."
+msgstr "在精简驾驶显示上显示当前偏移。统一的\"最大设定/限速\"卡片始终显示非零偏移。"
+
+msgid "Pressing the brake fully turns off Always On Lateral. Steering stays off after the brake is released until openpilot is engaged again or AOL is manually toggled back on."
+msgstr "踩刹车会完全关闭常开横向控制（AOL）。松开刹车后转向保持关闭，直到 openpilot 再次接合或手动重新开启 AOL。"
+
+msgid "Miscellaneous acceleration and braking control changes to fine-tune how openpilot drives."
+msgstr "其他加速与刹车控制调整，用于微调 openpilot 的驾驶表现。"
+
+msgid "Play a short chime when the external GPU model finishes loading. Driving alerts take priority."
+msgstr "外部 GPU 模型加载完成时播放短提示音。驾驶警报优先。"
+
+msgid "Set the volume for softer warnings about potential risks.\n\nExamples include: \"BRAKE! Risk of Collision\", \"Steering Temporarily Unavailable\"."
+msgstr "设置关于潜在风险的柔和警告音量。\n\n示例：\"刹车！碰撞风险\"、\"转向暂时不可用\"。"
+
+msgid "Vehicle speed in mph for curve point 6."
+msgstr "曲线点 6 的车速（mph）。"
+
+msgid "Save drive footage in higher video quality."
+msgstr "以更高画质保存行车录像。"
+
+msgid "Maximum acceleration in m/s² at curve point 1."
+msgstr "曲线点 1 的最大加速度（m/s²）。"
+
+msgid "Vehicle speed in mph for curve point 7."
+msgstr "曲线点 7 的车速（mph）。"
+
+msgid "The minimum following distance to the lead vehicle. openpilot blends between this value and the \"Relaxed\" profile as speed increases. Increase for more space; decrease for tighter gaps."
+msgstr "与前车的最小跟车距离。车速升高时 openpilot 会在该值与\"轻松\"风格之间过渡。调大留出更多空间，调小拉近距离。"
+
+msgid "Play an alert when the lead vehicle departs from a stop."
+msgstr "前车从静止起步时播放警报。"
+
+msgid "Only pause steering when the turn signal is active."
+msgstr "仅在转向灯激活时暂停转向。"
+
+msgid "Use the stock Bosch radar path on pre-Autopilot Teslas."
+msgstr "在 Pre-Autopilot 特斯拉上使用原厂博世雷达通路。"
+
+msgid "Use the manual-parking-brake Subaru stop-and-go strategy. Enable this for supported Subaru Global models with a manual handbrake. Keep it off on models with an electric parking brake."
+msgstr "使用手动驻车制动的斯巴鲁走走停停策略。适用于带手动手刹的斯巴鲁全球车型；配备电子驻车制动的车型请保持关闭。"
+
+msgid "Rotate the driving screen wheel with the physical steering wheel."
+msgstr "驾驶屏幕上的方向盘随实际方向盘转动。"
+
+msgid "Play the infamous \"Goat Scream\" when the steering controller reaches its limit. Based on the \"Turn Exceeds Steering Limit\" event."
+msgstr "转向控制器达到极限时播放著名的\"山羊尖叫\"。基于\"转向超过极限\"事件。"
+
+msgid "Shift the lane target left or right in meters. The controller reduces this offset automatically when the detected lane is narrow."
+msgstr "以米为单位将车道目标左移或右移。检测到车道较窄时控制器会自动减小该偏移。"
+
+msgid "Maximum acceleration in m/s² at curve point 7."
+msgstr "曲线点 7 的最大加速度（m/s²）。"
+
+msgid "Use the vehicle's stock longitudinal control instead of openpilot longitudinal control. This can stop openpilot from sending cruise-control acceleration and braking commands on supported vehicles."
+msgstr "使用车辆原厂纵向控制而非 openpilot 纵向控制。这会阻止 openpilot 在支持的车辆上发送巡航加速与制动指令。"
+
+msgid "Wake the screen from Standby when driving assistance engages."
+msgstr "驾驶辅助接合时从待机状态唤醒屏幕。"
+
+msgid "Select your car make."
+msgstr "选择你的汽车品牌。"
+
+msgid "WARNING: This suppresses openpilot's excessive longitudinal actuation diagnostic when measured acceleration looks impossible for the requested gas/brake command.\n\nLeave this OFF unless you are intentionally testing edge cases like shifting to neutral and understand that it can hide a real actuation problem."
+msgstr "警告：当实测加速度与所请求的油门/刹车指令明显不符时，此选项会抑制 openpilot 的\"纵向执行过度\"诊断。\n\n除非你有意测试切换到空档等边界情况，并理解它可能掩盖真实的执行故障，否则请保持关闭。"
+
+msgid "Vehicle provides additional space around hazards like cyclists and vehicles crossing into the lane."
+msgstr "车辆会在自行车、并入车道的车辆等危险物周围留出额外空间。"
+
+msgid "Switch to \"Experimental Mode\" when using a turn signal below the set speed to allow the model to choose an appropriate speed for smoother left and right turns."
+msgstr "低于设定速度打转向灯时切换到\"实验模式\"，让模型自行选择合适的车速，使左右转弯更平顺。"
+
+msgid "Set a custom filled-path color for the Python UIs.\n\nUse Stock to follow the default path color behavior."
+msgstr "为 Python 界面设置自定义填充路径颜色。\n\n选择\"原厂\"以跟随默认路径配色。"
+
+msgid "On supported Chevy Volts in L / single-pedal mode, blend friction braking so the car can slow to a stop and hold without using the brake pedal."
+msgstr "对支持 L 档/单踏板模式的雪佛兰 Volt，混合摩擦制动，使车辆无需踩刹车踏板即可减速停车并保持。"
+
+msgid "Performance data, sensor readings, and system metrics for debugging and optimizing openpilot."
+msgstr "用于调试和优化 openpilot 的性能数据、传感器读数和系统指标。"
+
+msgid "Use the original moving confidence ball on the small comma 4 UI instead of the fixed confidence, CEM/CCM, and personality sidebar."
+msgstr "在小型 comma 4 界面上使用原来的移动置信球，替代固定的置信、CEM/CCM 和风格侧栏。"
+
+msgid "Scale steering during high-speed lane changes."
+msgstr "高速变道时缩放转向。"
+
+msgid "Maximum acceleration in m/s² at curve point 2."
+msgstr "曲线点 2 的最大加速度（m/s²）。"
+
+msgid "Set the volume for the loudest warnings that require urgent attention.\n\nExamples include: \"DISENGAGE IMMEDIATELY — Driver Distracted\", \"DISENGAGE IMMEDIATELY — Driver Unresponsive\"."
+msgstr "设置需要紧急关注的最高等级警告音量。\n\n示例：\"立即解除 — 驾驶员分心\"、\"立即解除 — 驾驶员无响应\"。"
+
+msgid "Play an alert when the model predicts a red light has turned green.\n\nDisclaimer: openpilot does not explicitly detect traffic lights. This alert is based on end-to-end model predictions from camera input and may trigger even when the light has not changed."
+msgstr "当模型预测红灯变绿时播放警报。\n\n免责声明：openpilot 并不显式检测红绿灯。此警报基于摄像头输入的端到端模型预测，即使信号灯未变化也可能触发。"
+
+msgid "While driving below the minimum lane change speed with an active turn signal, instruct openpilot to turn left/right."
+msgstr "低于最低变道速度且转向灯激活时，指示 openpilot 左转/右转。"
+
+msgid "Set the driving-path width.\n\nDefault (6.1 feet) matches the width of a 2019 Lexus ES 350."
+msgstr "设置驾驶路径宽度。\n\n默认值（6.1 英尺）相当于 2019 雷克萨斯 ES 350 的车宽。"
+
+msgid "Zero point used to convert Tesla pedal interceptor output into the internal DI range."
+msgstr "用于将特斯拉踏板拦截器输出转换到内部 DI 范围的零点。"
+
+msgid "Maximum acceleration in m/s² at curve point 11."
+msgstr "曲线点 11 的最大加速度（m/s²）。"
+
+msgid "Show which condition triggered \"Experimental Mode\" on the driving screen."
+msgstr "在驾驶屏幕上显示触发\"实验模式\"的条件。"
+
+msgid "Tune where Force Stops bring the car to rest. Positive values let the car roll further before stopping (longer stop, closer to the line). Negative values stop the car sooner (more buffer before the line)."
+msgstr "调整强制停车的停车位置。正值让车辆滑行更远再停（停车更晚、更靠近停止线）；负值让车辆提前停下（停止线前留更多余量）。"
+
+msgid "How many seconds openpilot follows behind lead vehicles when using the \"Relaxed\" profile. Increase for more space; decrease for tighter gaps.\n\nDefault: 1.6 seconds."
+msgstr "使用\"轻松\"风格时 openpilot 与前车保持的秒数。调大留出更多空间，调小拉近距离。\n\n默认：1.6 秒。"
+
+msgid "Use Panda firmware that ignores the physical ignition line and starts from CAN ignition only.\n\nRequires a Panda flash. Use this only on vehicles with reliable CAN ignition when the harness box reports false ignition."
+msgstr "使用忽略物理点火线、仅从 CAN 点火启动的 Panda 固件。\n\n需要刷写 Panda。仅在线束盒误报点火且车辆 CAN 点火可靠时使用。"
+
+msgid "On supported Hyundai stock-cruise cars, use RES/SET button presses to match the cluster set speed to StarPilot's target."
+msgstr "对支持的现代原厂巡航车型，用 RES/SET 按键把仪表设定速度对齐到 StarPilot 的目标速度。"
+
+msgid "Speed limits, and other navigation widgets."
+msgstr "限速及其他导航组件。"
+
+msgid "Use a comma pedal interceptor for acceleration and regenerative braking on pre-Autopilot Teslas."
+msgstr "在 Pre-Autopilot 特斯拉上使用 comma 踏板拦截器实现加速与能量回收制动。"
+
+msgid "Upload driving data to \"stable.konik.ai\" instead of \"connect.comma.ai\"."
+msgstr "将驾驶数据上传到\"stable.konik.ai\"而非\"connect.comma.ai\"。"
+
+msgid "Keep openpilot in the standstill state until you press the gas pedal or the Resume/+ cruise button.\n\nThis applies to any engaged stop, not just red lights or stop signs."
+msgstr "让 openpilot 保持静止状态，直到你踩下油门或按下 RES/+ 巡航键。\n\n这适用于任何接合状态下的停车，不仅限于红灯或停车标志。"
+
+msgid "Render the speed-limit sources as compact text labels (e.g. \"Dash-45\", \"MapD-30\") without icons."
+msgstr "将限速来源渲染为紧凑文字标签（如\"Dash-45\"、\"MapD-30\"），不显示图标。"
+
+msgid "Set a custom path-edge color for the Python UIs.\n\nUse Stock to follow the default line color behavior."
+msgstr "为 Python 界面设置自定义路径边缘颜色。\n\n选择\"原厂\"以跟随默认线条配色。"
+
+msgid "Select the CAN bus used by the Tesla pedal interceptor."
+msgstr "选择特斯拉踏板拦截器使用的 CAN 总线。"
+
+msgid "Temporarily switch the device to the offroad state for remote updates when the vehicle is parked. This control is only available while the vehicle reports Park."
+msgstr "车辆停放时临时将设备切换到停车状态以便远程更新。仅当车辆报告处于 P 档时可用。"
+
+msgid "Mute only the sound for \"Turn Exceeds Steering Limit\" below this speed. The visual alert is always kept visible. Set to 0 to disable. The value uses your selected mph or km/h unit."
+msgstr "仅在此速度以下静音\"转向超过极限\"的声音。视觉警报始终保留。设为 0 可禁用。数值使用你所选的 mph 或 km/h 单位。"
+
+msgid "On pedal-interceptor Bolts, treat the steering-wheel CANCEL button as an extra mappable button."
+msgstr "对踏板拦截器版 Bolt，将方向盘 CANCEL 键视为额外的可映射按键。"
+
+msgid "Temporal smoothing duration (0.1-0.5 seconds, default 0.2). Higher values reduce flicker but add latency."
+msgstr "时间平滑时长（0.1–0.5 秒，默认 0.2）。数值越大越减少抖动，但会增加延迟。"
+
+msgid "Vehicle speed in mph for curve point 11."
+msgstr "曲线点 11 的车速（mph）。"
+
+msgid "Open Galaxy (new) at the top-level Galaxy link. Turn this off to use Galaxy (old) instead. Galaxy (old) remains available at /classic and Galaxy (new) at /mobile."
+msgstr "在顶层 Galaxy 链接处打开 Galaxy（新版）。关闭则使用 Galaxy（旧版）。旧版仍可通过 /classic 访问，新版在 /mobile。"
+
+msgid "Wake the screen from Standby and keep it awake while an informational alert is displayed."
+msgstr "显示信息类警报时从待机状态唤醒屏幕并保持常亮。"
+
+msgid "Switch to \"Experimental Mode\" when a slower lead vehicle is detected ahead."
+msgstr "前方检测到较慢前车时切换到\"实验模式\"。"
+
+msgid "Require a steering-wheel nudge for lane changes while using Always On Lateral without full engagement."
+msgstr "使用常开横向控制但未完全接合时，变道需要轻推方向盘确认。"
+
+msgid "On supported Subaru Impreza-family cars, use stock Resume/Set button presses to match the cluster set speed to StarPilot's target."
+msgstr "对支持的斯巴鲁翼豹系列车型，用原厂 RESUME/SET 按键把仪表设定速度对齐到 StarPilot 的目标速度。"
+
+msgid "Show the driving paths for the left and right lanes."
+msgstr "显示左右车道的行驶路径。"
+
+msgid "When enabled, your comma can wake up when your Tesla wakes up. When disabled, it normally powers on when you press the brake."
+msgstr "启用后，你的 comma 可随特斯拉一起唤醒。禁用时，通常在踩刹车时开机。"
+
+msgid "Wake the screen from Standby and keep it awake while a warning alert is displayed."
+msgstr "显示警告类警报时从待机状态唤醒屏幕并保持常亮。"
+
+msgid "Set the volume for prompts when openpilot detects driver distraction or unresponsiveness.\n\nExamples include: \"Pay Attention\", \"Touch Steering Wheel\"."
+msgstr "设置 openpilot 检测到驾驶员分心或无响应时的提示音量。\n\n示例：\"请集中注意力\"、\"请触摸方向盘\"。"
+
+msgid "Show advanced settings in Galaxy."
+msgstr "在 Galaxy 中显示高级设置。"
+
+msgid "Show the hands-free assistance graphic on supported CAN-FD Ford clusters while lateral control is active. Driver monitoring requirements do not change."
+msgstr "在支持的 CAN-FD 福特仪表上，横向控制激活时显示免手辅助图形。驾驶员监控要求不变。"
+
+msgid "Wake the screen from Standby when a turn signal is activated."
+msgstr "激活转向灯时从待机状态唤醒屏幕。"
+
+msgid "Maximum acceleration in m/s² at curve point 12."
+msgstr "曲线点 12 的最大加速度（m/s²）。"
+
+msgid "How many seconds openpilot follows behind lead vehicles when using the \"Standard\" profile. Increase for more space; decrease for tighter gaps.\n\nDefault: 1.45 seconds."
+msgstr "使用\"标准\"风格时 openpilot 与前车保持的秒数。调大留出更多空间，调小拉近距离。\n\n默认：1.45 秒。"
+
+msgid "Settings that control screen brightness, screen recording, and timeout duration."
+msgstr "控制屏幕亮度、屏幕录制和超时时长的设置。"
+
+msgid "Maximum acceleration in m/s² at curve point 3."
+msgstr "曲线点 3 的最大加速度（m/s²）。"
+
+msgid "Show numerical device temperature in the driving screen developer metrics."
+msgstr "在驾驶屏幕的开发者指标中显示设备温度数值。"
+
+msgid "When openpilot is first enabled, automatically set the max speed to the current posted limit."
+msgstr "openpilot 首次接合时，自动将最高速度设为当前限速。"
+
+msgid "Use acceleration profiles tuned for EVs. Defaults to the vehicle's detected powertrain type but can be overridden if the automatic choice doesn't match."
+msgstr "使用为电动车调校的加速曲线。默认跟随车辆检测到的动力类型，若自动选择不匹配可手动覆盖。"
+
+msgid "Require confirmation before applying a newly detected higher speed limit."
+msgstr "应用新检测到的更高限速前需要确认。"
+
+msgid "When the turn signal is on, openpilot will automatically change lanes. If a vehicle is detected in the blind spot, the lane change waits until it is clear. No steering-wheel nudge required!"
+msgstr "打开转向灯时，openpilot 会自动变道。若盲区检测到车辆，变道会等待其离开。无需轻推方向盘！"
+
+msgid "Switch to \"Experimental Mode\" when a slower or stopped vehicle is detected. Can make braking smoother and more reliable on some vehicles."
+msgstr "检测到较慢或停止的车辆时切换到\"实验模式\"。在某些车辆上可让刹车更平顺可靠。"
+
+msgid "Maximum acceleration in m/s² at curve point 10."
+msgstr "曲线点 10 的最大加速度（m/s²）。"
+
+msgid "Temporarily switch to \"Chill Mode\" when starting from a stop if planner is already allowing throttle. Useful if your car launches too slowly from lights or stop signs."
+msgstr "从静止起步时若规划器已允许油门，临时切换到\"Chill 模式\"。适用于车辆从红灯或停车标志起步太慢的情况。"
+
+msgid "Vehicle tries to center itself and slowly adjusts away from hazards, but may react too slowly."
+msgstr "车辆尝试居中，并缓慢远离危险物，但可能反应偏慢。"
+
+msgid "Maximum acceleration in m/s² at curve point 9."
+msgstr "曲线点 9 的最大加速度（m/s²）。"
+
+msgid "Set the lane-line thickness.\n\nDefault matches the MUTCD lane-line width standard of 4 inches."
+msgstr "设置车道线粗细。\n\n默认值符合 MUTCD 车道线宽度标准（4 英寸）。"
+
+msgid "Switch to \"Experimental Mode\" when a curve is detected to allow the model to set an appropriate speed for the curve."
+msgstr "检测到弯道时切换到\"实验模式\"，让模型为该弯道选择合适的车速。"
+
+msgid "Switch to \"Experimental Mode\" when driving below this speed without a lead to help openpilot handle low-speed situations more smoothly."
+msgstr "低于此速度且无前车时切换到\"实验模式\"，帮助 openpilot 更平顺地处理低速场景。"
+
+msgid "Settings that control how the device runs, powers off, and manages driving data."
+msgstr "控制设备运行、关机以及驾驶数据管理的设置。"
+
+msgid "Prevent large uploads on cellular. Turn this off to allow full/unfiltered uploads over mobile data."
+msgstr "阻止通过蜂窝网络进行大文件上传。关闭后允许通过移动数据完整上传。"
+
+msgid "Play a louder alert if a vehicle is in the blind spot when attempting to change lanes. Based on the \"Car Detected in Blindspot\" event."
+msgstr "尝试变道时若盲区有车，播放更响的警报。基于\"盲区检测到车辆\"事件。"
+
+msgid "Reduce maximum acceleration as you close in on a lead vehicle when Tesla pedal-long is active."
+msgstr "特斯拉踏板纵向激活时，接近前车过程中降低最大加速度。"
+
+msgid "Set the volume for the chime when openpilot engages, such as after pressing the \"RESUME\" or \"SET\" steering wheel buttons."
+msgstr "设置 openpilot 接合时的提示音音量，例如按下方向盘 RESUME 或 SET 键之后。"
+
+msgid "Only enable this if the wide camera is broken or for development!\n\nDisabling the wide camera may degrade driving performance and cause instability.\n\nRequires a reboot to take effect."
+msgstr "仅在广角摄像头损坏或开发调试时启用！\n\n禁用广角摄像头可能降低驾驶性能并导致不稳定。\n\n需要重启才能生效。"
+
+msgid "Reverse Toyota/Lexus cruise-button behavior so a short press changes the dashboard set speed by 5 and a hold changes it by 1."
+msgstr "反转丰田/雷克萨斯的巡航按键行为：短按使仪表设定速度变化 5，长按变化 1。"
+
+msgid "Show the current speed limit on the driving screen. The position depends on the device UI. Uses data from the car's dashboard (if supported) and \"OpenStreetMap (OSM)\"."
+msgstr "在驾驶屏幕上显示当前限速。位置取决于设备界面。使用车辆仪表数据（若支持）和\"OpenStreetMap (OSM)\"。"
+
+msgid "Show which condition triggered \"Chill Mode\" on the driving screen."
+msgstr "在驾驶屏幕上显示触发\"Chill 模式\"的条件。"
+
+msgid "Model visualizations for the driving path, lane lines, path edges, and road edges."
+msgstr "驾驶路径、车道线、路径边缘和道路边缘的模型可视化。"
+
+msgid "Play the infamous \"Goat Scream\" for full-screen critical alerts that require immediate takeover.\n\nExamples include: \"TAKE CONTROL IMMEDIATELY\" and \"Stock AEB: Risk of Collision\"."
+msgstr "对需要立即接管的全面屏严重警报播放著名的\"山羊尖叫\"。\n\n示例：\"立即接管\"、\"原厂 AEB：碰撞风险\"。"
+
+msgid "Switch to \"Chill Mode\" when following a steady, well-tracked lead vehicle at cruising speeds."
+msgstr "在巡航速度下跟随稳定且跟踪良好的前车时切换到\"Chill 模式\"。"
+
+msgid "Vision-detected limits at or below this value will not control speed. The value uses your selected mph or km/h unit."
+msgstr "低于或等于此数值的视觉检测限速不参与速度控制。数值使用你所选的 mph 或 km/h 单位。"
+
+msgid "Wake the screen from Standby and keep it awake while a critical or takeover alert is displayed."
+msgstr "显示严重或接管类警报时从待机状态唤醒屏幕并保持常亮。"
+
+msgid "Show the \"Curve Speed Controller\" target speed on the driving screen."
+msgstr "在驾驶屏幕上显示\"弯道速度控制器\"的目标速度。"
+
+msgid "Show GPU usage in the driving screen developer metrics."
+msgstr "在驾驶屏幕的开发者指标中显示 GPU 占用。"
+
+msgid "Show the driver camera feed when the vehicle is in reverse."
+msgstr "倒车时显示驾驶员摄像头画面。"
+
+msgid "Show the current driving direction with a simple on-screen compass."
+msgstr "用一个简单的屏幕罗盘显示当前行驶方向。"
+
+msgid "Switch to \"Experimental Mode\" when driving below this speed with a lead."
+msgstr "有前车且低于此速度行驶时切换到\"实验模式\"。"
+
+msgid "Multiplier for dashboard speed. 1x = no offset; 1.05x = 5% faster."
+msgstr "仪表速度的倍率。1x = 无偏移；1.05x = 快 5%。"
+
+msgid "Toggle Always On Lateral by touching the Tesla screen with three fingers. Requires the Model 3/Y Vehicle CAN add-on cable, which is detected automatically. Does not engage or cancel cruise control. Restart the device after changing this setting or the AOL brake behavior when screen taps are enabled."
+msgstr "用三根手指触摸特斯拉屏幕来切换常开横向控制。需要 Model 3/Y Vehicle CAN 附加线缆（会自动检测）。不会接合或取消巡航控制。更改此设置，或在屏幕触控启用时更改 AOL 刹车行为后，请重启设备。"
+
+msgid "Smoothen acceleration and braking when driving downhill/uphill."
+msgstr "下坡/上坡时使加速和刹车更平顺。"
+
+msgid "Color the driving path like a rainbow road.\n\nOn the Python UIs this overrides acceleration and braking path coloring."
+msgstr "将驾驶路径着成彩虹色。\n\n在 Python 界面上，这会覆盖加速与刹车路径着色。"
+
+msgid "Use the left paddle to pause openpilot acceleration and braking while Always On Lateral stays active on supported Hyundai CAN-FD cars."
+msgstr "在支持的现代 CAN-FD 车辆上，用左拨片暂停 openpilot 的加速与刹车，同时常开横向控制保持激活。"
+
+msgid "Play an alert when the posted speed limit changes."
+msgstr "限速变化时播放警报。"
+
+msgid "Use the pedal interceptor for full longitudinal control on supported GM vehicles."
+msgstr "在支持的 GM 车辆上使用踏板拦截器实现完整纵向控制。"
+
+msgid "Show the frames per second at the bottom of the driving screen."
+msgstr "在驾驶屏幕底部显示每秒帧数。"
+
+msgid "WARNING: This will prevent your drives from being recorded and all data will be unobtainable!\n\nPrevent the device from saving driving data."
+msgstr "警告：这会阻止记录你的驾驶，所有数据都将无法获取！\n\n阻止设备保存驾驶数据。"
+
+msgid "WARNING: This will prevent your drives from being uploaded to comma connect which will impact debugging and official support from comma!\n\nPrevent the device from uploading driving data."
+msgstr "警告：这会阻止将驾驶数据上传到 comma connect，将影响调试和 comma 的官方支持！\n\n阻止设备上传驾驶数据。"
+
+msgid "Vehicle reacts to hazards recognized by the vision model as quickly as possible."
+msgstr "车辆以尽可能快的速度对视觉模型识别到的危险物作出反应。"
+
+msgid "Turn off the screen after the onroad timeout. Touch and ignition changes always wake it. Choose additional wake events below."
+msgstr "超过行驶超时后关闭屏幕。触摸和点火变化总会唤醒它。可在下方选择额外的唤醒事件。"
+
+msgid "Set the volume for prompts that need attention.\n\nExamples include: \"Car Detected in Blindspot\", \"Steering Temporarily Unavailable\", \"Turn Exceeds Steering Limit\"."
+msgstr "设置需要关注的提示音量。\n\n示例：\"盲区检测到车辆\"、\"转向暂时不可用\"、\"转向超过极限\"。"
+
+msgid "Show a temporary Picture-in-Picture bubble of the side window while the turn signal is on or a blind spot is detected."
+msgstr "转向灯开启或检测到盲区时，显示侧窗的临时画中画气泡。"
+
+msgid "Switch to \"Experimental Mode\" when openpilot predicts a stop within the set time. This is usually triggered when the model \"sees\" a red light or stop sign ahead.\n\nDisclaimer: openpilot does not explicitly detect traffic lights or stop signs. In \"Experimental Mode\", openpilot makes end-to-end driving decisions from camera input, which means it may stop even when there's no clear reason!"
+msgstr "openpilot 预测在设定时间内停车时切换到\"实验模式\"。通常在模型\"看到\"前方红灯或停车标志时触发。\n\n免责声明：openpilot 并不显式检测红绿灯或停车标志。在\"实验模式\"下，openpilot 基于摄像头输入做端到端驾驶决策，因此即使没有明确原因也可能停车！"
+
+msgid "Scale the active Honda lateralTuning.pid.kpV values from openDBC. Applies live to Honda PID lateral only."
+msgstr "缩放来自 openDBC 的当前本田 lateralTuning.pid.kpV 数值。仅对本田 PID 横向实时生效。"
+
+msgid "Tint the on-screen steering-wheel icon green while accelerating and red while braking. Also show gas and brake indicators.\n\nDynamic: Opacity changes according to how much openpilot is accelerating or braking\nStatic: Full when active, dim when not"
+msgstr "加速时把屏幕方向盘图标着成绿色，刹车时着成红色。同时显示油门和刹车指示。\n\n动态：不透明度随 openpilot 的加速或刹车强度变化\n静态：激活时全亮，未激活时变暗"
+
+msgid "Use Vienna-style (EU) speed-limit signs on the compact driving display. The unified Max Set / Speed Limit card uses its own layout."
+msgstr "在精简驾驶显示上使用维也纳式（欧盟）限速标志。统一的\"最大设定/限速\"卡片使用自己的布局。"
+
+msgid "Twilsonco's \"Neural Network FeedForward\" controller. Uses a trained neural network model to predict steering torque based on vehicle speed, roll, and past/future planned path data for smoother, model-based steering."
+msgstr "Twilsonco 的\"神经网络前馈\"控制器。使用训练好的神经网络模型，根据车速、侧倾以及过去/未来规划路径预测转向扭矩，实现更平顺的模型化转向。"
+
+msgid "Switch to \"Experimental Mode\" whenever the driving model \"detects\" a red light or stop sign.\n\nDisclaimer: openpilot does not explicitly detect traffic lights or stop signs. In \"Experimental Mode\", openpilot makes end-to-end driving decisions from camera input, which means it may stop even when there's no clear reason!"
+msgstr "每当驾驶模型\"检测到\"红灯或停车标志时切换到\"实验模式\"。\n\n免责声明：openpilot 并不显式检测红绿灯或停车标志。在\"实验模式\"下，openpilot 基于摄像头输入做端到端驾驶决策，因此即使没有明确原因也可能停车！"
+
+msgid "How many seconds openpilot follows behind lead vehicles when using the \"Aggressive\" profile. Increase for more space; decrease for tighter gaps.\n\nDefault: 1.25 seconds."
+msgstr "使用\"激进\"风格时 openpilot 与前车保持的秒数。调大留出更多空间，调小拉近距离。\n\n默认：1.25 秒。"
+
+msgid "Switch to \"Chill Mode\" on open roads above this speed when no lead is detected and the car is still below the set speed."
+msgstr "在开阔道路上高于此速度、未检测到前车且车速仍低于设定速度时，切换到\"Chill 模式\"。"
+
+msgid "Replace the built-in acceleration profile with your own speed breakpoints and maximum-acceleration values. The starting curve mirrors the selected acceleration profile plus EV or Truck tuning."
+msgstr "用你自己的速度断点和最大加速度值替换内置加速曲线。起始曲线会参照所选加速曲线并叠加电动车或卡车调校。"
+
+msgid "While parked, if the battery voltage falls below the set level, the device shuts down to prevent excessive battery drain."
+msgstr "停车时若电池电压低于设定值，设备会关机以避免过度耗电。"
+
+msgid "Show a red path when a vehicle is in that lane's blind spot."
+msgstr "当某车道盲区有车时，将该车道路径显示为红色。"
+
+msgid "Use the Extreme harness angle channel with cooperative torque fallback."
+msgstr "使用 Extreme 线束角度通道，并带回退的协同扭矩。"
+
+msgid "Miscellaneous visual changes to fine-tune how the driving screen looks."
+msgstr "其他视觉调整，用于微调驾驶屏幕的外观。"
+
+msgid "Vehicle smooths out hazard avoidance, making less rapid adjustments."
+msgstr "车辆对危险物避让更平滑，调整幅度更小。"
+
+msgid "Wake the screen from Standby when driving assistance disengages."
+msgstr "驾驶辅助解除时从待机状态唤醒屏幕。"
+
+msgid "Maximum acceleration in m/s² at curve point 8."
+msgstr "曲线点 8 的最大加速度（m/s²）。"
+
+msgid "Use Mapbox speed-limit data when no other source is available."
+msgstr "没有其他来源时使用 Mapbox 限速数据。"
+
+msgid "Minimum vehicle-detection confidence (0.80-1.00, default 0.94). Higher values reduce false positives but may miss detections."
+msgstr "车辆检测的最低置信度（0.80–1.00，默认 0.94）。数值越高越少误报，但可能漏检。"
+
+msgid "Vehicle speed in mph for curve point 5."
+msgstr "曲线点 5 的车速（mph）。"
+
+msgid "Switch to \"Experimental Mode\" when a stopped lead vehicle is detected ahead."
+msgstr "前方检测到停止的前车时切换到\"实验模式\"。"
+
+msgid "Show the lead-vehicle marker on the driving screen."
+msgstr "在驾驶屏幕上显示前车标记。"
+
+msgid "Play the loud blind spot alert while lateral control is off or paused. Useful when steering pauses on turn signal, since the lane-change state machine is inactive then."
+msgstr "横向控制关闭或暂停时也播放盲区加响警报。当转向灯时暂停转向尤其有用，因为此时变道状态机处于非激活。"
+
+msgid "Vehicle speed in mph for curve point 8."
+msgstr "曲线点 8 的车速（mph）。"
+
+msgid "Virtually shift the camera perspective used by the driving model. Positive values bias the model center left; negative values bias it right. Use only for development."
+msgstr "虚拟移动驾驶模型使用的摄像头视角。正值使模型中心偏左，负值偏右。仅供开发使用。"
+
+msgid "Vehicle speed in mph for curve point 2."
+msgstr "曲线点 2 的车速（mph）。"
+
+msgid "WARNING: Running at higher temperatures may damage your device!\n\nAllow the device to run at higher temperatures before throttling or shutting down. Use only if you understand the risks!"
+msgstr "警告：在更高温度下运行可能损坏设备！\n\n允许设备在降频或关机前承受更高温度。仅在你了解风险时使用！"
+
+msgid "Show CPU usage in the driving screen developer metrics."
+msgstr "在驾驶屏幕的开发者指标中显示 CPU 占用。"
+
+msgid "Show memory usage in the driving screen developer metrics."
+msgstr "在驾驶屏幕的开发者指标中显示内存占用。"
+
+msgid "Set the volume for the \"Steer Unavailable Under\" alert shown below the car's minimum steering speed.\n\nSet to Muted to silence only this alert."
+msgstr "设置\"低于此速度转向不可用\"警报的音量，该警报在低于车辆最低转向速度时显示。\n\n设为\"静音\"可仅关闭此警报。"
+
+msgid "Set the minimum time between repeated steering-limit and minimum-steer-speed alerts while \"Switchback Mode\" is active. Useful on winding roads where \"Turn Exceeds Steering Limit\" and \"Steer Unavailable Under\" can repeat frequently. Set to Off to disable the cooldown even when the mode is on."
+msgstr "设置\"往返模式\"激活时，重复的转向极限与最低转向速度警报之间的最短间隔。适用于\"转向超过极限\"和\"低于此速度转向不可用\"频繁重复的蜿蜒道路。设为\"关闭\"可在该模式开启时也禁用冷却。"
+
+msgid "Vehicle speed in mph for curve point 12."
+msgstr "曲线点 12 的车速（mph）。"
+
+msgid "Scaling factor used to convert Tesla pedal interceptor output into the internal DI range."
+msgstr "用于将特斯拉踏板拦截器输出转换到内部 DI 范围的缩放系数。"
+
+msgid "Steering control changes to fine-tune how openpilot drives."
+msgstr "转向控制调整，用于微调 openpilot 的驾驶表现。"
+
+msgid "Use the road camera to detect and display speed-limit signs, with optional use by Speed Limit Controller."
+msgstr "使用道路摄像头检测并显示限速标志，可选择供限速控制器使用。"
+
+msgid "When \"Disable Uploads\" is enabled, allow uploads only while parked (offroad)."
+msgstr "启用\"禁用上传\"时，仅允许在停车状态下上传。"
+
+msgid "Vehicle speed in mph for curve point 4."
+msgstr "曲线点 4 的车速（mph）。"
+
+msgid "When SLC is enabled, prevent it from acting on vision-detected speed limits at or below the configured threshold. Detection, display, debugging, and training collection remain active."
+msgstr "启用 SLC 时，阻止其对等于或低于设定阈值的视觉检测限速起作用。检测、显示、调试和训练采集仍保持运行。"
+
+msgid "Use the remote-climate Hyundai/Kia/Genesis CAN-FD panda firmware at boot.\n\nRequired for EV remote-climate startup signal behavior."
+msgstr "启动时使用支持远程空调的现代/起亚/捷尼赛思 CAN-FD panda 固件。\n\n电动车远程空调启动信号行为必需。"
+
+msgid "Change the path width based on engagement.\n\nFully Engaged: 100%\nAlways On Lateral: 75%\nDisengaged: 50%"
+msgstr "根据接合状态改变路径宽度。\n\n完全接合：100%\n常开横向：75%\n未接合：50%"
+
+msgid "Runs the fan on a lower, more aggressive temperature curve: the fan ramps up sooner and reacts faster to rising temperature, keeping the device meaningfully cooler on hot days at the cost of more fan noise."
+msgstr "以更低温度曲线运行风扇：风扇更早启动并对温度上升反应更快，在炎热天气下让设备明显更凉，代价是风扇噪音更大。"
+
+msgid "Wake the screen from Standby when a recognised Bluetooth, controller or steering wheel button is pressed, including buttons without an assigned action."
+msgstr "按下已识别的蓝牙、控制器或方向盘按键（包括未分配动作的按键）时，从待机状态唤醒屏幕。"
+
+msgid "Only use Curve Speed Controller when not following a lead vehicle."
+msgstr "仅在未跟随前车时使用弯道速度控制器。"
+
+msgid "Pause \"Always On Lateral\" below the set speed while the brake pedal is pressed."
+msgstr "踩下刹车时，低于设定速度暂停\"常开横向控制\"。"
+
+msgid "Show a popup banner when the Python driving UIs switch into chill, experimental, switchback, or override mode."
+msgstr "Python 驾驶界面切换到 chill、实验、往返或覆盖模式时显示弹出横幅。"
+
+msgid "Prevent automatic lane changes into lanes narrower than the set width."
+msgstr "阻止自动变道进入窄于设定宽度的车道。"
+
+msgid "Use a more stock-like presentation by hiding most branch-specific UI, theme, sound, and alert styling. This only changes presentation and does not change driving behavior."
+msgstr "通过隐藏大部分分支专属的界面、主题、音效和警报样式，呈现更接近原厂的外观。这仅改变呈现方式，不会改变驾驶行为。"
+
+msgid "Scale the active Honda lateralTuning.pid.kiV values from openDBC. Applies live to Honda PID lateral only."
+msgstr "缩放来自 openDBC 的当前本田 lateralTuning.pid.kiV 数值。仅对本田 PID 横向实时生效。"
+
+msgid "Override upload blocks and always keep uploader enabled. Advanced use only."
+msgstr "覆盖上传限制并始终保持上传器启用。仅供高级用途。"
+
+msgid "Use torque-based steering control instead of angle-based control for smoother lane keeping, especially in curves."
+msgstr "使用基于扭矩的转向控制而非基于角度的控制，使车道保持更平顺，尤其在弯道中。"
+
+msgid "Set the volume for alerts when openpilot disengages.\n\nExamples include: \"Cruise Fault: Restart the Car\", \"Parking Brake Engaged\", \"Pedal Pressed\"."
+msgstr "设置 openpilot 解除时的警报音量。\n\n示例：\"巡航故障：请重启车辆\"、\"驻车制动已启用\"、\"踏板被踩下\"。"
+
+msgid "Maximum acceleration in m/s² at curve point 6."
+msgstr "曲线点 6 的最大加速度（m/s²）。"
+
+msgid "Vehicle speed in mph for curve point 10."
+msgstr "曲线点 10 的车速（mph）。"
+
+msgid "Maximum acceleration in m/s² at curve point 5."
+msgstr "曲线点 5 的最大加速度（m/s²）。"
+
+msgid "Show full-strength gas and brake indicators when active, and dim them when inactive."
+msgstr "激活时以全强度显示油门和刹车指示，未激活时变暗。"
+
+msgid "Maximum acceleration in m/s² at curve point 4."
+msgstr "曲线点 4 的最大加速度（m/s²）。"
+
+msgid "Use aggressive acceleration profiles tuned for trucks. Intended for heavy vehicles that need stronger throttle."
+msgstr "使用为卡车调校的激进加速曲线。适用于需要更强油门的重型车辆。"
+
+msgid "Save lower-threshold vision sign candidates into the debug session for later training import without showing or applying them live. Leave this on if you want to help improve the model."
+msgstr "将较低阈值的视觉标志候选保存到调试会话，以便之后导入训练，而不实时显示或应用。如果你想帮助改进模型，请保持开启。"
+
+msgid "Set the driving-path edge width that represents different driving modes and statuses.\n\nDefault is 20% of the total path width.\n\nColor Guide:\n\n- Light Blue: Always On Lateral\n- Green: Default\n- Orange: Experimental Mode\n- Red: Traffic Mode\n- Yellow: Conditional Experimental Mode overridden"
+msgstr "设置表示不同驾驶模式和状态的驾驶路径边缘宽度。\n\n默认为总路径宽度的 20%。\n\n颜色说明：\n\n- 浅蓝：常开横向控制\n- 绿色：默认\n- 橙色：实验模式\n- 红色：拥堵模式\n- 黄色：条件实验模式已被覆盖"
+
+msgid "Use the vehicle's wheel speed instead of the cluster speed. This is purely a visual change and doesn't impact how openpilot drives!"
+msgstr "使用车辆轮速而非仪表速度。这纯粹是视觉变化，不影响 openpilot 的驾驶方式！"
+
+msgid "Use the remote-start GM panda firmware at boot.\n\nRequired for GM remote-start startup signal behavior."
+msgstr "启动时使用支持远程启动的 GM panda 固件。\n\nGM 远程启动信号行为必需。"
+
+msgid "Turns on/off using radar data to track leads at standstill, making following/takeoffs more responsive once leads move."
+msgstr "开启/关闭使用雷达数据跟踪静止前车，使前车移动后的跟车/起步响应更灵敏。"
+
+msgid "Stop and go for supported Subaru vehicles."
+msgstr "对支持的斯巴鲁车辆启用走走停停。"
+
+msgid "Set the volume for alerts when openpilot refuses to engage.\n\nExamples include: \"Brake Hold Active\", \"Door Open\", \"Seatbelt Unlatched\"."
+msgstr "设置 openpilot 拒绝接合时的警报音量。\n\n示例：\"制动保持激活\"、\"车门未关\"、\"安全带未系\"。"
+
+msgid "Opt-in ARS510 radar on Toyota RAV4 2022-2025, including hybrids. ACC Target uses the radar's selected lead; Fused Tracks filters the full object list. Off preserves vision-only operation. Restart the device after changing this setting. Does not enable Alpha Long, restore AEB, or change tuning. Collect validation routes and remain ready to take over."
+msgstr "在 2022-2025 丰田 RAV4（含混动）上选择性启用 ARS510 雷达。ACC 目标使用雷达选定的前车；融合轨迹用于筛选完整目标列表。关闭则保持纯视觉运行。更改此设置后请重启设备。不会启用 Alpha 纵向、恢复 AEB 或改变调校。请采集验证路线并随时准备接管。"
+
+msgid "Require confirmation before applying a newly detected lower speed limit."
+msgstr "应用新检测到的更低限速前需要确认。"
+
+msgid "Set how loud each type of openpilot alert is to keep routine prompts from becoming distracting."
+msgstr "设置各类 openpilot 警报的音量，避免常规提示过于打扰。"
+
+msgid "Yield during an intentional manual turn while keeping the Ford steering session ready."
+msgstr "在有意手动转向时让行，同时保持福特转向会话就绪。"
+
+msgid "On GM pedal-long cars, add the configured set-speed offset to the spoofed dash set speed so it matches the on-screen set speed."
+msgstr "在 GM 踏板纵向车辆上，将配置的设定速度偏移加到伪装的仪表设定速度上，使其与屏幕显示一致。"
+
+msgid "Switch to \"Chill Mode\" when following a stable lead above this speed."
+msgstr "高于此速度跟随稳定前车时切换到\"Chill 模式\"。"
+
+msgid "Set a custom lane-line color for the Python UIs.\n\nUse Stock to follow the default line color behavior."
+msgstr "为 Python 界面设置自定义车道线颜色。\n\n选择\"原厂\"以跟随默认线条配色。"
+
+msgid "Scale the driving-screen border thickness.\n\n100% matches the stock border width."
+msgstr "缩放驾驶屏幕边框粗细。\n\n100% 与原厂边框宽度一致。"
+
+msgid "Show a timer when stopped in place of the current speed to indicate how long the vehicle has been stopped."
+msgstr "停车时用计时器替代当前速度显示，以指示已停止多久。"
+
+msgid "Vehicle speed in mph for curve point 3."
+msgstr "曲线点 3 的车速（mph）。"
+
+msgid "Use automatic brightness with an adjustable offset, or Manual to set a fixed brightness while parked."
+msgstr "停车时使用带可调偏移的自动亮度，或选择\"手动\"设定固定亮度。"
+
+msgid "Force openpilot to stop whenever the driving model \"detects\" a red light or stop sign.\n\nDisclaimer: openpilot does not explicitly detect traffic lights or stop signs. In \"Experimental Mode\", openpilot makes end-to-end driving decisions from camera input, which means it may stop even when there's no clear reason!"
+msgstr "当驾驶模型\"检测到\"红灯或停车标志时，强制 openpilot 停车。\n\n免责声明：openpilot 并不显式检测红绿灯或停车标志。在\"实验模式\"下，openpilot 基于摄像头输入做端到端驾驶决策，因此即使没有明确原因也可能停车！"
+
+msgid "The turn-speed hack from comma's 2022 \"Taco Bell Run\". Designed to slow down for left and right turns."
+msgstr "来自 comma 2022 年\"Taco Bell Run\"的转向速度补丁。用于左右转弯时减速。"
+
+msgid "Vehicle rigidly tries to center itself rather than avoiding hazards, potholes, or road debris."
+msgstr "车辆僵硬地试图居中，而不避让危险物、坑洞或路面障碍。"
+
+msgid "Miscellaneous steering control changes to fine-tune how openpilot drives."
+msgstr "其他转向控制调整，用于微调 openpilot 的驾驶表现。"
+
+msgid "Vehicle speed in mph for curve point 9."
+msgstr "曲线点 9 的车速（mph）。"
+
+msgid "Vehicle speed in mph for curve point 1. Breakpoint speeds must increase from one point to the next."
+msgstr "曲线点 1 的车速（mph）。断点速度必须逐点递增。"
+
+msgid "Set the road-edge thickness.\n\nDefault matches half of the MUTCD lane-line width standard of 4 inches."
+msgstr "设置道路边缘粗细。\n\n默认值符合 MUTCD 车道线宽度标准（4 英寸）的一半。"
+
+msgid "Fine-tunes openpilot's steering control."
+msgstr "微调 openpilot 的转向控制。"
+
+msgid "Learns steering delay; ignores the manual value."
+msgstr "学习转向延迟；忽略手动设定值。"
+
+msgid "Auto-tunes steering friction and lateral acceleration."
+msgstr "自动调校转向摩擦和横向加速度。"
+
+msgid "Uses fixed values instead of live steering auto-tuning."
+msgstr "使用固定值而非实时转向自动调校。"
+
+msgid "Uses torque-based steering for smoother lane keeping."
+msgstr "使用基于扭矩的转向，使车道保持更平顺。"
+
+msgid "Keeps steering active when pressing the gas or brake."
+msgstr "踩油门或刹车时保持转向激活。"
+
+msgid "Keep steering off after pressing the brake until you deliberately re-engage it."
+msgstr "踩刹车后保持转向关闭，直到你主动重新接合。"
+
+msgid "Toggle steering with a three-finger screen touch using the Vehicle CAN add-on cable."
+msgstr "使用 Vehicle CAN 附加线缆时，用三指触摸屏幕切换转向。"
+
+msgid "Enables openpilot lane changes."
+msgstr "启用 openpilot 变道。"
+
+msgid "Changes lanes automatically when the turn signal is on."
+msgstr "打转向灯时自动变道。"
+
+msgid "Requires a nudge unless full openpilot control is engaged."
+msgstr "未完全接合 openpilot 时需要轻推方向盘。"
+
+msgid "Limits automatic lane changes to one per signal."
+msgstr "每次转向灯仅允许自动变道一次。"
+
+msgid "Temporarily shortens the follow gap during lane changes."
+msgstr "变道时临时缩短跟车距离。"
+
+msgid "Additional settings for fine-tuning steering control."
+msgstr "用于微调转向控制的额外设置。"
+
+msgid "Allows turn desires below lane-change speed with a signal."
+msgstr "低于变道速度时打灯也允许转向意图。"
+
+msgid "Allows navigation to request low-speed turns."
+msgstr "允许导航请求低速转向。"
+
+msgid "Uses route-based lane positioning after torque confirmation."
+msgstr "扭矩确认后使用基于路线的车道定位。"
+
+msgid "Uses a neural network to smooth steering torque."
+msgstr "使用神经网络平滑转向扭矩。"
+
+msgid "Uses planned path data to smooth steering in curves."
+msgstr "使用规划路径数据平滑弯道转向。"
+
+msgid "Adds quality-of-life steering changes."
+msgstr "添加提升体验的转向调整。"
+
+msgid "Pauses steering when the turn signal is active."
+msgstr "转向灯激活时暂停转向。"
+
+msgid "Uses the driver camera for adjacent-spot monitoring."
+msgstr "使用驾驶员摄像头进行相邻盲区监测。"
+
+msgid "Fine-tunes openpilot's acceleration and braking."
+msgstr "微调 openpilot 的加速与刹车。"
+
+msgid "Uses acceleration profiles tuned for EV powertrains."
+msgstr "使用为电动车动力调校的加速曲线。"
+
+msgid "Uses stronger acceleration profiles for heavy vehicles."
+msgstr "为重型车辆使用更强的加速曲线。"
+
+msgid "Uses custom maximum-acceleration values by speed."
+msgstr "按车速使用自定义最大加速度值。"
+
+msgid "Enables Experimental Mode for configured conditions."
+msgstr "在设定条件下启用实验模式。"
+
+msgid "Keeps a manual Experimental Mode override after reboot."
+msgstr "重启后保留手动实验模式覆盖。"
+
+msgid "Enables Experimental Mode when a curve is detected ahead."
+msgstr "前方检测到弯道时启用实验模式。"
+
+msgid "Uses Experimental Mode for predicted red lights or stops."
+msgstr "对预测的红灯或停止使用实验模式。"
+
+msgid "Uses Experimental Mode for a slower or stopped lead."
+msgstr "对较慢或停止的前车使用实验模式。"
+
+msgid "Keeps Experimental Mode active on open roads without a lead."
+msgstr "无前车的开阔道路上保持实验模式。"
+
+msgid "Uses Experimental Mode when a slower lead is detected."
+msgstr "检测到较慢前车时使用实验模式。"
+
+msgid "Uses Experimental Mode when a stopped lead is detected."
+msgstr "检测到停止前车时使用实验模式。"
+
+msgid "Shows which condition triggered Experimental Mode."
+msgstr "显示触发实验模式的条件。"
+
+msgid "Slows for upcoming curves using your driving history."
+msgstr "根据你的驾驶历史为即将到来的弯道减速。"
+
+msgid "Shows the Curve Speed Controller target speed."
+msgstr "显示弯道速度控制器的目标速度。"
+
+msgid "Uses Curve Speed Controller only without a lead."
+msgstr "仅在无前车时使用弯道速度控制器。"
+
+msgid "Learned cornering comfort from your driving data."
+msgstr "从驾驶数据学习到的过弯舒适度。"
+
+msgid "How much curve data has been collected."
+msgstr "已采集的弯道数据量。"
+
+msgid "Customizes driving personalities to match your style."
+msgstr "自定义驾驶风格以匹配你的习惯。"
+
+msgid "Customizes Traffic Mode for stop-and-go driving."
+msgstr "为走走停停路况自定义拥堵模式。"
+
+msgid "Customizes Aggressive Mode for assertive driving."
+msgstr "为果断驾驶自定义激进模式。"
+
+msgid "Customizes Standard Mode for balanced driving."
+msgstr "为均衡驾驶自定义标准模式。"
+
+msgid "Customizes Relaxed Mode for smoother driving."
+msgstr "为平顺驾驶自定义轻松模式。"
+
+msgid "Additional acceleration and braking tuning."
+msgstr "额外的加速与刹车调校。"
+
+msgid "Chooses how quickly openpilot accelerates."
+msgstr "选择 openpilot 的加速快慢。"
+
+msgid "Chooses how firmly openpilot slows down."
+msgstr "选择 openpilot 的减速力度。"
+
+msgid "Anticipates nearby traffic during lane changes."
+msgstr "变道时预判周边车流。"
+
+msgid "Slows for turns using the Taco Bell Run hack."
+msgstr "使用 Taco Bell Run 补丁在转弯时减速。"
+
+msgid "Lets navigation lower cruise speed for upcoming turns."
+msgstr "允许导航为即将到来的转弯降低巡航速度。"
+
+msgid "Adds quality-of-life acceleration and braking changes."
+msgstr "添加提升体验的加速与刹车调整。"
+
+msgid "Swaps Toyota/Lexus short-press and hold cruise increments."
+msgstr "交换丰田/雷克萨斯巡航按键短按与长按的步进。"
+
+msgid "Commands stops for model-predicted red lights or stop signs."
+msgstr "对模型预测的红灯或停车标志指令停车。"
+
+msgid "Holds standstill until you press gas or Resume/+."
+msgstr "保持静止直到你踩油门或按 RES/+。"
+
+msgid "Uses radar to improve lead takeoffs from a stop."
+msgstr "使用雷达改善前车起步时的跟随。"
+
+msgid "Maps Accel/Decel profiles to Eco and Sport gear modes."
+msgstr "将加速/减速曲线映射到经济与运动档位模式。"
+
+msgid "Adjusts driving behavior for current weather."
+msgstr "根据当前天气调整驾驶行为。"
+
+msgid "Asks before applying a new speed limit."
+msgstr "应用新限速前先询问。"
+
+msgid "Asks before applying a lower speed limit."
+msgstr "应用更低限速前先询问。"
+
+msgid "Asks before applying a higher speed limit."
+msgstr "应用更高限速前先询问。"
+
+msgid "Matches the speed limit when openpilot engages."
+msgstr "接合时匹配限速。"
+
+msgid "Chooses the speed when no limit source is available."
+msgstr "没有限速来源时选择使用的速度。"
+
+msgid "Uses Mapbox speed limits as a fallback."
+msgstr "使用 Mapbox 限速作为备用。"
+
+msgid "Chooses the backup speed-limit source."
+msgstr "选择备用限速来源。"
+
+msgid "Shows the offset on the compact display; the unified card always shows nonzero offsets."
+msgstr "在精简显示上显示偏移；统一卡片始终显示非零偏移。"
+
+msgid "Shows speed-limit sources and their current values."
+msgstr "显示限速来源及其当前数值。"
+
+msgid "Temporarily uses Chill Mode during simple cruising."
+msgstr "简单巡航时临时使用 Chill 模式。"
+
+msgid "Keeps a manual Chill Mode override after reboot."
+msgstr "重启后保留手动 Chill 模式覆盖。"
+
+msgid "Uses Chill Mode when following a steady lead."
+msgstr "跟随稳定前车时使用 Chill 模式。"
+
+msgid "Uses Chill Mode for smoother launches from a stop."
+msgstr "从静止起步时使用 Chill 模式，起步更平顺。"
+
+msgid "Shows which condition triggered Chill Mode."
+msgstr "显示触发 Chill 模式的条件。"
+
+msgid "Shows speed-limit sources as compact text labels."
+msgstr "将限速来源显示为紧凑文字标签。"
+
+msgid "Hides speed-limit sources with no current reading."
+msgstr "隐藏当前无读数的限速来源。"
+
+msgid "Detects and displays speed-limit signs with the road camera."
+msgstr "使用道路摄像头检测并显示限速标志。"
+
+msgid "Ignores vision speed limits below the configured threshold."
+msgstr "忽略低于设定阈值的视觉限速。"
+
+msgid "Saves confirmed vision speed-limit signs for training."
+msgstr "保存已确认的视觉限速标志用于训练。"
+
+msgid "Saves extra vision sign samples for training."
+msgstr "保存额外的视觉标志样本用于训练。"
+
+msgid "Preserves route segments containing auto-bookmarks."
+msgstr "保留包含自动书签的路线分段。"
+
+msgid "Additional settings for fine-tuning the driving screen."
+msgstr "用于微调驾驶屏幕的额外设置。"
+
+msgid "Hides current speed from the driving screen."
+msgstr "在驾驶屏幕上隐藏当前速度。"
+
+msgid "Shows the detected lead vehicle."
+msgstr "显示检测到的前车。"
+
+msgid "Hides the max-speed indicator from the driving screen."
+msgstr "在驾驶屏幕上隐藏最高速度指示。"
+
+msgid "Hides non-critical alerts from the driving screen."
+msgstr "在驾驶屏幕上隐藏非严重警报。"
+
+msgid "Hides the steering-wheel button on the driving screen."
+msgstr "隐藏驾驶屏幕上的方向盘按键。"
+
+msgid "Uses wheel speed instead of cluster speed for display."
+msgstr "显示时使用轮速而非仪表速度。"
+
+msgid "Applies seasonal themes automatically."
+msgstr "自动应用季节性主题。"
+
+msgid "Enables StarPilot widgets on the driving screen."
+msgstr "在驾驶屏幕上启用 StarPilot 组件。"
+
+msgid "Colors the path by planned acceleration and braking."
+msgstr "按规划的加速与刹车为路径着色。"
+
+msgid "Colors the driving path like a rainbow."
+msgstr "将驾驶路径着成彩虹色。"
+
+msgid "Shows a banner when driving mode changes."
+msgstr "驾驶模式变化时显示横幅。"
+
+msgid "Shows driving paths for adjacent lanes."
+msgstr "显示相邻车道的行驶路径。"
+
+msgid "Marks adjacent paths when a blind spot is detected."
+msgstr "检测到盲区时标记相邻路径。"
+
+msgid "Shows a side-camera preview on a turn signal or blind spot."
+msgstr "打转向灯或检测到盲区时显示侧摄像头预览。"
+
+msgid "Shows the side preview while a turn signal is on."
+msgstr "转向灯开启时显示侧视预览。"
+
+msgid "Shows the side preview when a blind spot is detected."
+msgstr "检测到盲区时显示侧视预览。"
+
+msgid "Keep off for the default view with the car body along the inside edge."
+msgstr "保持关闭可让车身位于内侧边缘的默认视角。"
+
+msgid "Shows driving direction with an on-screen compass."
+msgstr "用屏幕罗盘显示行驶方向。"
+
+msgid "Controls and shows driving personality from a widget."
+msgstr "通过组件控制和显示驾驶风格。"
+
+msgid "Colors the driving-screen wheel by acceleration and braking, with optional pedal indicators."
+msgstr "按加速与刹车为屏幕方向盘着色，可选显示踏板指示。"
+
+msgid "Fades pedal indicators with acceleration and braking."
+msgstr "踏板指示随加速与刹车淡入淡出。"
+
+msgid "Shows full pedal indicators when active; dims otherwise."
+msgstr "激活时全强度显示踏板指示，否则变暗。"
+
+msgid "Rotates the driving-screen wheel with the physical wheel."
+msgstr "屏幕方向盘随实际方向盘转动。"
+
+msgid "Shows model paths, lane lines, and road edges."
+msgstr "显示模型路径、车道线和道路边缘。"
+
+msgid "Changes path width with engagement state."
+msgstr "路径宽度随接合状态变化。"
+
+msgid "Shows navigation and speed-limit widgets."
+msgstr "显示导航和限速组件。"
+
+msgid "Clears the active route when the device goes offroad."
+msgstr "设备停车时清除当前路线。"
+
+msgid "Shows the current road name on the driving screen."
+msgstr "在驾驶屏幕上显示当前道路名称。"
+
+msgid "Shows the current speed limit on the driving screen."
+msgstr "在驾驶屏幕上显示当前限速。"
+
+msgid "Uses Vienna-style signs on the compact display."
+msgstr "在精简显示上使用维也纳式标志。"
+
+msgid "Chooses the camera feed used by the driving screen."
+msgstr "选择驾驶屏幕使用的摄像头画面。"
+
+msgid "Shows the driver camera feed in reverse."
+msgstr "倒车时显示驾驶员摄像头画面。"
+
+msgid "Shows how long the vehicle has been stopped."
+msgstr "显示车辆已停止多久。"
+
+msgid "Uses the stock moving confidence ball on comma 4."
+msgstr "在 comma 4 上使用原厂移动置信球。"
+
+msgid "Uses a stock-like UI without changing driving behavior."
+msgstr "使用接近原厂的界面，不改变驾驶行为。"
+
+msgid "Hides the Changing Lanes banner."
+msgstr "隐藏\"正在变道\"横幅。"
+
+msgid "Hides the personality banner when distance changes."
+msgstr "切换车距时隐藏驾驶风格横幅。"
+
+msgid "Hides the driver-monitoring icon."
+msgstr "隐藏驾驶员监控图标。"
+
+msgid "Hides the Turning Left/Right banner."
+msgstr "隐藏\"左转/右转\"横幅。"
+
+msgid "Disables the wide camera; may reduce driving performance."
+msgstr "禁用广角摄像头；可能降低驾驶性能。"
+
+msgid "Sets the volume for each alert type."
+msgstr "设置各类警报的音量。"
+
+msgid "Plays Goat Scream at the steering limit."
+msgstr "达到转向极限时播放山羊尖叫。"
+
+msgid "Plays Goat Scream for critical takeover alerts."
+msgstr "对严重接管警报播放山羊尖叫。"
+
+msgid "Alerts when the model predicts a light turned green."
+msgstr "模型预测绿灯亮起时发出警报。"
+
+msgid "Alerts when a stopped lead vehicle departs."
+msgstr "停止的前车起步时发出警报。"
+
+msgid "Plays a louder alert for blind-spot lane changes."
+msgstr "盲区变道时播放更响的警报。"
+
+msgid "Plays the blind-spot alert when steering is paused."
+msgstr "转向暂停时也播放盲区警报。"
+
+msgid "Alerts when the posted speed limit changes."
+msgstr "限速变化时发出警报。"
+
+msgid "Uses the Extreme harness angle channel with torque fallback."
+msgstr "使用 Extreme 线束角度通道，并带回退扭矩。"
+
+msgid "Locks the selected fingerprint; disables auto-detection."
+msgstr "锁定所选指纹；禁用自动识别。"
+
+msgid "Uses right-hand-drive driver monitoring."
+msgstr "使用右舵驾驶员监控。"
+
+msgid "Uses stock longitudinal control instead of openpilot."
+msgstr "使用原厂纵向控制而非 openpilot。"
+
+msgid "Adds cooperative steering for Tesla Model 3."
+msgstr "为特斯拉 Model 3 添加协同转向。"
+
+msgid "Uses stock Bosch radar on pre-Autopilot Teslas."
+msgstr "在 Pre-Autopilot 特斯拉上使用原厂博世雷达。"
+
+msgid "Enables radar mounted behind the nosecone."
+msgstr "启用安装在前罩后方的雷达。"
+
+msgid "Uses a comma pedal for acceleration on pre-Autopilot Teslas."
+msgstr "在 Pre-Autopilot 特斯拉上使用 comma 踏板加速。"
+
+msgid "Chooses the CAN bus for the Tesla pedal interceptor."
+msgstr "选择特斯拉踏板拦截器的 CAN 总线。"
+
+msgid "Limits acceleration near a lead on Tesla pedal-long."
+msgstr "特斯拉踏板纵向时限制接近前车时的加速度。"
+
+msgid "Enables Tesla pedal-long after calibration."
+msgstr "校准后启用特斯拉踏板纵向。"
+
+msgid "Uses the pedal interceptor for GM longitudinal control."
+msgstr "使用踏板拦截器实现 GM 纵向控制。"
+
+msgid "Applies GM pedal-long set-speed offsets to the dash."
+msgstr "将 GM 踏板纵向的设定速度偏移应用到仪表。"
+
+msgid "Uses CAN ignition only; requires a Panda flash."
+msgstr "仅使用 CAN 点火；需要刷写 Panda。"
+
+msgid "Smooths pedal response on hills."
+msgstr "在坡道上平滑踏板响应。"
+
+msgid "Uses GM remote-start firmware at boot."
+msgstr "启动时使用 GM 远程启动固件。"
+
+msgid "Allow your comma to wake up with your Tesla."
+msgstr "允许你的 comma 随特斯拉一起唤醒。"
+
+msgid "Uses Hyundai/Kia/Genesis remote-climate firmware at boot."
+msgstr "启动时使用现代/起亚/捷尼赛思远程空调固件。"
+
+msgid "Adds stop-and-go to the 2017 Chevy Volt."
+msgstr "为 2017 雪佛兰 Volt 添加走走停停。"
+
+msgid "Holds supported GM vehicle brakes until the gas pedal is pressed."
+msgstr "让支持的 GM 车辆保持刹车直到踩下油门。"
+
+msgid "Adds blended braking for one-pedal Chevy Volt driving."
+msgstr "为单踏板雪佛兰 Volt 驾驶添加混合制动。"
+
+msgid "Holds Jeep brakes after ACC stops, then resumes in traffic."
+msgstr "ACC 停车后保持 Jeep 刹车，车流移动时恢复。"
+
+msgid "Enables stop-and-go on supported Subarus."
+msgstr "在支持的斯巴鲁上启用走走停停。"
+
+msgid "Enables manual-handbrake stop-and-go on supported Subarus."
+msgstr "在支持的斯巴鲁上启用手动手刹走走停停。"
+
+msgid "Requests AVH ON at startup on the 2025 Legacy."
+msgstr "在 2025 Legacy 启动时请求开启 AVH。"
+
+msgid "Requests Stop/Start OFF once after ignition on supported Subarus."
+msgstr "在支持的斯巴鲁上点火后请求一次关闭启停。"
+
+msgid "Adds stop-and-go to Lexus/Toyota vehicles without it."
+msgstr "为没有走走停停的雷克萨斯/丰田车辆添加该功能。"
+
+msgid "Holds supported Toyota/Lexus brakes after a manual stop with cruise disengaged."
+msgstr "巡航未接合时手动停车后保持支持的丰田/雷克萨斯刹车。"
+
+msgid "Experimental radar parsing for 2022-2025 RAV4s; disabled by default."
+msgstr "2022-2025 RAV4 的实验性雷达解析；默认关闭。"
+
+msgid "Makes the Bolt CANCEL button available for remapping."
+msgstr "让 Bolt 的 CANCEL 键可用于重映射。"
+
+msgid "Adds Hyundai CAN-FD left-paddle acceleration/braking pause."
+msgstr "添加现代 CAN-FD 左拨片加速/刹车暂停。"
+
+msgid "Controls device power, data, and recording."
+msgstr "控制设备电源、数据和录制。"
+
+msgid "Prevents drive logging; leave off unless testing."
+msgstr "阻止记录驾驶；除非测试否则请关闭。"
+
+msgid "Prevents drives from uploading to comma connect."
+msgstr "阻止驾驶数据上传到 comma connect。"
+
+msgid "Disables uploads while driving; allows them while parked."
+msgstr "行驶时禁用上传，停车时允许。"
+
+msgid "Keeps uploads enabled despite upload blocks."
+msgstr "即使有上传限制也保持上传启用。"
+
+msgid "Saves drive footage at higher quality."
+msgstr "以更高画质保存行车录像。"
+
+msgid "Limits uploads over cellular data."
+msgstr "限制通过蜂窝网络上传。"
+
+msgid "Allows higher temperatures; may damage the device."
+msgstr "允许更高温度；可能损坏设备。"
+
+msgid "Cooler-running, louder fan curve for comma 3/3X."
+msgstr "comma 3/3X 更凉但更吵的风扇曲线。"
+
+msgid "Uploads driving data to the Konik server."
+msgstr "将驾驶数据上传到 Konik 服务器。"
+
+msgid "Controls screen brightness, recording, and timeout."
+msgstr "控制屏幕亮度、录制和超时。"
+
+msgid "Keep the driving screen awake during eGPU model loading."
+msgstr "eGPU 模型加载期间保持驾驶屏幕常亮。"
+
+msgid "Adds a driving-screen button to record the display."
+msgstr "在驾驶屏幕上添加录制屏幕的按钮。"
+
+msgid "Turn off the driving screen after inactivity and choose additional wake events."
+msgstr "闲置后关闭驾驶屏幕，并选择额外的唤醒事件。"
+
+msgid "Enables developer controls and diagnostics."
+msgstr "启用开发者控制与诊断。"
+
+msgid "Shows performance and sensor metrics for debugging."
+msgstr "显示用于调试的性能与传感器指标。"
+
+msgid "Shows frames per second on the driving screen."
+msgstr "在驾驶屏幕上显示每秒帧数。"
+
+msgid "Shows CPU usage in developer metrics."
+msgstr "在开发者指标中显示 CPU 占用。"
+
+msgid "Shows GPU usage in developer metrics."
+msgstr "在开发者指标中显示 GPU 占用。"
+
+msgid "Shows device temperature in developer metrics."
+msgstr "在开发者指标中显示设备温度。"
+
+msgid "Shows memory usage in developer metrics."
+msgstr "在开发者指标中显示内存占用。"
+
+msgid "Shows advanced settings in Galaxy."
+msgstr "在 Galaxy 中显示高级设置。"
+
+msgid "Read-only Stinger object validation; no braking or steering changes."
+msgstr "只读的 Stinger 目标验证；不改变制动或转向。"
+
+msgid "Serve Galaxy (new) as the default landing page."
+msgstr "将 Galaxy（新版）作为默认首页。"
+
+msgid "Uses openpilot longitudinal control; may disable stock AEB."
+msgstr "使用 openpilot 纵向控制；可能禁用原厂 AEB。"
+
+msgid "Forces offroad state while parked for remote updates."
+msgstr "停车时强制进入停车状态以便远程更新。"
+
+msgid "Matches StarPilot's target speed with Hyundai RES/SET."
+msgstr "用现代 RES/SET 对齐 StarPilot 的目标速度。"
+
+msgid "Matches StarPilot's target speed with Subaru Resume/Set."
+msgstr "用斯巴鲁 RESUME/SET 对齐 StarPilot 的目标速度。"
+
+msgid "Biases steering toward the detected lane center."
+msgstr "将转向偏向检测到的车道中心。"
+
+msgid "Fades lane-centering correction during turn signals."
+msgstr "转向灯期间淡出车道居中修正。"
+
+msgid "Hides an acceleration diagnostic; leave off unless testing."
+msgstr "隐藏加速诊断；除非测试否则请关闭。"
+
+msgid "Speed & Following"
+msgstr "速度与跟车"
+
+msgid "Display & UI"
+msgstr "显示与界面"
+
+msgid "Vehicle"
+msgstr "车辆"
+
+msgid "Longitudinal"
+msgstr "纵向"
+
+msgid "Visual"
+msgstr "视觉"
+
+msgid "Actions"
+msgstr "动作"
+
+msgid "Safety"
+msgstr "安全"
+
+# ===== ???????UI ???? replace?=====
+
+msgid "Loud \"Car Detected in Blindspot\" Alert"
+msgstr "盲区检测警报加响"
+
+msgid "\"Taco Bell Run\" Turn Speed Hack"
+msgstr "\"Taco Bell Run\" 转向速度补丁"
+
+msgid "\"Detected\" Stop Lights/Signs"
+msgstr "\"检测到的\"停车灯/标志"
+
+msgid "Force Stop at \"Detected\" Stop Lights/Signs"
+msgstr "在\"检测到的\"停车灯/标志处强制停车"
+
+# ===== 复数条目与组合格式串补充 =====
+
+msgid "{} region selected"
+msgid_plural "{} regions selected"
+msgstr[0] "已选择 {} 个区域"
+msgstr[1] "已选择 {} 个区域"
+
+msgid "{}\nElapsed {} | ETA {}"
+msgstr "{}\n已用 {} | 预计 {}"
+
+msgid "{} / {} ({}%)\nElapsed {} | ETA {}"
+msgstr "{} / {}（{}%）\n已用 {} | 预计 {}"
+
+msgid "{}\nElapsed {}"
+msgstr "{}\n已用 {}"

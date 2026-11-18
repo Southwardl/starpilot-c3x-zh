@@ -1,0 +1,22 @@
+--- a/opendbc_repo/opendbc/car/gm/values.py
++++ b/opendbc_repo/opendbc/car/gm/values.py
+@@ -297,6 +297,11 @@
+     [GMCarDocs("Buick Regal Essence 2018")],
+     GMCarSpecs(mass=1714, wheelbase=2.83, steerRatio=14.4, centerToFrontRatio=0.4),
+   )
++  # Buick Verano GS 2018 (威朗) — 指纹 2026-08-19 采集，含 0x2FF SASCM 心跳
++  BUICK_VERANO = GMSDGMPlatformConfig(
++    [GMCarDocs("Buick Verano 2018", "ACC & LKAS")],
++    GMCarSpecs(mass=1320, wheelbase=2.70, steerRatio=16.0, centerToFrontRatio=0.4),
++  )
+   CADILLAC_ESCALADE = GMASCMPlatformConfig(
+     [GMCarDocs("Cadillac Escalade 2017", "Driver Assist Package")],
+     GMCarSpecs(mass=2564, wheelbase=2.95, steerRatio=17.3),
+@@ -576,6 +581,7 @@
+ 
+ # We're integrated at the Safety Data Gateway Module on these cars
+ SDGM_CAR = {
++  CAR.BUICK_VERANO,
+   CAR.CADILLAC_XT4,
+   CAR.CADILLAC_XT5,
+   CAR.CADILLAC_XT6,

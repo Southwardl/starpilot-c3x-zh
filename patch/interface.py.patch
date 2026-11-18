@@ -1,0 +1,15 @@
+--- a/opendbc_repo/opendbc/car/gm/interface.py
++++ b/opendbc_repo/opendbc/car/gm/interface.py
+@@ -335,6 +335,12 @@
+       ret.radarUnavailable = RADAR_HEADER_MSG not in fingerprint[CanBus.OBSTACLE] and not docs
+       ret.pcmCruise = True
+       ret.minEnableSpeed = -1.
++      # [patched] VERANO_MIN_ENABLE_SPEED
++      # ??? ACC ??????????0 km/h + ??????????
++      # "Cruise Fault: Restart the Car"??? accFaulted=True??
++      # ???????????????????????
++      if candidate == CAR.BUICK_VERANO:
++        ret.minEnableSpeed = 0.
+       ret.minSteerSpeed = 7 * CV.MPH_TO_MS
+       ret.safetyConfigs[0].safetyParam |= GMSafetyFlags.HW_SDGM.value
+ 

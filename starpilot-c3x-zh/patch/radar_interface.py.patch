@@ -1,0 +1,35 @@
+--- a/opendbc_repo/opendbc/car/gm/radar_interface.py
++++ b/opendbc_repo/opendbc/car/gm/radar_interface.py
+@@ -3,7 +3,7 @@
+ from opendbc.can import CANParser
+ from opendbc.car import Bus, structs
+ from opendbc.car.common.conversions import Conversions as CV
+-from opendbc.car.gm.values import DBC, CanBus
++from opendbc.car.gm.values import DBC, CanBus, CAR
+ from opendbc.car.interfaces import RadarInterfaceBase
+ 
+ RADAR_HEADER_MSG = 1120  # F_LRR_Obj_Header
+@@ -33,6 +33,13 @@
+   return CANParser(DBC[car_fingerprint][Bus.radar], messages, CanBus.OBSTACLE)
+ 
+ 
++# Some GM radar variants report TrkAzimuth with the opposite lateral sign.
++# Flip only for the affected platform so other GM cars keep stock behaviour.
++AZIMUTH_SIGN = {
++  CAR.BUICK_VERANO: -1.0,
++}
++
++
+ class RadarInterface(RadarInterfaceBase):
+   def __init__(self, CP):
+     super().__init__(CP)
+@@ -85,7 +92,8 @@
+         distance = cpt['TrkRange']
+         self.pts[targetId].dRel = distance  # from front of car
+         # From driver's pov, left is positive
+-        self.pts[targetId].yRel = math.sin(cpt['TrkAzimuth'] * CV.DEG_TO_RAD) * distance
++        sign = AZIMUTH_SIGN.get(self.CP.carFingerprint, 1.0)
++        self.pts[targetId].yRel = math.sin(cpt['TrkAzimuth'] * CV.DEG_TO_RAD) * distance * sign
+         self.pts[targetId].vRel = cpt['TrkRangeRate']
+         self.pts[targetId].aRel = float('nan')
+         self.pts[targetId].yvRel = float('nan')

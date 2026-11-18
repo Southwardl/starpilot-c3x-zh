@@ -1,0 +1,133 @@
+--- a/selfdrive/ui/widgets/drive_stats.py
++++ b/selfdrive/ui/widgets/drive_stats.py
+@@ -59,6 +59,10 @@
+   this_week: DriveSummary = field(default_factory=DriveSummary)
+   daily_distance: list[DailyDistance] = field(default_factory=list)
+   records: list[PersonalRecord] = field(default_factory=list)
++  # [restyle] 最近行程：[(左侧文本, 右侧文本), ...]，以及底部信息
++  recent_routes: list[tuple[str, str]] = field(default_factory=list)
++  footer_model: str = ""
++  footer_version: str = ""
+ 
+ 
+ @dataclass
+@@ -456,12 +460,30 @@
+       is_future=day > now.date(),
+     ))
+ 
++  # [restyle] 最近 5 次行程：编号从 0 开始按时间顺序累加（最早一次为第 0 次）
++  recent = []
++  unit_short = "km" if is_metric else "mi"
++  try:
++    chronological = sorted(routes, key=lambda r: r.date)   # 旧 -> 新
++  except Exception:
++    chronological = []
++  total_routes = len(chronological)
++  for offset, route in enumerate(reversed(chronological[-5:])):   # 新 -> 旧
++    number = total_routes - 1 - offset                            # 最新一次 = 总数-1
++    stamp = route.date.strftime("%m-%d %H:%M")
++    left = tr("第{}次 · {}").format(number, stamp)
++    dist = route.distance_meters / 1000.0 if is_metric else route.distance_meters / METER_TO_MILE
++    minutes = max(0, int(round(route.duration / 60.0)))
++    right = tr("{} {} · {} 分钟").format(f"{dist:.1f}", unit_short, minutes)
++    recent.append((left, right))
++
+   return DriveStatsData(
+     all_time=all_time,
+     past_week=past_week,
+     this_week=this_week,
+     daily_distance=daily,
+     records=_personal_records(galaxy_stats, routes, is_metric),
++    recent_routes=recent,
+   )
+ 
+ 
+@@ -523,6 +545,9 @@
+     self._font_bold = gui_app.font(FontWeight.BOLD)
+     self._font_semi_bold = gui_app.font(FontWeight.SEMI_BOLD)
+     self._font_medium = gui_app.font(FontWeight.MEDIUM)
++    # [restyle] 底部展示用，由 home.py 注入
++    self.footer_model: str = ""
++    self.footer_version: str = ""
+     self.refresh()
+ 
+   def refresh(self) -> None:
+@@ -662,19 +687,67 @@
+       rl.draw_text_ex(self._font_medium, label, label_pos, 23, 0, MUTED_COLOR)
+ 
+   def render_overview(self, rect: rl.Rectangle) -> None:
++    """原厂风格：三张统计卡 + 最近行程列表 + 底部模型/版本。"""
+     gap = 18
+-    summary_height = 184
+-    card_width = (rect.width - gap) / 2
+-    summaries = (
+-      (tr("ALL TIME"), self._data.all_time, PURPLE),
+-      (tr("PAST WEEK"), self._data.past_week, TEAL),
++    stats_height = 190
++    card_w = (rect.width - 2 * gap) / 3.0
++    unit = tr("km") if self._data.this_week.unit == "kilometers" else tr("miles")
++
++    at = self._data.all_time
++    total_hours = at.hours
++    full_h = int(total_hours)
++    full_m = int(round((total_hours - full_h) * 60))
++    if full_m >= 60:
++      full_h += 1
++      full_m -= 60
++    avg_min = int(round(total_hours * 60 / at.drives)) if at.drives else 0
++    avg_text = tr("平均 {} 分钟/次").format(avg_min) if at.drives else tr("暂无数据")
++
++    cards = (
++      (tr("累计行程"), f"{_format_count(at.drives)} {tr('次')}", avg_text, PURPLE),
++      (tr("辅助驾驶时长"), tr("{} 小时 {} 分").format(full_h, full_m), tr("累计上路时长"), TEAL),
++      (tr("总里程"), f"{_format_decimal(at.distance)} {unit}", tr("本机累计行驶距离"), PURPLE),
+     )
+-    for index, (title, summary, accent) in enumerate(summaries):
+-      card_rect = rl.Rectangle(rect.x + index * (card_width + gap), rect.y, card_width, summary_height)
+-      self._draw_summary_card(card_rect, title, summary, accent)
+-
+-    graph_rect = rl.Rectangle(rect.x, rect.y + summary_height + gap, rect.width, rect.height - summary_height - gap)
+-    self._draw_distance_graph(graph_rect)
++
++    for index, (title, value, sub, accent) in enumerate(cards):
++      card_rect = rl.Rectangle(rect.x + index * (card_w + gap), rect.y, card_w, stats_height)
++      self._draw_card(card_rect, accent)
++      rl.draw_text_ex(self._font_semi_bold, title, rl.Vector2(card_rect.x + 28, card_rect.y + 26), 30, 0, MUTED_COLOR)
++      rl.draw_text_ex(self._font_bold, value, rl.Vector2(card_rect.x + 28, card_rect.y + 68), 56, 0, TEXT_COLOR)
++      if sub:
++        rl.draw_text_ex(self._font_medium, sub, rl.Vector2(card_rect.x + 30, card_rect.y + 142), 26, 0, MUTED_COLOR)
++
++    list_rect = rl.Rectangle(rect.x, rect.y + stats_height + gap, rect.width,
++                             rect.height - stats_height - gap)
++    self._draw_card(list_rect)
++    rl.draw_text_ex(self._font_semi_bold, tr("最近行程"), rl.Vector2(list_rect.x + 30, list_rect.y + 26), 32, 0, TEXT_COLOR)
++
++    rows = self._data.recent_routes[:5]
++    row_y = list_rect.y + 92
++    row_h = 56
++    if not rows:
++      rl.draw_text_ex(self._font_medium, tr("暂无驾驶记录"), rl.Vector2(list_rect.x + 34, row_y), 30, 0, MUTED_COLOR)
++    for left_text, right_text in rows:
++      rl.draw_text_ex(self._font_medium, left_text, rl.Vector2(list_rect.x + 34, row_y), 30, 0, TEXT_COLOR)
++      right_size = measure_text_cached(self._font_medium, right_text, 30)
++      rl.draw_text_ex(self._font_medium, right_text,
++                      rl.Vector2(list_rect.x + list_rect.width - 34 - right_size.x, row_y), 30, 0, MUTED_COLOR)
++      row_y += row_h
++      rl.draw_line(int(list_rect.x + 30), int(row_y - 16), int(list_rect.x + list_rect.width - 30), int(row_y - 16), TRACK_COLOR)
++
++    # 底部：当前模型 / 软件版本
++    foot_y = list_rect.y + list_rect.height - 100
++    rl.draw_line(int(list_rect.x + 30), int(foot_y), int(list_rect.x + list_rect.width - 30), int(foot_y), TRACK_COLOR)
++    foot_rows = (
++      (tr("当前模型"), self.footer_model or tr("未知")),
++      (tr("软件版本"), self.footer_version or tr("未知")),
++    )
++    for i, (label, value) in enumerate(foot_rows):
++      y = foot_y + 18 + i * 42
++      rl.draw_text_ex(self._font_medium, label, rl.Vector2(list_rect.x + 34, y), 28, 0, MUTED_COLOR)
++      value_size = measure_text_cached(self._font_semi_bold, value, 28)
++      rl.draw_text_ex(self._font_semi_bold, value,
++                      rl.Vector2(list_rect.x + list_rect.width - 34 - value_size.x, y), 28, 0, TEXT_COLOR)
+ 
+   def _draw_distance_graph(self, rect: rl.Rectangle) -> None:
+     self._draw_card(rect)
