@@ -454,6 +454,44 @@ ssh comma@<设备IP> 'sudo bash /tmp/starpilot-c3x-zh/provision.sh'
 
 ## 变更记录
 
+### v1.4.5 — 2026-11-19
+
+把「屏蔽驾驶员监控」做成**菜单开关**，取代上一版的隐藏文件开关。
+
+**菜单变化**
+
+| 位置 | 原 | 现 |
+|---|---|---|
+| 设置 › 开关 ├ 图标 | Always-On Driver Monitoring | **始终屏蔽驾驶员监控** |
+| 说明 | 即使未启用 openpilot 也启用驾驶员监控。 | 始终屏蔽驾驶员监控（DM）。修好摄像头后可关闭此项恢复。 |
+
+参数仍是 `AlwaysOnDM`（已注册），但语义反转：**打开 = 屏蔽 DM**。
+
+**实现**
+
+```python
+# selfdrive/selfdrived/selfdrived.py
+self.camera_packets = ["roadCameraState", "wideRoadCameraState"]
+if not self.params.get_bool("AlwaysOnDM"):
+    self.camera_packets.append("driverCameraState")
+```
+
+| `AlwaysOnDM` | 行为 |
+|---|---|
+| `1`（当前默认）| 屏蔽 DM，不检查 `driverCameraState` |
+| `0` | 恢复驾驶员监控检查 |
+
+修好摄像头后，在菜单里关掉这个开关（或 `echo -n 0 > /data/params/d/AlwaysOnDM`）
+并重启 `comma.service` 即可恢复。
+
+**⚠️ 关于中文显示的重要说明**
+
+本次修复中发现一个**脚本编码陷阱**：用 PowerShell `Set-Content -Encoding ASCII`
+写含中文的脚本时，中文会在写入阶段就被替换成 `?`，导致 `.po` 文件被破坏。
+所有含中文的脚本必须用 UTF-8 写入（本仓库工具已改为用 `write` 工具或 Python 生成）。
+
+**补丁总数**：17 个（新增 `toggles.py.patch`），全部通过干净 StarPilot `2589caad` 的应用测试。
+
 ### v1.4.4 — 2026-11-19
 
 把「屏蔽驾驶员监控」改为**默认行为**。

@@ -1,6 +1,6 @@
 {
   "name": "starpilot-c3x-zh",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "generated_at": "2026-11-18T00:15:45+08:00",
   "baseline": {
     "repository": "https://github.com/StarPilotHQ/StarPilot.git",
@@ -157,12 +157,19 @@
       "kind": "patch",
       "description": "静止时跳过 commIssue + 默认屏蔽驾驶员监控（DM）",
       "sha256_current": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "target": "selfdrive/ui/layouts/settings/toggles.py",
+      "patch": "patch/toggles.py.patch",
+      "kind": "patch",
+      "description": "菜单「始终启用驾驶员监控」改为「始终屏蔽驾驶员监控」",
+      "sha256_current": "0000000000000000000000000000000000000000000000000000000000000000"
     }
   ],
   "stats": {
     "translation_entries": 2119,
     "font_glyphs": 6933,
-    "patched_files": 16,
+    "patched_files": 17,
     "dropped_files": 5
   },
   "features": {
@@ -239,11 +246,13 @@
     "note": "StarPilot 自定义启动提示，显示 5 秒。出厂默认是英文安全提示。"
   },
   "driver_monitoring_policy": {
-    "default": "disabled",
-    "reason": "本机驾驶员摄像头硬件故障（driverCameraState 0 帧，前视/广角正常），而 cameraMalfunction 是 NO_ENTRY 级别，会让设备完全不可用。",
-    "implementation": "selfdrived.camera_packets 默认不含 driverCameraState",
-    "re_enable": "sudo touch /data/.enable_driver_monitoring && sudo systemctl restart comma.service",
-    "cost": "无驾驶员监控（DM），系统不会检测分心/低头",
-    "hardware_note": "判断为摄像头模组 FPC 排线接触问题（9008 刷机拆装过）。修好后创建 /data/.enable_driver_monitoring 即可恢复。"
+    "default": "suppressed",
+    "toggle": "设置 › 开关 › 始终屏蔽驾驶员监控 (AlwaysOnDM)",
+    "on": "屏蔽 DM（默认）",
+    "off": "恢复驾驶员监控检查",
+    "implementation": "selfdrived.camera_packets 在 AlwaysOnDM=True 时不含 driverCameraState",
+    "reason": "本机驾驶员摄像头硬件故障（driverCameraState 0 帧，前视/广角正常），cameraMalfunction 是 NO_ENTRY 会让设备完全不可用",
+    "cost": "无驾驶员监控，不检测分心/低头",
+    "hardware_fix": "修好摄像头后，在菜单里关掉该开关即可恢复（无需重启？需重启 comma.service）"
   }
 }

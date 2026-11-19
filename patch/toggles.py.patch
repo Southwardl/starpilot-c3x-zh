@@ -1,0 +1,20 @@
+--- a/selfdrive/ui/layouts/settings/toggles.py
++++ b/selfdrive/ui/layouts/settings/toggles.py
+@@ -27,7 +27,7 @@
+     "Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line " +
+     "without a turn signal activated while driving over 31 mph (50 km/h)."
+   ),
+-  "AlwaysOnDM": tr_noop("Enable driver monitoring even when openpilot is not engaged."),
++  "AlwaysOnDM": tr_noop("Always suppress driver monitoring (DM). Turn off to re-enable after fixing the camera."),  # [patched] DM_SUPPRESS_TOGGLE
+   'RecordFront': tr_noop("Upload data from the driver facing camera and help improve the driver monitoring algorithm."),
+   "IsRHD": tr_noop("Use right-hand-drive driver monitoring. This follows the auto-detected side until changed manually."),
+   "IsMetric": tr_noop("Display speed in km/h instead of mph."),
+@@ -75,7 +75,7 @@
+         False,
+       ),
+       "AlwaysOnDM": (
+-        lambda: tr("Always-On Driver Monitoring"),
++        lambda: tr("Always Suppress Driver Monitoring"),
+         DESCRIPTIONS["AlwaysOnDM"],
+         "monitoring.png",
+         False,

@@ -127,8 +127,8 @@ msgstr "同意"
 
 #: selfdrive/ui/layouts/settings/toggles.py:70
 #, python-format
-msgid "Always-On Driver Monitoring"
-msgstr "始终启用驾驶员监控"
+msgid "Always Suppress Driver Monitoring"
+msgstr "始终屏蔽驾驶员监控"
 
 #: selfdrive/ui/layouts/settings/toggles.py:186
 #, python-format
@@ -355,8 +355,8 @@ msgid "Enable Tethering"
 msgstr "启用网络共享"
 
 #: selfdrive/ui/layouts/settings/toggles.py:30
-msgid "Enable driver monitoring even when openpilot is not engaged."
-msgstr "即使未启用 openpilot 也启用驾驶员监控。"
+msgid "Always suppress driver monitoring (DM). Turn off to re-enable after fixing the camera."
+msgstr "始终屏蔽驾驶员监控（DM）。修好摄像头后关闭此项即可恢复。"
 
 #: selfdrive/ui/layouts/settings/toggles.py:46
 #, python-format
