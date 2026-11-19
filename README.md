@@ -454,6 +454,47 @@ ssh comma@<设备IP> 'sudo bash /tmp/starpilot-c3x-zh/provision.sh'
 
 ## 变更记录
 
+### v1.4.2 — 2026-11-19
+
+修正 v1.4.1 的一个严重错误，并把启动提示改为中文。
+
+**v1.4.1 的错误**
+
+静止守卫写成了 `self.sm['carState'].vEgo`，但 `selfdrived` 的 SubMaster 里
+**没有 `carState`** —— 它用的是独立 socket：
+
+```python
+self.car_state_sock = messaging.sub_sock('carState', timeout=20)
+...
+CS = self.data_sample()          # ← update_events(self, CS) 的 CS 参数
+```
+
+结果每帧抛 `KeyError` → `selfdrived` 崩溃重启 → **启动提示反复弹出**
+（用户看到的「Hop in and buckle up! 一直跳」就是这个崩溃循环的外在表现）。
+
+**修正**：改用 `update_events` 的 `CS` 参数。
+
+```python
+parked = CS.vEgo < 0.1
+if not all_checks and report_comm_issue and ... and not parked:
+```
+
+**验证**：`selfdrived` 运行时长稳定增长（45s → 60s → 75s，无重启），
+`alertType` 为空。
+
+**启动提示改中文**
+
+`StartupMessageTop` / `StartupMessageBottom` 是 StarPilot 的自定义启动提示
+（原车主设成了 "Hop in and buckle up!" / "Human-tested, frog-approved 🐸"），
+在接合时显示 5 秒。现改为：
+
+| 参数 | 值 |
+|---|---|
+| `StartupMessageTop` | 请随时准备接管车辆 |
+| `StartupMessageBottom` | 保持双手在方向盘上并注视道路 |
+
+字体图集已覆盖全部字符（6,933 字）。
+
 ### v1.4.1 — 2026-11-19
 
 修复「停车不启动发动机时显示进程间通信异常」。

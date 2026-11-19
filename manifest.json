@@ -1,6 +1,6 @@
 {
   "name": "starpilot-c3x-zh",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "generated_at": "2026-11-18T00:15:45+08:00",
   "baseline": {
     "repository": "https://github.com/StarPilotHQ/StarPilot.git",
@@ -155,7 +155,7 @@
       "target": "selfdrive/selfdrived/selfdrived.py",
       "patch": "patch/selfdrived.py.patch",
       "kind": "patch",
-      "description": "静止时不上报 commIssue（liveParameters 滤波器漂移导致的无意义告警）",
+      "description": "静止时不上报 commIssue（注意：必须用 update_events 的 CS 参数，self.sm 里没有 carState）",
       "sha256_current": "0000000000000000000000000000000000000000000000000000000000000000"
     }
   ],
@@ -223,7 +223,8 @@
       "symptom": "停车不启动发动机时显示「进程间通信异常」",
       "root_cause": "车辆静止时 liveParameters.valid 因滤波器 roll 标准差漂移而间歇失效，plannerd 的 longitudinalPlan.valid 依赖它，radard 的 radarState.valid 依赖 liveTracks 频率（熄火时雷达不供电，从 20Hz 掉到 6.7Hz），连锁使 all_checks=False → commIssue。",
       "fix": "selfdrived 在 carState.vEgo < 0.1 时跳过 commIssue 上报。",
-      "note": "commIssue 的语义是禁止接合，静止时本就不会接合，跳过无安全影响；行驶中该检查完全保留。"
+      "note": "commIssue 的语义是禁止接合，静止时本就不会接合，跳过无安全影响；行驶中该检查完全保留。",
+      "caution": "selfdrived.update_events(self, CS) 的 CS 来自独立的 car_state_sock，不在 self.sm 里。误用 self.sm['carState'] 会导致 KeyError 崩溃循环，表现是启动提示反复弹出。"
     }
   },
   "params_set_by_installer": {
@@ -231,5 +232,10 @@
     "ClusterOffset": "1.19",
     "CEStopLights": "1",
     "CEStoppedLead": "1"
+  },
+  "startup_message": {
+    "StartupMessageTop": "请随时准备接管车辆",
+    "StartupMessageBottom": "保持双手在方向盘上并注视道路",
+    "note": "StarPilot 自定义启动提示，显示 5 秒。出厂默认是英文安全提示。"
   }
 }
