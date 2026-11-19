@@ -1,6 +1,6 @@
 {
   "name": "starpilot-c3x-zh",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "generated_at": "2026-11-18T00:15:45+08:00",
   "baseline": {
     "repository": "https://github.com/StarPilotHQ/StarPilot.git",
@@ -192,6 +192,31 @@
     "eps_limit_with_latactive_ratio": 0.1,
     "samples": 29700,
     "data_path": "/data/eps_speed_test.csv",
-    "note": "威朗 EPS 在 10-45km/h 有 65-68% 帧报 LKATorqueDeliveredStatus=2；openpilot 主动转向时仅 9-10%，说明转向实际有效，提示属误报。"
+    "note": "威朗 EPS 在 10-45km/h 有 65-68% 帧报 LKATorqueDeliveredStatus=2；openpilot 主动转向时仅 9-10%，说明转向实际有效，提示属误报。",
+    "stopping_fix": {
+      "before": {
+        "stopAccel": -0.25,
+        "vEgoStopping": 0.25,
+        "stoppingDecelRate": 1.0,
+        "brake_units": 25,
+        "result": "卡在 4.5 km/h 蠕行，0 帧 standstill"
+      },
+      "after": {
+        "stopAccel": -1.5,
+        "vEgoStopping": 0.75,
+        "stoppingDecelRate": 3.0,
+        "brake_units": 150,
+        "result": "28.7 秒完全静止，2707/2835 帧 standstill"
+      },
+      "data_path": "/data/brake_diag2.csv",
+      "samples": 17801,
+      "note": "EBCM 有驾驶员优先权：脚搭在刹车踏板（4-5%）时 openpilot 的刹车不生效，必须完全离开刹车踏板。"
+    }
+  },
+  "params_set_by_installer": {
+    "AlphaLongitudinalEnabled": "1",
+    "ClusterOffset": "1.19",
+    "CEStopLights": "1",
+    "CEStoppedLead": "1"
   }
 }

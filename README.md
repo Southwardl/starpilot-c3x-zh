@@ -454,6 +454,68 @@ ssh comma@<设备IP> 'sudo bash /tmp/starpilot-c3x-zh/provision.sh'
 
 ## 变更记录
 
+### v1.4.0 — 2026-11-19
+
+别克威朗纵向控制「低速刹停」完整修复。
+
+**问题现象**：高速跟车正常，但低速跟车减速刹停、红灯刹停全部失效，车辆卡在 4.5 km/h 蠕行。
+
+**诊断方法**：在车上采集 17,808 帧实时数据（`/data/brake_diag2.csv`），同时记录
+`carControl.actuators`、`carState.aEgo`、`longControlState` 以及 `0x315`
+（`EBCMFrictionBrakeCmd`）报文的原始字节，用 DBC 精确解码 `FrictionBrakeCmd`
+和 `FrictionBrakeMode`。
+
+**定位到的三个问题**
+
+1. **停车参数太弱**（`interface.py` 威朗专用分支）
+   ```python
+   ret.stoppingDecelRate = 1.0    → 3
+   ret.vEgoStopping     = 0.25   → 0.75
+   ret.vEgoStarting     = 0.25   → 0.75
+   ret.stopAccel        = -0.25  → -1.5
+   ```
+   `stopAccel=-0.25` 只产生 `25/400`（6%）的刹车量，对抗不了自动挡怠速蠕行。
+   改成 `-1.5` 后是 `150/400`（38%）。
+
+2. **红灯减速开关被关闭**
+   `CEStopLights = 0`（出厂默认 1）→ 恢复为 1。
+
+3. **静止前车不响应**
+   `CEStoppedLead = 0` → 开启为 1，让「前车静止 <1 m/s 且距离 <40 m」触发条件实验模式。
+
+**验证结果**
+
+| 指标 | 修复前 | 修复后 |
+|---|---|---|
+| `longControlState=stopping` 帧 | 0 | 2,835 |
+| `standstill` 帧 | 0 | 2,874 |
+| 最低车速 | 4.5 km/h（卡死）| 0.0 km/h |
+| 最长连续静止 | 0 秒 | **28.7 秒** |
+
+停车时 `0x315` 发出 `FrictionBrakeCmd=150`、`FrictionBrakeMode=0xd`（驻车保持），
+`drvBrake=0`（驾驶员零介入）。
+
+**⚠️ 使用注意**
+
+实测发现 **EBCM 有驾驶员优先权**：只要脚搭在刹车踏板上（哪怕只有 4-5%），它就会忽略
+SASCM 转发来的刹车指令。想让 openpilot 自己刹停，右脚必须完全离开刹车踏板。
+
+**install.sh 现在自动设置的参数**
+
+| 参数 | 值 | 作用 |
+|---|---|---|
+| `AlphaLongitudinalEnabled` | 1 | 启用 openpilot 纵向控制 |
+| `ClusterOffset` | 1.19 | UI 车速显示校准 |
+| `CEStopLights` | 1 | 红灯减速 |
+| `CEStoppedLead` | 1 | 静止前车响应 |
+
+**顺带澄清的两个误判**（避免以后重复排查）
+
+- ❌ 不是 panda 拦截 bus2 上的 `0x315`：`GM_CAM_LONG_TX_MSGS` 里明确允许
+  `{0x315, 2, 5, .check_relay=false}`。
+- ❌ 不是刹车总线选错：`get_friction_brake_bus()` 返回 `CanBus.CAMERA` 是对的，
+  符合「C3X 经摄像头总线 → SASCM 转发 → EBCM」的实际架构。
+
 ### v1.3.0 — 2026-11-18
 
 别克威朗（BUICK_VERANO）实车适配：从「能识别」到「能开」。

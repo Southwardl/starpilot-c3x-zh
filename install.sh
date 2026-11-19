@@ -160,6 +160,12 @@ items = {
     # 实测：原车轮速标定与仪表存在约 19% 偏差，此值让界面车速与仪表一致。
     # 注意：只影响显示，不影响控制。换轮胎后需按「仪表 ÷ 设备」重新标定。
     "ClusterOffset": b"1.19",
+    # 这两项出厂默认是 1，但实测设备上被置成了 0，导致：
+    #   · 红灯前不减速
+    #   · 前方静止车辆不响应
+    # 恢复为 1 后才能配合 VERANO_STOPPING_TUNE 实现完整刹停。
+    "CEStopLights": b"1",
+    "CEStoppedLead": b"1",
 }
 for k, v in items.items():
     p = params / k
