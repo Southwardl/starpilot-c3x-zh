@@ -454,6 +454,38 @@ ssh comma@<设备IP> 'sudo bash /tmp/starpilot-c3x-zh/provision.sh'
 
 ## 变更记录
 
+### v1.4.4 — 2026-11-19
+
+把「屏蔽驾驶员监控」改为**默认行为**。
+
+上一版是 opt-in（创建 `/data/.allow_no_driver_camera` 才跳过检查），
+现在反过来 —— **默认不检查驾驶员摄像头**，需要时用开关恢复：
+
+```python
+# selfdrive/selfdrived/selfdrived.py
+self.camera_packets = ["roadCameraState", "wideRoadCameraState"]
+if os.path.exists("/data/.enable_driver_monitoring"):
+    self.camera_packets.append("driverCameraState")
+```
+
+| 操作 | 效果 |
+|---|---|
+| 默认（无文件）| **屏蔽 DM**，不检查 `driverCameraState` |
+| `sudo touch /data/.enable_driver_monitoring` | 恢复驾驶员监控检查 |
+| `sudo rm /data/.enable_driver_monitoring` | 再次屏蔽 |
+
+**原因**：本机驾驶员摄像头硬件故障（`driverCameraState` 0 帧，前视/广角正常），
+而 `cameraMalfunction` 是 `ET.NO_ENTRY` 级别，会让设备完全不可用。
+
+**代价**：系统不再检测司机分心/低头/视线离开，请自行保持注意力。
+
+**DM 进程仍在运行但几乎不耗 CPU**（`dmonitoringd` 1.8%、`dmonitoringmodeld` 0.3%），
+没有摄像头帧时它们空转，无需停止。
+
+**硬件修复建议**：摄像头模组的 FPC 排线重新插拔（设备为 9008 刷机拆装过）。
+
+**验证**：`alertType` 为空，`selfdrived` 运行时长稳定增长（01:05 → 01:13）。
+
 ### v1.4.3 — 2026-11-19
 
 处理驾驶员摄像头硬件故障导致的设备不可用，并澄清告警层的中文字体问题。
