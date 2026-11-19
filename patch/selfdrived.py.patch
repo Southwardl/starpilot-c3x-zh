@@ -1,0 +1,17 @@
+--- a/selfdrive/selfdrived/selfdrived.py
++++ b/selfdrive/selfdrived/selfdrived.py
+@@ -705,7 +705,13 @@
+     report_comm_issue, self.valid_only_comm_issue_frames = evaluate_comm_issue(
+       all_checks, all_alive, all_freq_ok, self.valid_only_comm_issue_frames,
+     )
+-    if not all_checks and report_comm_issue and no_system_errors and not big_model_settling:
++    # [patched] COMM_ISSUE_PARKED_GUARD
++    # ????? liveParameters.valid ????? roll ???????????
++    # ??? longitudinalPlan/radarState ? valid=False???????
++    # ???????????????IMU ???????????
++    # commIssue ?????????????????????????
++    parked = self.sm['carState'].vEgo < 0.1
++    if not all_checks and report_comm_issue and no_system_errors and not big_model_settling and not parked:
+       if not all_alive:
+         self.events.add(EventName.commIssue)
+       elif not all_freq_ok:

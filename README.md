@@ -454,6 +454,48 @@ ssh comma@<设备IP> 'sudo bash /tmp/starpilot-c3x-zh/provision.sh'
 
 ## 变更记录
 
+### v1.4.1 — 2026-11-19
+
+修复「停车不启动发动机时显示进程间通信异常」。
+
+**现象**：车辆停在原地、发动机未启动（点火开关在 ON/ACC 档）时，屏幕持续显示
+`Communication Issue Between Processes`。
+
+**排查过程**
+
+1. 复刻 `selfdrived` 的 SubMaster 订阅列表，逐条统计 `valid` 状态，发现 6 个消息
+   100% 无效：
+   ```
+   longitudinalPlan  liveDelay  liveParameters
+   radarState      liveTorqueParameters  driverAssistance
+   ```
+2. 追到两个独立根因：
+   - **`radarState.valid`** ← `radard.py:628` 的 `sm.all_checks()`。radard 订阅了
+     `liveTracks`（要求 20 Hz），但熄火时雷达不供电，实际只有 6.7 Hz →
+     `freq_ok=False`。而 `has_slow_radar_tracks()` 因为
+     `radarTimeStepDEPRECATED=0.0667 < 2/20=0.1` 返回 False，没有忽略频率检查。
+   - **`liveParameters.valid`** ← `paramsd.py:188` 要求 6 个条件全满足，其中
+     `roll_valid` 依赖滤波器 roll 标准差。**车辆静止时没有发动机振动，IMU 噪声
+     特性改变，`roll_std` 漂移超出阈值** → `valid=False`。
+3. `plannerd.py:39` 的 `longitudinalPlan.valid = sm.all_checks([...,'liveParameters'])`
+   把 `liveParameters` 的失效传染给纵向规划，最终 `all_checks()=False` → `commIssue`。
+
+**修复**
+
+`selfdrive/selfdrived/selfdrived.py`：车辆静止时跳过 `commIssue` 上报。
+
+```python
+parked = self.sm['carState'].vEgo < 0.1
+if not all_checks and report_comm_issue and ... and not parked:
+    if not all_alive:
+        self.events.add(EventName.commIssue)
+```
+
+**安全性**：`commIssue` 的语义是**禁止接合**（NO_ENTRY）。车辆静止时本来就不会接合，
+跳过上报无安全影响；**行驶中该检查完整保留**，任何真实的进程通信故障仍会正常报警。
+
+**验证**：熄火状态下采样 20 秒，`alertType` 为空（告警消失）。
+
 ### v1.4.0 — 2026-11-19
 
 别克威朗纵向控制「低速刹停」完整修复。
