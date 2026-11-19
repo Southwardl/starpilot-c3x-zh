@@ -1,6 +1,6 @@
 {
   "name": "starpilot-c3x-zh",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "generated_at": "2026-11-18T00:15:45+08:00",
   "baseline": {
     "repository": "https://github.com/StarPilotHQ/StarPilot.git",
@@ -155,7 +155,7 @@
       "target": "selfdrive/selfdrived/selfdrived.py",
       "patch": "patch/selfdrived.py.patch",
       "kind": "patch",
-      "description": "静止时不上报 commIssue（注意：必须用 update_events 的 CS 参数，self.sm 里没有 carState）",
+      "description": "静止时跳过 commIssue + 驾驶员摄像头故障时可选绕过 cameraMalfunction",
       "sha256_current": "0000000000000000000000000000000000000000000000000000000000000000"
     }
   ],
@@ -237,5 +237,12 @@
     "StartupMessageTop": "请随时准备接管车辆",
     "StartupMessageBottom": "保持双手在方向盘上并注视道路",
     "note": "StarPilot 自定义启动提示，显示 5 秒。出厂默认是英文安全提示。"
+  },
+  "driver_camera_bypass": {
+    "trigger": "/data/.allow_no_driver_camera 存在时生效",
+    "effect": "不检查 driverCameraState，允许在驾驶员摄像头故障时使用设备",
+    "cost": "失去驾驶员监控（DM）",
+    "hardware_note": "本机驾驶员摄像头 0 帧（前视/广角正常），DISABLE_DRIVER 未设置、4 个 cam-sensor-driver 子设备都在、camerad 正常 —— 判断为摄像头模组 FPC 排线接触问题（设备为 9008 刷机拆装过）。硬件修好后删除该文件即可恢复检查。",
+    "restore": "sudo rm /data/.allow_no_driver_camera && sudo systemctl restart comma.service"
   }
 }

@@ -454,6 +454,63 @@ ssh comma@<设备IP> 'sudo bash /tmp/starpilot-c3x-zh/provision.sh'
 
 ## 变更记录
 
+### v1.4.3 — 2026-11-19
+
+处理驾驶员摄像头硬件故障导致的设备不可用，并澄清告警层的中文字体问题。
+
+**问题一：驾驶员摄像头故障 → 设备不可用**
+
+现象：屏幕显示 `Camera Malfunction: driverCamera`，NO_ENTRY 级别，无法接合。
+
+排查结果（全部排除软件原因）：
+
+| 检查项 | 结果 |
+|---|---|
+| `roadCameraState` / `wideRoadCameraState` | ✅ 正常出帧 |
+| `driverCameraState` | ❌ 0 帧，从 `selfdrived.initialized` 时就无效 |
+| `DISABLE_DRIVER` 环境变量 | 未设置（配置上启用）|
+| `cam-sensor-driver` 子设备 | ✅ 4 个都在 |
+| `camerad` 进程 | ✅ 运行正常 |
+| 重启 `comma.service` | 无效 |
+
+触发逻辑：
+
+```python
+self.camera_packets = ["roadCameraState", "driverCameraState", "wideRoadCameraState"]
+if not self.sm.all_alive(self.camera_packets):
+    self.events.add(EventName.cameraMalfunction)   # NO_ENTRY
+```
+
+**判断**：摄像头模组 FPC 排线接触问题（设备为 9008 刷机拆装过）。
+
+**临时绕过**（opt-in，与 `comma.sh` 的 tap-reset 保护同一风格）：
+
+```python
+self.camera_packets = ["roadCameraState", "wideRoadCameraState"]
+if not os.path.exists("/data/.allow_no_driver_camera"):
+    self.camera_packets.append("driverCameraState")
+```
+
+- 启用：`sudo touch /data/.allow_no_driver_camera` + 重启
+- 恢复：`sudo rm /data/.allow_no_driver_camera` + 重启
+
+**代价：失去驾驶员监控（DM）。硬件修好后务必删除该文件。**
+
+**问题二：告警层中文显示为 `？`**
+
+`selfdrive/ui/onroad/alert_renderer.py` 用的是 **Inter 字体**（`Inter-Bold.fnt` 等拉丁字体），
+**不是** NotoSansSC。Inter 没有 CJK 字形，所以告警文字里的中文全部渲染成 `?`。
+
+主界面（菜单/设置）用 NotoSansSC，中文正常。
+
+**结论**：`StartupMessageTop` / `StartupMessageBottom` 这类走告警通道的文字必须用英文。
+已恢复为出厂英文安全提示：
+
+| 参数 | 值 |
+|---|---|
+| `StartupMessageTop` | Be ready to take over at any time |
+| `StartupMessageBottom` | Always keep hands on wheel and eyes on road |
+
 ### v1.4.2 — 2026-11-19
 
 修正 v1.4.1 的一个严重错误，并把启动提示改为中文。
