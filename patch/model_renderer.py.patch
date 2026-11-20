@@ -1,0 +1,38 @@
+--- a/selfdrive/ui/onroad/model_renderer.py
++++ b/selfdrive/ui/onroad/model_renderer.py
+@@ -9,6 +9,13 @@
+ from openpilot.selfdrive.locationd.calibrationd import HEIGHT_INIT
+ from openpilot.selfdrive.ui.lib.starpilot_theme import get_param_color, get_theme_color, get_visual_color, is_stock_color_scheme, with_alpha
+ from openpilot.selfdrive.ui.onroad.radar_tracks import project_radar_points
++# [patched] RADAR_DRAW_ORIGIN_FIX
++# 雷达 dRel 以保险杠为原点，模型路径以相机为原点，绘制时必须补上这段距离
++try:
++  from openpilot.selfdrive.controls.radard import RADAR_TO_CAMERA as _RADAR_TO_CAMERA
++except Exception:
++  _RADAR_TO_CAMERA = 1.52
++
+ from openpilot.selfdrive.ui.onroad.starpilot.rainbow_path import RainbowPath
+ from openpilot.selfdrive.ui.lib.starpilot_visuals import lead_indicator_enabled
+ from openpilot.selfdrive.ui.ui_state import ui_state, UIStatus
+@@ -222,7 +229,9 @@
+ 
+     for i, lead_data in enumerate(leads):
+       if lead_data and lead_data.status:
+-        d_rel, y_rel, v_rel = lead_data.dRel, lead_data.yRel, lead_data.vRel
++        # [patched] RADAR_DRAW_ORIGIN_FIX：同样补齐相机原点偏移
++        d_rel = lead_data.dRel + _RADAR_TO_CAMERA
++        y_rel, v_rel = lead_data.yRel, lead_data.vRel
+         idx = self._get_path_length_idx(path_x_array, d_rel)
+ 
+         # Get z-coordinate from path at the lead vehicle position
+@@ -673,7 +682,9 @@
+       float(self._rect.height),
+     )
+     if projection_key != self._radar_projection_key:
+-      d_rel = np.fromiter((float(point.dRel) for point in radar_points), dtype=np.float64, count=len(radar_points))
++      # [patched] RADAR_DRAW_ORIGIN_FIX：dRel 以保险杠为原点，补回相机原点
++      d_rel = np.fromiter((float(point.dRel) + _RADAR_TO_CAMERA for point in radar_points),
++                          dtype=np.float64, count=len(radar_points))
+       in_y = np.fromiter((float(-point.yRel) for point in radar_points), dtype=np.float64, count=len(radar_points))
+       clip_bounds = (
+         float(clip.x),

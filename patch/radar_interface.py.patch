@@ -23,7 +23,7 @@
  
  
  class RadarInterface(RadarInterfaceBase):
-@@ -75,17 +82,24 @@
+@@ -75,17 +82,27 @@
          break
  
        cpt = self.rcp.vl[ii]
@@ -36,7 +36,10 @@
 +      # 三重过滤：距离在有效区间 + ObjectID 非 0。
 +      _rng = cpt['TrkRange']
 +      _oid = cpt['TrkObjectID']
-+      if 0.0 < _rng < 200.0 and _oid != 0:
++      # [patched] EMPTY_SLOT_FILTER_V2
++      # 空槽的 TrkRange 是 255.88，用距离区间即可过滤；
++      # 不再要求 _oid != 0（真实目标的 ObjectID 也可能为 0，会误杀）。
++      if 0.0 < _rng < 200.0:
          targetId = cpt['TrkObjectID']
          currentTargets.add(targetId)
          if targetId not in self.pts:

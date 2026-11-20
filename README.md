@@ -454,6 +454,84 @@ ssh comma@<设备IP> 'sudo bash /tmp/starpilot-c3x-zh/provision.sh'
 
 ## 变更记录
 
+### v1.4.8 — 2026-11-20
+
+雷达-视觉融合深度校准，修复两个真实缺陷。
+
+**问题一：雷达点位恒定偏近约 1.45 米**
+
+实测（严格匹配正前方前车，260 样本，σ=0.62 m）：
+
+```
+x_vision − dRel_radar = 1.445 m
+当前 RADAR_TO_CAMERA = 1.52  →  参数本身正确
+```
+
+但 `model_renderer.py` 绘制雷达点位时**直接把 `dRel` 当成相机坐标系的 x 用**：
+
+```python
+# 修复前
+d_rel = np.fromiter((float(point.dRel) for point in radar_points), ...)
+```
+
+`dRel` 以**保险杠**为原点，模型路径以**相机**为原点，两者差 1.45 米 ——
+所以所有点位恒定偏近 1.45 米，视觉上就是「点位在真实车辆前方一点，跟着车一起跑」。
+
+**修复**：
+
+```python
+# 雷达点位和前车标记都补上基准偏移
+d_rel = np.fromiter((float(point.dRel) + _RADAR_TO_CAMERA for point in radar_points), ...)
+d_rel = lead_data.dRel + _RADAR_TO_CAMERA
+```
+
+**问题二：车道前方停止的车辆不刹车**
+
+`radard.py` 里「雷达目标无需视觉确认即可作为引导」的路径有硬限制：
+
+```python
+def potential_low_speed_lead(self, v_ego):
+    return abs(self.yRel) < 1.0 and (v_ego < V_EGO_STATIONARY) and (0.75 < self.dRel < 25)
+```
+
+`V_EGO_STATIONARY = 4 m/s`（14.4 km/h）—— **只有自车几乎停住时才生效**。
+所以 60 km/h 接近红灯前排队的车辆时，完全依赖视觉模型，而视觉对远处静止车辆
+置信度常低于 `LeadDetectionThreshold = 37%`，结果就是不减速。
+
+**修复**：复用 StarPilot 已有的「先动后停」检测器（原本只用于相邻车道）：
+
+```python
+return (abs(self.yRel) < EGO_STOPPED_LEAD_MAX_Y      # 1.8 m，自己车道
+        and self.seen_moving                          # 曾以 >5 m/s 持续移动 0.75 s
+        and self.rest_frames >= ADJACENT_STOP_REST_FRAMES   # 之后静止 0.75 s
+        and self.cnt >= ADJACENT_STOP_MOVING_FRAMES
+        and (0.75 < self.dRel < EGO_STOPPED_LEAD_MAX_D))    # 60 m 内
+```
+
+**为什么不会幽灵刹车**：龙门架、天桥、路边标志**永远不会以 5 m/s 移动**，
+`seen_moving` 天然把它们排除。这比对任意静止物体放宽安全得多。
+
+**顺带修正：雷达空槽过滤**
+
+上一版加了 `_oid != 0`，实测可能误杀真实目标（放宽后立刻看到正前方 10 米的车）。
+空槽的 `TrkRange` 是 255.88，所以只用距离区间即可：
+
+```python
+if 0.0 < _rng < 200.0:      # 不再要求 _oid != 0
+```
+
+**排查过程中排除的假设**（都有数据支撑）
+
+| 假设 | 结论 | 依据 |
+|---|---|---|
+| `RADAR_TO_CAMERA` 参数错 | ❌ 正确 | 实测 1.445 vs 1.52，只差 7 cm |
+| `AZIMUTH_SIGN` 符号反了 | ❌ 正确 | 判别测试 60.6% vs 7.9% |
+| `radarDelay` 导致滞后 | ❌ 无关 | 源码里只用于 `v_lead`，不影响位置 |
+| 融合抖动/跳目标 | ❌ 无 | 抖动 0.000 m，仅 2 个 trackId |
+| 视觉-雷达符号不一致 | ❌ 一致 | `leadOne.yRel = -vision.y` 是设计 |
+
+**补丁总数**：19 个，全部通过干净 StarPilot `2589caad` 应用测试。
+
 ### v1.4.7 — 2026-11-20
 
 修复 GM 雷达**空槽被当成真实目标**的问题（雷达-视觉融合校准第一步）。

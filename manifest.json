@@ -1,6 +1,6 @@
 {
   "name": "starpilot-c3x-zh",
-  "version": "1.4.7",
+  "version": "1.4.8",
   "generated_at": "2026-11-18T00:15:45+08:00",
   "baseline": {
     "repository": "https://github.com/StarPilotHQ/StarPilot.git",
@@ -141,7 +141,7 @@
       "target": "opendbc_repo/opendbc/car/gm/radar_interface.py",
       "patch": "patch/radar_interface.py.patch",
       "kind": "patch",
-      "description": "威朗雷达方位角符号修正 + 过滤空槽幽灵目标",
+      "description": "威朗雷达方位角符号 + 空槽过滤（只用距离区间，不用 ObjectID）",
       "sha256_current": "0000000000000000000000000000000000000000000000000000000000000000"
     },
     {
@@ -164,12 +164,26 @@
       "kind": "patch",
       "description": "菜单「始终启用驾驶员监控」改为「始终屏蔽驾驶员监控」",
       "sha256_current": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "target": "selfdrive/controls/radard.py",
+      "patch": "patch/radard.py.patch",
+      "kind": "patch",
+      "description": "自己车道里「先动后停」的车辆也能成为引导（红灯前排队的车）",
+      "sha256_current": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "target": "selfdrive/ui/onroad/model_renderer.py",
+      "patch": "patch/model_renderer.py.patch",
+      "kind": "patch",
+      "description": "雷达点位/前车标记补上 RADAR_TO_CAMERA 基准偏移",
+      "sha256_current": "0000000000000000000000000000000000000000000000000000000000000000"
     }
   ],
   "stats": {
     "translation_entries": 2119,
     "font_glyphs": 6933,
-    "patched_files": 17,
+    "patched_files": 19,
     "dropped_files": 5
   },
   "features": {
@@ -258,8 +272,11 @@
   },
   "radar_findings": {
     "empty_slot_range": 255.88,
-    "problem": "GM 雷达空槽的 TrkRange 是 255.88（无效标记）而非 0，原代码 `if TrkRange > 0.0` 无法过滤，最多 19 个空槽被当成真实目标发布，污染雷达-视觉融合与 UI 跟踪点位。",
-    "fix": "if 0.0 < TrkRange < 200.0 and TrkObjectID != 0:",
-    "verification": "修复后 276 帧采样中幽灵目标 0 个，目标数 min=3 max=5"
+    "radar_to_camera_measured": 1.445,
+    "radar_to_camera_current": 1.52,
+    "azimuth_sign_verified": "实测判别 60.6% vs 7.9%，-1.0 正确",
+    "draw_origin_bug": "雷达 dRel 以保险杠为原点，模型路径以相机为原点，UI 绘制未补 RADAR_TO_CAMERA，所有点位恒定偏近约 1.45 米",
+    "stopped_lead_gap": "potential_low_speed_lead 只在 v_ego < 4 m/s 且 dRel < 25 时生效，行驶中完全依赖视觉（阈值 37%），远处静止车辆检测不到就不减速",
+    "stopped_lead_fix": "复用相邻车道的「先动后停」判定（seen_moving + rest_frames），自己车道 |yRel|<1.8 且 60 米内也能成为引导；龙门架等静止物永不移动，天然排除，不会幽灵刹车"
   }
 }
