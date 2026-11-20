@@ -454,6 +454,43 @@ ssh comma@<设备IP> 'sudo bash /tmp/starpilot-c3x-zh/provision.sh'
 
 ## 变更记录
 
+### v1.4.7 — 2026-11-20
+
+修复 GM 雷达**空槽被当成真实目标**的问题（雷达-视觉融合校准第一步）。
+
+**现象**
+
+`liveTracks` 里出现 `dRel = 255.88 m`、`trackId = 0`、`vRel = 0` 的"幽灵目标"。
+
+**根因**
+
+```python
+# opendbc_repo/opendbc/car/gm/radar_interface.py
+# Zero distance means it's an empty target slot
+if cpt['TrkRange'] > 0.0:        # ← 只过滤 0
+```
+
+**GM 雷达空槽的 `TrkRange` 实际是 255.88（无效标记），不是 0**，所以过滤失效。
+雷达有 20 个槽位，只有 `FLRRNumValidTargets` 个是真实目标，
+但因为循环遍历所有更新过的消息，**最多 19 个空槽会全部被当成真实目标发布**。
+
+后果：
+- 污染 `radard` 的雷达-视觉融合匹配
+- UI 上显示大量不存在的跟踪点位
+
+**修复**
+
+```python
+_rng = cpt['TrkRange']
+_oid = cpt['TrkObjectID']
+if 0.0 < _rng < 200.0 and _oid != 0:
+```
+
+**验证**：修复后 276 帧采样，幽灵目标 0 个，真实目标数 min=3 max=5。
+
+**下一步**：用 `tools/calib_radar.py` 实测三项校准值（纵向偏移 / 横向比例 / 横向残差），
+需要实车带前车行驶采集。
+
 ### v1.4.6 — 2026-11-20
 
 修复 v1.4.4/v1.4.5 遗留的「进程间通信异常」。

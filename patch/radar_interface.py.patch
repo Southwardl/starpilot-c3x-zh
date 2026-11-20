@@ -9,22 +9,41 @@
  from opendbc.car.interfaces import RadarInterfaceBase
  
  RADAR_HEADER_MSG = 1120  # F_LRR_Obj_Header
-@@ -33,6 +33,13 @@
+@@ -31,6 +31,13 @@
+   messages = list({(s[1], 14) for s in signals})
+ 
    return CANParser(DBC[car_fingerprint][Bus.radar], messages, CanBus.OBSTACLE)
- 
- 
++
++
 +# Some GM radar variants report TrkAzimuth with the opposite lateral sign.
 +# Flip only for the affected platform so other GM cars keep stock behaviour.
 +AZIMUTH_SIGN = {
 +  CAR.BUICK_VERANO: -1.0,
 +}
-+
-+
+ 
+ 
  class RadarInterface(RadarInterfaceBase):
-   def __init__(self, CP):
-     super().__init__(CP)
-@@ -85,7 +92,8 @@
-         distance = cpt['TrkRange']
+@@ -75,17 +82,24 @@
+         break
+ 
+       cpt = self.rcp.vl[ii]
+-      # Zero distance means it's an empty target slot
+-      if cpt['TrkRange'] > 0.0:
++      # [patched] EMPTY_SLOT_FILTER
++      # GM 雷达空槽的 TrkRange 是 255.88（无效标记），不是 0，
++      # 原判断只过滤 0 会让最多 19 个空槽被当成真实目标发布，
++      # 污染雷达-视觉融合与 UI 跟踪点位。
++      # 三重过滤：距离在有效区间 + ObjectID 非 0。
++      _rng = cpt['TrkRange']
++      _oid = cpt['TrkObjectID']
++      if 0.0 < _rng < 200.0 and _oid != 0:
+         targetId = cpt['TrkObjectID']
+         currentTargets.add(targetId)
+         if targetId not in self.pts:
+           self.pts[targetId] = structs.RadarData.RadarPoint()
+           self.pts[targetId].trackId = targetId
+-        distance = cpt['TrkRange']
++        distance = _rng
          self.pts[targetId].dRel = distance  # from front of car
          # From driver's pov, left is positive
 -        self.pts[targetId].yRel = math.sin(cpt['TrkAzimuth'] * CV.DEG_TO_RAD) * distance

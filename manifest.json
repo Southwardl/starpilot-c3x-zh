@@ -1,6 +1,6 @@
 {
   "name": "starpilot-c3x-zh",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "generated_at": "2026-11-18T00:15:45+08:00",
   "baseline": {
     "repository": "https://github.com/StarPilotHQ/StarPilot.git",
@@ -141,7 +141,7 @@
       "target": "opendbc_repo/opendbc/car/gm/radar_interface.py",
       "patch": "patch/radar_interface.py.patch",
       "kind": "patch",
-      "description": "修正威朗雷达方位角符号（左右镜像），仅对该车型生效",
+      "description": "威朗雷达方位角符号修正 + 过滤空槽幽灵目标",
       "sha256_current": "0000000000000000000000000000000000000000000000000000000000000000"
     },
     {
@@ -255,5 +255,11 @@
     "cost": "无驾驶员监控，不检测分心/低头",
     "hardware_fix": "修好摄像头后，在菜单里关掉该开关即可恢复（无需重启？需重启 comma.service）",
     "note": "屏蔽 DM 时必须同时忽略 driverMonitoringState，否则 dmonitoringd 因缺少driverCameraState 而无法发布该消息，导致 all_alive/all_freq_ok 失败并触发 commIssue。"
+  },
+  "radar_findings": {
+    "empty_slot_range": 255.88,
+    "problem": "GM 雷达空槽的 TrkRange 是 255.88（无效标记）而非 0，原代码 `if TrkRange > 0.0` 无法过滤，最多 19 个空槽被当成真实目标发布，污染雷达-视觉融合与 UI 跟踪点位。",
+    "fix": "if 0.0 < TrkRange < 200.0 and TrkObjectID != 0:",
+    "verification": "修复后 276 帧采样中幽灵目标 0 个，目标数 min=3 max=5"
   }
 }
