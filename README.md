@@ -454,6 +454,48 @@ ssh comma@<设备IP> 'sudo bash /tmp/starpilot-c3x-zh/provision.sh'
 
 ## 变更记录
 
+### v1.4.6 — 2026-11-20
+
+修复 v1.4.4/v1.4.5 遗留的「进程间通信异常」。
+
+**根因**（从 `swaglog` 的 `commIssue` 事件拿到确切字段）：
+
+```
+not_alive:   ['driverMonitoringState', 'alertDebug', 'lateralManeuverPlan', 'gpsLocation']
+not_freq_ok: ['driverMonitoringState', 'alertDebug', 'lateralManeuverPlan']
+```
+
+`alertDebug` / `lateralManeuverPlan` / `gpsLocation` 本来就在忽略列表里，
+**但 `driverMonitoringState` 没有**。
+
+驾驶员摄像头故障 → `dmonitoringd` 拿不到 `driverCameraState` → 发不出
+`driverMonitoringState` → `selfdrived.all_alive()` / `all_freq_ok()` 失败 → `commIssue`。
+
+上一版只屏蔽了**摄像头检查**，漏掉了这条**状态消息检查**。
+
+**修复**
+
+```python
+ignore = self.sensor_packets + self.gps_packets + ['alertDebug', 'lateralManeuverPlan']
+# [patched] DM_STATE_IGNORE
+if self.params.get_bool("AlwaysOnDM"):
+    ignore += ['driverMonitoringState']
+```
+
+既然 DM 已被主动屏蔽，这条状态消息也应该一并忽略。
+
+**selfdrived 现在有三处补丁**
+
+| 标记 | 作用 |
+|---|---|
+| `DRIVER_CAM_ALWAYS_OFF` | 默认不检查 `driverCameraState` |
+| `DM_STATE_IGNORE` | 屏蔽 DM 时忽略 `driverMonitoringState` |
+| `COMM_ISSUE_PARKED_GUARD` | 静止时跳过 `commIssue` 上报 |
+
+**排错方法记录**：`selfdrived` 的 `cloudlog.event("commIssue", ...)` 会带上
+`invalid` / `not_alive` / `not_freq_ok` 三个列表，直接从 `/data/log/swaglog.*`
+里 grep `commIssue` 就能看到到底哪条消息出问题 —— 比猜快得多。
+
 ### v1.4.5 — 2026-11-19
 
 把「屏蔽驾驶员监控」做成**菜单开关**，取代上一版的隐藏文件开关。

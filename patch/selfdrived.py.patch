@@ -1,6 +1,6 @@
 --- a/selfdrive/selfdrived/selfdrived.py
 +++ b/selfdrive/selfdrived/selfdrived.py
-@@ -202,7 +202,14 @@
+@@ -202,12 +202,25 @@
      self.gps_location_service = get_gps_location_service(self.params)
      self.gps_packets = [self.gps_location_service]
      self.sensor_packets = ["accelerometer", "gyroscope"]
@@ -16,7 +16,18 @@
  
      # TODO: de-couple selfdrived with card/conflate on carState without introducing controls mismatches
      self.car_state_sock = messaging.sub_sock('carState', timeout=20)
-@@ -705,7 +712,13 @@
+ 
+     ignore = self.sensor_packets + self.gps_packets + ['alertDebug', 'lateralManeuverPlan']
++    # [patched] DM_STATE_IGNORE
++    # 屏蔽 DM 时（AlwaysOnDM=1）驾驶员摄像头不可用，dmonitoringd 发不出
++    # driverMonitoringState，会让 all_alive/all_freq_ok 失败并触发 commIssue。
++    # 既然 DM 已被主动屏蔽，这个状态消息也应该一并忽略。
++    if self.params.get_bool("AlwaysOnDM"):
++      ignore += ['driverMonitoringState']
+     if SIMULATION:
+       ignore += ['driverCameraState', 'managerState']
+     if REPLAY:
+@@ -705,7 +718,13 @@
      report_comm_issue, self.valid_only_comm_issue_frames = evaluate_comm_issue(
        all_checks, all_alive, all_freq_ok, self.valid_only_comm_issue_frames,
      )

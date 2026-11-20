@@ -1,6 +1,6 @@
 {
   "name": "starpilot-c3x-zh",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "generated_at": "2026-11-18T00:15:45+08:00",
   "baseline": {
     "repository": "https://github.com/StarPilotHQ/StarPilot.git",
@@ -155,7 +155,7 @@
       "target": "selfdrive/selfdrived/selfdrived.py",
       "patch": "patch/selfdrived.py.patch",
       "kind": "patch",
-      "description": "静止时跳过 commIssue + 默认屏蔽驾驶员监控（DM）",
+      "description": "① 静止时跳过 commIssue ② 默认屏蔽 DM ③ 屏蔽 DM 时忽略 driverMonitoringState",
       "sha256_current": "0000000000000000000000000000000000000000000000000000000000000000"
     },
     {
@@ -253,6 +253,7 @@
     "implementation": "selfdrived.camera_packets 在 AlwaysOnDM=True 时不含 driverCameraState",
     "reason": "本机驾驶员摄像头硬件故障（driverCameraState 0 帧，前视/广角正常），cameraMalfunction 是 NO_ENTRY 会让设备完全不可用",
     "cost": "无驾驶员监控，不检测分心/低头",
-    "hardware_fix": "修好摄像头后，在菜单里关掉该开关即可恢复（无需重启？需重启 comma.service）"
+    "hardware_fix": "修好摄像头后，在菜单里关掉该开关即可恢复（无需重启？需重启 comma.service）",
+    "note": "屏蔽 DM 时必须同时忽略 driverMonitoringState，否则 dmonitoringd 因缺少driverCameraState 而无法发布该消息，导致 all_alive/all_freq_ok 失败并触发 commIssue。"
   }
 }
