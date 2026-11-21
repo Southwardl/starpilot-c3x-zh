@@ -1,6 +1,6 @@
 {
   "name": "starpilot-c3x-zh",
-  "version": "1.4.9",
+  "version": "1.4.10",
   "generated_at": "2026-11-18T00:15:45+08:00",
   "baseline": {
     "repository": "https://github.com/StarPilotHQ/StarPilot.git",
@@ -134,7 +134,7 @@
       "target": "opendbc_repo/opendbc/car/gm/interface.py",
       "patch": "patch/interface.py.patch",
       "kind": "patch",
-      "description": "威朗 minEnableSpeed 设为 0（任意速度可接合），并保留 SASCM 纵向支持",
+      "description": "威朗纵向启用速度 + 停车参数（stoppingDecelRate 3.0→1.5 改善平顺性）",
       "sha256_current": "0000000000000000000000000000000000000000000000000000000000000000"
     },
     {
@@ -271,5 +271,12 @@
     "draw_origin_bug": "雷达 dRel 以保险杠为原点，模型路径以相机为原点，UI 绘制未补 RADAR_TO_CAMERA，所有点位恒定偏近约 1.45 米",
     "stopped_lead_gap": "potential_low_speed_lead 只在 v_ego < 4 m/s 且 dRel < 25 时生效，行驶中完全依赖视觉（阈值 37%），远处静止车辆检测不到就不减速",
     "stopped_lead_fix": "已撤回。v1.4.8 的 EGO_LANE_STOPPED_LEAD 补丁缺少迟滞，导致 leadOne 在雷达/视觉两个来源间高频切换，实车表现为刹车抖动（车一抖一抖 + ABS 液压泵咯噔声）。抖动刹车比不刹车更危险，已回滚。如需重做，必须先实现来源迟滞（一旦选定来源，需连续 N 帧不匹配才切换）。"
+  },
+  "stopping_tune": {
+    "stoppingDecelRate": 1.5,
+    "stopAccel": -1.5,
+    "vEgoStopping": 0.75,
+    "vEgoStarting": 0.75,
+    "reason": "原 stoppingDecelRate=3.0 是原厂默认 0.8 的 3.75 倍，刹车压力变化过猛导致减速不够平顺。降为 1.5 后仍能停住但明显柔和。"
   }
 }

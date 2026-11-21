@@ -454,6 +454,42 @@ ssh comma@<设备IP> 'sudo bash /tmp/starpilot-c3x-zh/provision.sh'
 
 ## 变更记录
 
+### v1.4.10 — 2026-11-21
+
+改善刹车平顺性。
+
+**问题**：刹车减速不够平顺（用户反馈，抖动异响已通过 v1.4.9 回滚解决）。
+
+**根因**
+
+```python
+# 我们之前设的（[patched] VERANO_STOPPING_TUNE）
+ret.stoppingDecelRate = 3      # brake_travel/s while trying to stop
+# 原厂默认
+ret.stoppingDecelRate = 0.8
+```
+
+`stoppingDecelRate` 是「尝试停车时刹车行程的变化速率」。
+设成 3.0 意味着刹车压力以 **3.75 倍**于原厂的速度压上去，减速曲线生硬。
+
+当初调到 3.0 是为了解决「无法停车」，现在车能停住了，可以回调。
+
+**调整**
+
+| 参数 | 原值 | 新值 | 原厂默认 |
+|---|---|---|---|
+| `stoppingDecelRate` | 3.0 | **1.5** | 0.8 |
+| `stopAccel` | -1.5 | -1.5 | -2.0 |
+| `vEgoStopping` | 0.75 | 0.75 | 0.5 |
+
+`stoppingDecelRate` 从 3.0 降到 1.5（仍为原厂 1.9 倍），在「能果断停住」和
+「减速平顺」之间折中。
+
+**如果停车变得不够果断（溜车）**：把 `stoppingDecelRate` 调回 1.8-2.0。
+**如果仍不够平顺**：可以继续降到 1.0-1.2，但需确认能停住。
+
+**补丁总数**：18 个。
+
 ### v1.4.9 — 2026-11-21
 
 **撤回 v1.4.8 的 `EGO_LANE_STOPPED_LEAD` 补丁。**
