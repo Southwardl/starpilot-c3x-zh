@@ -166,6 +166,22 @@ items = {
     # 恢复为 1 后才能配合 VERANO_STOPPING_TUNE 实现完整刹停。
     "CEStopLights": b"1",
     "CEStoppedLead": b"1",
+    # ---------- 跟车与刹车平顺性（v1.4.11 起）----------
+    # 跟车性格：0=aggressive(T_FOLLOW 1.25s) 1=standard(1.45s) 2=relaxed(1.75s)
+    # 之前是 0，跟车距离最短，低速时会贴到 5 米内，落进「贴车-刹-窜」的
+    # 震荡区，表现为低速刹车抖动。改成 2 后跟车距离增加 40%。
+    "LongitudinalPersonality": b"2",
+    # 前车停止时额外保持的距离（公制单位=米）。
+    # 出厂 2 米偏近；加大到 8 米可避开低速震荡区，并让刹停更从容。
+    "IncreasedStoppedDistance": b"8",
+    # 前车检测置信度阈值（百分数）。0.25 是系统允许的最低值。
+    # 37% 时视觉对远处静止车辆常低于阈值，导致前车时有时无 → 刹车通断。
+    "LeadDetectionThreshold": b"25",
+    # 各性格的加/减速 jerk 限制（百分之一 m/s³）。50 = 0.50 m/s³。
+    # 需要 CustomPersonalities=1 才生效。
+    "CustomPersonalities": b"1",
+    "RelaxedJerkDeceleration": b"50",
+    "RelaxedJerkAcceleration": b"50",
 }
 for k, v in items.items():
     p = params / k

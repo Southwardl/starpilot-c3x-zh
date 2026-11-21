@@ -454,6 +454,73 @@ ssh comma@<设备IP> 'sudo bash /tmp/starpilot-c3x-zh/provision.sh'
 
 ## 变更记录
 
+### v1.4.11 — 2026-11-21
+
+修复低速刹车抖动，并补齐驾驶参数。
+
+**关键实测数据**（10 分钟、32,041 帧干净数据：已接合 + 双脚离开踏板）
+
+各速度段的 `aEgo` 相邻帧跳变：
+
+| 速度段 | 帧数 | aEgo 标准差 | 相邻帧跳变中位 | P90 |
+|---|---|---|---|---|
+| 0-5 km/h | 5981 | 0.506 | 0.010 | 0.030 |
+| 5-10 km/h | 2984 | 0.541 | 0.010 | 0.030 |
+| **10-15 km/h** | 1428 | **0.861** ⚠ | 0.020 | 0.050 |
+| 15-25 km/h | 1937 | 0.651 | 0.010 | 0.040 |
+| 25-40 km/h | 11324 | 0.385 ✅ | 0.010 | 0.030 |
+
+低速段最大的跳变：
+
+```
+v=15.0km/h  aEgo +1.06 -> -2.54  (Δ3.60)  brOut    0 -> 379
+v= 9.8km/h  aEgo -2.47 -> +0.71  (Δ3.18)  brOut  198 ->   0
+v=14.9km/h  aEgo +0.31 -> -2.09  (Δ2.40)  brOut    0 -> 258
+```
+
+**一帧内刹车从 0 跳到 379** —— 相当于 72 m/s³ 的 jerk，远超设定的 0.5。
+
+**根因**
+
+`LongitudinalPersonality` 是 `aggressive`（`T_FOLLOW = 1.25` 秒，跟车距离最短）。
+车会贴近到前车 5 米内，然后：
+
+```
+车距 > 目标 -> 加速贴近
+     ↓
+车距 < 目标 -> 猛刹
+     ↓
+刹过头 -> 车距变大 -> 再加速
+     ↓
+一抖一抖
+```
+
+同时观察到 `leadOne.dRel = -2.5`（负距离），说明已贴到基准点以内。
+
+**调整**
+
+| 参数 | 原值 | 新值 | 说明 |
+|---|---|---|---|
+| `LongitudinalPersonality` | 0 (aggressive) | **2 (relaxed)** | T_FOLLOW 1.25s → 1.75s |
+| `IncreasedStoppedDistance` | 2 米 | **8 米** | 停得更远，避开震荡区 |
+| `LeadDetectionThreshold` | 37% | **25%** | 前车不易掉线 |
+| `CustomPersonalities` | 1 | 1 | 保持，让 jerk 设置生效 |
+| `RelaxedJerkDeceleration` | 1.0 | **0.5 m/s³** | 更平顺 |
+| `stoppingDecelRate` | 3.0 | **1.5** | 刹车压力变化减半 |
+
+**⚠️ 重要的操作前提**
+
+驾驶时**双脚必须完全离开两个踏板**。实测：
+
+```
+脚完全松开 -> carState.brake = 1~3    -> brakePressed=False  openpilot 控制
+脚轻搭着   -> carState.brake ≈ 65     -> brakePressed=True   openpilot 交出纵向
+用力踩下   -> carState.brake = 77~104 -> brakePressed=True
+```
+
+**只要 `brakePressed` 为 True，openpilot 就不做任何纵向动作** —— 这是设计如此，
+不是故障。本次排查中大量「不刹车」现象都是这个原因。
+
 ### v1.4.10 — 2026-11-21
 
 改善刹车平顺性。

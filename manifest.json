@@ -1,6 +1,6 @@
 {
   "name": "starpilot-c3x-zh",
-  "version": "1.4.10",
+  "version": "1.4.11",
   "generated_at": "2026-11-18T00:15:45+08:00",
   "baseline": {
     "repository": "https://github.com/StarPilotHQ/StarPilot.git",
@@ -278,5 +278,17 @@
     "vEgoStopping": 0.75,
     "vEgoStarting": 0.75,
     "reason": "原 stoppingDecelRate=3.0 是原厂默认 0.8 的 3.75 倍，刹车压力变化过猛导致减速不够平顺。降为 1.5 后仍能停住但明显柔和。"
+  },
+  "driving_tune": {
+    "LongitudinalPersonality": 2,
+    "IncreasedStoppedDistance": 8,
+    "LeadDetectionThreshold": 25,
+    "CustomPersonalities": 1,
+    "RelaxedJerkDeceleration": 0.5,
+    "RelaxedJerkAcceleration": 0.5,
+    "stoppingDecelRate": 1.5,
+    "stopAccel": -1.5,
+    "vEgoStopping": 0.75,
+    "notes": "低速刹车抖动的根因是跟车距离过短（aggressive T_FOLLOW=1.25s）导致贴近后进入「贴车-刹-窜」震荡区；改为 relaxed(1.75s) + 停止距离 8 米。警告：驾驶时脚必须完全离开刹车踏板，轻搭（carState.brake≈65）也会触发 brakePressed 使 openpilot 交出纵向控制。"
   }
 }
