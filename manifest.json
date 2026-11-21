@@ -1,6 +1,6 @@
 {
   "name": "starpilot-c3x-zh",
-  "version": "1.4.8",
+  "version": "1.4.9",
   "generated_at": "2026-11-18T00:15:45+08:00",
   "baseline": {
     "repository": "https://github.com/StarPilotHQ/StarPilot.git",
@@ -166,13 +166,6 @@
       "sha256_current": "0000000000000000000000000000000000000000000000000000000000000000"
     },
     {
-      "target": "selfdrive/controls/radard.py",
-      "patch": "patch/radard.py.patch",
-      "kind": "patch",
-      "description": "自己车道里「先动后停」的车辆也能成为引导（红灯前排队的车）",
-      "sha256_current": "0000000000000000000000000000000000000000000000000000000000000000"
-    },
-    {
       "target": "selfdrive/ui/onroad/model_renderer.py",
       "patch": "patch/model_renderer.py.patch",
       "kind": "patch",
@@ -183,7 +176,7 @@
   "stats": {
     "translation_entries": 2119,
     "font_glyphs": 6933,
-    "patched_files": 19,
+    "patched_files": 18,
     "dropped_files": 5
   },
   "features": {
@@ -277,6 +270,6 @@
     "azimuth_sign_verified": "实测判别 60.6% vs 7.9%，-1.0 正确",
     "draw_origin_bug": "雷达 dRel 以保险杠为原点，模型路径以相机为原点，UI 绘制未补 RADAR_TO_CAMERA，所有点位恒定偏近约 1.45 米",
     "stopped_lead_gap": "potential_low_speed_lead 只在 v_ego < 4 m/s 且 dRel < 25 时生效，行驶中完全依赖视觉（阈值 37%），远处静止车辆检测不到就不减速",
-    "stopped_lead_fix": "复用相邻车道的「先动后停」判定（seen_moving + rest_frames），自己车道 |yRel|<1.8 且 60 米内也能成为引导；龙门架等静止物永不移动，天然排除，不会幽灵刹车"
+    "stopped_lead_fix": "已撤回。v1.4.8 的 EGO_LANE_STOPPED_LEAD 补丁缺少迟滞，导致 leadOne 在雷达/视觉两个来源间高频切换，实车表现为刹车抖动（车一抖一抖 + ABS 液压泵咯噔声）。抖动刹车比不刹车更危险，已回滚。如需重做，必须先实现来源迟滞（一旦选定来源，需连续 N 帧不匹配才切换）。"
   }
 }
